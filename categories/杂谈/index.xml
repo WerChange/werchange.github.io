@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>杂谈 on WerChange</title>
-        <link>http://localhost:1313/categories/%E6%9D%82%E8%B0%88/</link>
+        <link>https://werchange.github.io/categories/%E6%9D%82%E8%B0%88/</link>
         <description>Recent content in 杂谈 on WerChange</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>WerChange</copyright><atom:link href="http://localhost:1313/categories/%E6%9D%82%E8%B0%88/index.xml" rel="self" type="application/rss+xml" />
+        <copyright>WerChange</copyright><atom:link href="https://werchange.github.io/categories/%E6%9D%82%E8%B0%88/index.xml" rel="self" type="application/rss+xml" />
     </channel>
 </rss>
