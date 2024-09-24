@@ -7,7 +7,34 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>WerChange</copyright>
-        <lastBuildDate>Mon, 04 Dec 2023 20:14:00 +0800</lastBuildDate><atom:link href="https://werchange.github.io/tags/dp/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 22 Jan 2024 11:49:00 +0800</lastBuildDate><atom:link href="https://werchange.github.io/tags/dp/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>CF1920E 题解</title>
+        <link>https://werchange.github.io/p/cf1920e-%E9%A2%98%E8%A7%A3/</link>
+        <pubDate>Mon, 22 Jan 2024 11:49:00 +0800</pubDate>
+        
+        <guid>https://werchange.github.io/p/cf1920e-%E9%A2%98%E8%A7%A3/</guid>
+        <description>&lt;h1 id=&#34;cf1920ehttpscodeforcescomcontest1920probleme&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://codeforces.com/contest/1920/problem/E&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CF1920E&lt;/a&gt;
+&lt;/h1&gt;&lt;p&gt;被这种题卡了，脸都不要了。&lt;/p&gt;
+&lt;p&gt;仔细读题，发现序列可以分成两部分（$0$ 和 $1$）来考虑。&lt;/p&gt;
+&lt;p&gt;在合法序列中，对于一个 $1$，它产生的子串贡献一定是（假设与上一个 $1$ 之间有 $x$ 个 $0$，与下一个 $1$ 之间有 $y$ 个 $0$）：
+&lt;/p&gt;
+$$(x+1)(y+1)$$
+&lt;p&gt;如果去 DP 这 $n$ 个 $1$，易得转移方程：
+&lt;/p&gt;
+$$f_{i,j}=\sum f_{i-p\times j,p}$$
+&lt;p&gt;$f_{i,j}$ 表示：当前贡献了 $i$ 个合法子串，上一个 $1$ 到现在的 $1$ 的长度为 $j$ 的组成序列方案数。&lt;/p&gt;
+&lt;p&gt;接下来考虑 $p$ 的值域。&lt;/p&gt;
+&lt;p&gt;要使式子成立，有：$p\in [1, \frac{i}{j}]$。&lt;/p&gt;
+&lt;p&gt;考虑题目限制（最长合法串长度不大于 $k$），有：$p\in [1,k+1-j]$。&lt;/p&gt;
+&lt;p&gt;所以 $p\in [1,\min{\frac{i}{j},k+1-j}]$，即：
+&lt;/p&gt;
+$$f_{i,j}=\sum\limits_{p=1}^{\min\{\frac{i}{j},k+1-j\}} f_{i-p\times j,p}$$
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://codeforces.com/contest/1920/submission/242206913&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;code&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>[ARC120E] 1D Party 题解</title>
         <link>https://werchange.github.io/p/arc120e-1d-party-%E9%A2%98%E8%A7%A3/</link>
         <pubDate>Mon, 04 Dec 2023 20:14:00 +0800</pubDate>

@@ -7,7 +7,26 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>WerChange</copyright>
-        <lastBuildDate>Sat, 16 Dec 2023 11:48:00 +0800</lastBuildDate><atom:link href="https://werchange.github.io/tags/%E4%B9%B1%E6%90%9E/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 24 Feb 2024 09:41:00 +0800</lastBuildDate><atom:link href="https://werchange.github.io/tags/%E4%B9%B1%E6%90%9E/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>DK 树</title>
+        <link>https://werchange.github.io/p/dk-%E6%A0%91/</link>
+        <pubDate>Sat, 24 Feb 2024 09:41:00 +0800</pubDate>
+        
+        <guid>https://werchange.github.io/p/dk-%E6%A0%91/</guid>
+        <description>&lt;h2 id=&#34;引入&#34;&gt;引入
+&lt;/h2&gt;&lt;p&gt;这是由 DengDuck 总结整理的一种处理线段树类问题的算法。&lt;/p&gt;
+&lt;h2 id=&#34;板题引入&#34;&gt;板题引入
+&lt;/h2&gt;&lt;p&gt;给定数列 $A{a_i}$ 和 $B{b_i}$。&lt;/p&gt;
+&lt;p&gt;其中有以下操作：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;C l r z&lt;/code&gt;：$a_i\leftarrow a_i+z$，$i\in [l,r]$&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Q l r&lt;/code&gt;：$\sum\limits_{i=l}^r a_i\times b_i$&lt;/p&gt;
+&lt;h2 id=&#34;算法概要&#34;&gt;算法概要
+&lt;/h2&gt;&lt;p&gt;先预处理 $B$ 的前缀和 $sum_i$。&lt;/p&gt;
+&lt;p&gt;对于每一个线段树上的区间的修改实际上就是 $z\times sum_{[l,r]}$。&lt;/p&gt;
+&lt;p&gt;然后懒标记依旧下传 $z$，&lt;code&gt;pushdown&lt;/code&gt; 操作就同理了。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>[ARC124C] LCM of GCDs 题解</title>
         <link>https://werchange.github.io/p/arc124c-lcm-of-gcds-%E9%A2%98%E8%A7%A3/</link>
         <pubDate>Sat, 16 Dec 2023 11:48:00 +0800</pubDate>
