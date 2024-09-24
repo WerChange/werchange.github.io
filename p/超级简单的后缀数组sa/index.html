@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="超级简单的后缀数组（SA）！！ 前言 这里选择当一手标题党。 由于刚学完这个字符串算法，本人字符串算法又比较薄弱，好不容易这一次在晚修看各种资料看">
+<title>超级简单的后缀数组（SA）！！</title>
+
+<link rel='canonical' href='https://werchange.github.io/p/%E8%B6%85%E7%BA%A7%E7%AE%80%E5%8D%95%E7%9A%84%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84sa/'>
+
+<link rel="stylesheet" href="/scss/style.min.46b014bcd81355ac4fa4b0113be0f78589502d595e9e9c4ab35776b148d0407b.css"><meta property='og:title' content="超级简单的后缀数组（SA）！！">
+<meta property='og:description' content="超级简单的后缀数组（SA）！！ 前言 这里选择当一手标题党。 由于刚学完这个字符串算法，本人字符串算法又比较薄弱，好不容易这一次在晚修看各种资料看">
+<meta property='og:url' content='https://werchange.github.io/p/%E8%B6%85%E7%BA%A7%E7%AE%80%E5%8D%95%E7%9A%84%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84sa/'>
+<meta property='og:site_name' content='WerChange'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='字符串' /><meta property='article:published_time' content='2024-01-14T22:00:00&#43;08:00'/><meta property='article:modified_time' content='2024-01-14T22:00:00&#43;08:00'/><meta property='og:image' content='https://werchange.github.io/img/%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84/p1.png' />
+<meta name="twitter:title" content="超级简单的后缀数组（SA）！！">
+<meta name="twitter:description" content="超级简单的后缀数组（SA）！！ 前言 这里选择当一手标题党。 由于刚学完这个字符串算法，本人字符串算法又比较薄弱，好不容易这一次在晚修看各种资料看"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://werchange.github.io/img/%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84/p1.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu8c3c1d874d717a899c9fcbab108aff70_5877_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">✍</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">WerChange</a></h1>
+            <h2 class="site-description">广东中山一只现役 OIer</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%8F%8B%E9%93%BE/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="5" cy="19" r="1" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <path d="M4 11a9 9 0 0 1 9 9" />
+</svg>
+
+
+
+                
+                <span>友链</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E9%93%BE%E6%8E%A5/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#到底什么是后缀数组">到底什么是“后缀数组”？</a></li>
+    <li><a href="#后缀数组与名次数组">后缀数组与名次数组</a></li>
+    <li><a href="#怎么求出这两个数组倍增算法">怎么求出这两个数组？——倍增算法</a></li>
+    <li><a href="#求-sa-代码具体实现">求 SA 代码具体实现</a>
+      <ol>
+        <li><a href="#对长度为-1-的子串排序">对长度为 $1$ 的子串排序</a></li>
+        <li><a href="#对长度为-w-的子串排序">对长度为 $w$ 的子串排序</a>
+          <ol>
+            <li><a href="#先搞定第二关键字的排序">先搞定第二关键字的排序</a></li>
+            <li><a href="#处理出新的-sa-数组">处理出新的 SA 数组</a></li>
+            <li><a href="#根据新的-sa-得出新的-rank">根据新的 SA 得出新的 Rank</a></li>
+            <li><a href="#for-循环为什么这么写">for 循环为什么这么写？</a></li>
+          </ol>
+        </li>
+        <li><a href="#一些常数优化-trick">一些常数优化 Trick</a></li>
+      </ol>
+    </li>
+    <li><a href="#这个后缀数组能干什么">这个后缀数组能干什么？</a></li>
+    <li><a href="#什么是-textheight-数组">什么是 $\text{height}$ 数组</a>
+      <ol>
+        <li><a href="#如何高效得到-textheight-数组">如何高效得到 $\text{height}$ 数组？</a>
+          <ol>
+            <li><a href="#一个方向">一个方向</a></li>
+          </ol>
+        </li>
+        <li><a href="#代码实现获得-textheight-数组">代码实现获得 $\text{height}$ 数组</a></li>
+      </ol>
+    </li>
+    <li><a href="#textheight-数组能干些什么后缀数组算法的应用">$\text{height}$ 数组能干些什么——后缀数组算法的应用</a>
+      <ol>
+        <li><a href="#例-1最长公共前缀">例 1：最长公共前缀</a>
+          <ol>
+            <li><a href="#分析">分析：</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#参考文献">参考文献</a></li>
+    <li><a href="#结尾">结尾</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E8%B6%85%E7%BA%A7%E7%AE%80%E5%8D%95%E7%9A%84%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84sa/">
+                
+                    <img src="/img/%e5%90%8e%e7%bc%80%e6%95%b0%e7%bb%84/p1.png" loading="lazy" alt="Featured image of post 超级简单的后缀数组（SA）！！" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E7%AE%97%E6%B3%95/" style="background-color: #2a9d8f; color: #fff;">
+                算法
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E8%B6%85%E7%BA%A7%E7%AE%80%E5%8D%95%E7%9A%84%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84sa/">超级简单的后缀数组（SA）！！</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jan 14, 2024 22:00 CST</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 9 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="超级简单的后缀数组sa">超级简单的后缀数组（SA）！！
+</h1><h2 id="前言">前言
+</h2><blockquote>
+<p>这里选择当一手标题党。</p>
+<p>由于刚学完这个字符串算法，本人字符串算法又比较薄弱，好不容易这一次在晚修看各种资料看得七七八八，决定趁脑子清醒的时候记录下来。</p>
+<p>免得自己不久后忘了后又要痛苦地再看各种资料。希望这篇博客能帮到你。</p>
+<p>前置知识：RMQ 问题、基数排序、lcp 问题</p>
+<p>使用指南：在抽象的时候，可以选择先不看证明；先记住结论，顺一遍后再返回来补证明也是可以的。如果有草稿本和笔，是最佳的选择。</p>
+</blockquote>
+<h2 id="到底什么是后缀数组">到底什么是“后缀数组”？
+</h2><p>后缀，顾名思义，即为 $[i,..,n]$ 的区间。以 $S$ 的第 $i$ 个字符开始的后缀定义为 $\text{Suffix}(i)$，下文简写为 $\text{suf}(i)$。</p>
+<p>如果这玩意儿（后缀）碰上了字符串，那么后缀也就成了特殊的字串。</p>
+<p>后缀数组又是什么呢？</p>
+<blockquote>
+<p>“后缀数组——处理字符串的有力工具。”——国集选手罗穗骞</p>
+</blockquote>
+<p>说到底，这是一个处理字符串的基础算法。</p>
+<p>学会 <strong>后缀自动机（SAM）</strong> 之后是不是就可以不学 <strong>后缀数组（SA）</strong> 了？<strong>不</strong>！虽然 SAM 更为强大和全面，但是有些问题 SA 将体现出优势，只单方面地掌握 SAM 是远远不够的。</p>
+<blockquote>
+<p>例子：求一个串后缀的 lcp 方面的应用，SA 可以直接用 RMQ，但是 SAM 还要求出 LCA。等等。</p>
+</blockquote>
+<p>那现在让我们开始吧。</p>
+<h2 id="后缀数组与名次数组">后缀数组与名次数组
+</h2><p>此“后缀数组”非彼“后缀数组”，此二级标题中的“后缀数组”是一个实打实的数组。定义为：$\text{SA}[i]$，存储的是 $1,&hellip;,n$ 的一个排列。</p>
+<p>他保证 $\text{suf}(\text{SA}[i])&lt;\text{suf}(\text{SA}[i+1])$，就是将 $S$ 的后缀从小到大排序后把后缀的开头按序放入 $\text{SA}$ 中。</p>
+<p>名次数组 $\text{Rank[i]}$ 存储的是 $\text{suf}(i)$ 在所有后缀中排序后的名次。</p>
+<p>一言了之，$\text{SA}[i]$ 表示原串中从小到大排名为 $i$ 的是哪个后缀；$\text{Rank}[i]$ 表示原串中后缀 $i$ 从小到大排名后的名次。</p>
+<blockquote>
+<p>“简单的说，后缀数组是‘排第几的是谁？’，名次数组是‘你排第几？’。”——罗穗骞</p>
+</blockquote>
+<p>显然，这俩玩意儿就是双映射关系，说白了就是运算互逆。</p>
+<p><img src="/img/%e5%90%8e%e7%bc%80%e6%95%b0%e7%bb%84/p1.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h2 id="怎么求出这两个数组倍增算法">怎么求出这两个数组？——倍增算法
+</h2><p>大家都可以想到的朴素算法或时间复杂度不优秀的算法这里就不再提及了。</p>
+<p>由于过于复杂的 $\text{DC3}$算法 本人又不会，所以这里只提及 $\text{O}(n \log n)$ 的倍增算法。</p>
+<p>主要思路：对每个字符开始长度为 $2^k$ 的子串进行排序，求出 $\text{Rank}$ 值。</p>
+<p>$k$ 从 $0$ 开始，每次不断 $+1$ 直到长度超过了原串的长度（$2^k&gt;n$）。当达到限制后，每个字符开始的长度为 $2^k$ 的子串便相当于所有的后缀。并且此时肯定已经得到了互不相等的 $\text{Rank}$ 值。</p>
+<p>此刻要解决的是如何排序。</p>
+<p>如果采用 <code>sort</code> 快排，时间复杂度并没有利用字符串后缀的性质。</p>
+<p>我们在处理长为 $2^k$ 的问题时，肯定是已经知道 $2^{k-1}$ 的 $\text{Rank}$ 值。那我们就可以利用这些值，把一个子串 $\text{Sub}(i,2^k)$ （从 $i$ 开始长度为 $2^k$ 的串），看作由两个关键字组成：$\text{Sub}(i,2^{k-1})+\text{Sub}(i+2^{k-1},2^{k-1})$。由此，可用基数排序。</p>
+<blockquote>
+<p>举个例子：</p>
+<p>以字符串“aabaaaab”为例，整个过程如图所示。其中 $x,y$ 是表示长度为 $2^k$ 的字符串的两个关键字 。</p>
+<p><img src="/img/%e5%90%8e%e7%bc%80%e6%95%b0%e7%bb%84/p2.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+</blockquote>
+<p>怎么样？这个图看不懂？静下心来，细细揣摩。这里要嚼透了（尤其是 $\text{SA},\text{Rank}$ 数组的差别），才能理解后面更为抽象的代码实现。</p>
+<h2 id="求-sa-代码具体实现">求 SA 代码具体实现
+</h2><p>以往很多算法都是贴个模板 code 就走人了，但今天不行。</p>
+<p>放一下板子，你们就明白（为什么不行）了。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">sa</span><span class="p">[</span><span class="n">MAXN</span><span class="p">],</span><span class="n">rk</span><span class="p">[</span><span class="n">MAXN</span><span class="p">],</span><span class="n">oldrk</span><span class="p">[</span><span class="n">MAXN</span><span class="o">&lt;&lt;</span><span class="mi">1</span><span class="p">],</span><span class="n">id</span><span class="p">[</span><span class="n">MAXN</span><span class="p">],</span><span class="n">key1</span><span class="p">[</span><span class="n">MAXN</span><span class="p">],</span><span class="n">cnt</span><span class="p">[</span><span class="n">MAXN</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="kt">bool</span> <span class="nf">cmp</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span><span class="kt">int</span> <span class="n">y</span><span class="p">,</span><span class="kt">int</span> <span class="n">w</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span><span class="k">return</span> <span class="n">oldrk</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">==</span><span class="n">oldrk</span><span class="p">[</span><span class="n">y</span><span class="p">]</span><span class="o">&amp;&amp;</span><span class="n">oldrk</span><span class="p">[</span><span class="n">x</span><span class="o">+</span><span class="n">w</span><span class="p">]</span><span class="o">==</span><span class="n">oldrk</span><span class="p">[</span><span class="n">y</span><span class="o">+</span><span class="n">w</span><span class="p">];}</span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">SA</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="o">++</span><span class="n">cnt</span><span class="p">[</span><span class="n">rk</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]];</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">m</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">cnt</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+=</span><span class="n">cnt</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">&gt;=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">--</span><span class="p">)</span> <span class="n">sa</span><span class="p">[</span><span class="n">cnt</span><span class="p">[</span><span class="n">rk</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="o">--</span><span class="p">]</span><span class="o">=</span><span class="n">i</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">p</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">w</span><span class="o">=</span><span class="mi">1</span><span class="p">;;</span><span class="n">w</span><span class="o">&lt;&lt;=</span><span class="mi">1</span><span class="p">,</span><span class="n">m</span><span class="o">=</span><span class="n">p</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">p</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">&gt;=</span><span class="n">n</span><span class="o">-</span><span class="n">w</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">--</span><span class="p">)</span> <span class="n">id</span><span class="p">[</span><span class="o">++</span><span class="n">p</span><span class="p">]</span><span class="o">=</span><span class="n">i</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span><span class="p">(</span><span class="n">sa</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&gt;</span><span class="n">w</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">id</span><span class="p">[</span><span class="o">++</span><span class="n">p</span><span class="p">]</span><span class="o">=</span><span class="n">sa</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="n">w</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">m</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">cnt</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="o">++</span><span class="n">cnt</span><span class="p">[</span><span class="n">key1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">rk</span><span class="p">[</span><span class="n">id</span><span class="p">[</span><span class="n">i</span><span class="p">]]];</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">m</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">cnt</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+=</span><span class="n">cnt</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">&gt;=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">--</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">sa</span><span class="p">[</span><span class="n">cnt</span><span class="p">[</span><span class="n">key1</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="o">--</span><span class="p">]</span><span class="o">=</span><span class="n">id</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">oldrk</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">rk</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">        <span class="n">p</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">rk</span><span class="p">[</span><span class="n">sa</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="o">=</span><span class="n">cmp</span><span class="p">(</span><span class="n">sa</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">sa</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="n">w</span><span class="p">)</span><span class="o">?</span><span class="nl">p</span><span class="p">:</span><span class="o">++</span><span class="n">p</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="n">p</span><span class="o">==</span><span class="n">n</span><span class="p">)</span> <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>如果你能直接看懂此代码是如何求出 $\text{SA}$ 数组——</p>
+<p>那么您可以直接离开此寒舍了。并接受在下一膜拜~ Orz</p>
+<p>如果你留了下来，别着急，我来分步讲解。</p>
+<h3 id="对长度为-1-的子串排序">对长度为 $1$ 的子串排序
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="o">++</span><span class="n">cnt</span><span class="p">[</span><span class="n">rk</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]];</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">m</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">cnt</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+=</span><span class="n">cnt</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">&gt;=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">--</span><span class="p">)</span> <span class="n">sa</span><span class="p">[</span><span class="n">cnt</span><span class="p">[</span><span class="n">rk</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="o">--</span><span class="p">]</span><span class="o">=</span><span class="n">i</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>第 1 行，就是把长为 $1$ 的子串（就是字符啦）全部扔进桶里。</p>
+<p>第 2 行，把这个桶转换成前缀和，就可以知道字符 $i$ 在原串是第几个了。</p>
+<p>第 3 行，由于桶内的元素也要分个排名，所以这里的写法选择了倒序循环、<code>cnt--</code>。</p>
+<p>其实这 3 行就是在做基数排序</p>
+<h3 id="对长度为-w-的子串排序">对长度为 $w$ 的子串排序
+</h3><h4 id="先搞定第二关键字的排序">先搞定第二关键字的排序
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">p</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">&gt;=</span><span class="n">n</span><span class="o">-</span><span class="n">w</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">--</span><span class="p">)</span> <span class="n">id</span><span class="p">[</span><span class="o">++</span><span class="n">p</span><span class="p">]</span><span class="o">=</span><span class="n">i</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="k">if</span><span class="p">(</span><span class="n">sa</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&gt;</span><span class="n">w</span><span class="p">)</span> <span class="n">id</span><span class="p">[</span><span class="o">++</span><span class="n">p</span><span class="p">]</span><span class="o">=</span><span class="n">sa</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="n">w</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>第 2 行，先把那些以自己开头，长度不足 $w$ 的 $i$ 放在排序数组 $id$ 的前端。这是因为他们根本没有第二关键字，可视为 $0$，自然是最小的。这里倒不倒序是一样的，你也可以正序写。</p>
+<p>第 3 行，把那些有第二关键字的，记录他们第一关键字的开头，即 <code>sa[i]-w</code>。</p>
+<p>分析一下，第 2 行的操作其实也是在记录第一关键字的开头。</p>
+<h4 id="处理出新的-sa-数组">处理出新的 SA 数组
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">m</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">cnt</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="o">++</span><span class="n">cnt</span><span class="p">[</span><span class="n">key1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">rk</span><span class="p">[</span><span class="n">id</span><span class="p">[</span><span class="n">i</span><span class="p">]]];</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">m</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">cnt</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+=</span><span class="n">cnt</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">&gt;=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">--</span><span class="p">)</span> <span class="n">sa</span><span class="p">[</span><span class="n">cnt</span><span class="p">[</span><span class="n">key1</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="o">--</span><span class="p">]</span><span class="o">=</span><span class="n">id</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>第 1 行，置空 $\text{cnt}$，当然可以 <code>memset(cnt,0,sizeof(cnt))</code>。</p>
+<p>第 2-3 行，性质上是等价于对单个字符处理出 $\text{SA}$ 的操作的，都是在做基数排序。这里的 <code>key1[i]=rk[id[i]]</code> 是一个减少访问空间来节约时间的小 Trick（因为第 4 行再次出现 <code>key1[i]</code>）。注意这里 $key1[i]\neq i$，这是因为此刻的 $\text{Rank}$ 并非此轮的新值，而是上一轮的旧值。</p>
+<p>第 4 行，处理出新的 $\text{SA}$ 数组。</p>
+<h4 id="根据新的-sa-得出新的-rank">根据新的 SA 得出新的 Rank
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">oldrk</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">rk</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="n">p</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">rk</span><span class="p">[</span><span class="n">sa</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="o">=</span><span class="n">cmp</span><span class="p">(</span><span class="n">sa</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">sa</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="n">w</span><span class="p">)</span><span class="o">?</span><span class="nl">p</span><span class="p">:</span><span class="o">++</span><span class="n">p</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span><span class="p">(</span><span class="n">p</span><span class="o">==</span><span class="n">n</span><span class="p">)</span> <span class="k">break</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>第 1 行，之所以要拷贝一份上一轮的 $\text{Rank}$，这是因为在得到新的 $\text{Rank}$ 时，需要上一轮的值。但是为了避免冲突，这里才会拷贝出一份。当然，代码你也可以写成 <code>memcpy(oldrk+1,rk+1,n*sizeof(int))</code>。</p>
+<p>第 2-3 行，得出新值。注意，由于 $\text{Rank}$ 是可能有相同的，所以需要比较两个字符串是否完全相同。即 <code>cmp(sa[i],sa[i-1],w)</code>。</p>
+<p>第 4 行，由于 $p$ 表示不同的字符串的个数，所以一旦 $p=n$，意味着再没有相同的字符串，再往下做排序已不会改变 $\text{Rank}$ 值。例如下图，第 4 次排序就是没有必要的。</p>
+<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/gyvpawjf.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<h4 id="for-循环为什么这么写">for 循环为什么这么写？
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">w</span><span class="o">=</span><span class="mi">1</span><span class="p">;;</span><span class="n">w</span><span class="o">&lt;&lt;=</span><span class="mi">1</span><span class="p">,</span><span class="n">m</span><span class="o">=</span><span class="n">p</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>变量 $w$ 代表长度，这里不多说了。至于这个 <code>m=p</code>，首先要明确的一点是，$m$ 表示桶可装的元素最大值。而排序后，$\text{Rank}$ 数组中的最大值小于 $p$，所以可以改变最大值。也就是优化基数排序值域。</p>
+<h3 id="一些常数优化-trick">一些常数优化 Trick
+</h3><ol>
+<li><strong>第二关键字无需基数排序</strong>。正如代码中所打，按照他的实质，把无第二关键字的丢到最前面，再把剩下的依次放入。</li>
+<li><strong>优化基数排序的值域</strong>。代码中的 $p$ 即是 $\text{Rank}$ 的值域，可以优化值域。</li>
+<li><strong>利用 $\text{key1}$ 数组存储，减少不连续内存访问</strong>。这个在大数据效果明显。</li>
+<li><strong>利用 $\text{cmp}()$ 代替计算</strong>。原理同 3。</li>
+<li><strong>利用指针直接交换的性质。</strong> 在 $\text{oldrank}$ 数组拷贝时，是循环拷贝，常数较大。如果在定义时定义成指针形式，那就可以直接 <code>t=x,x=y,y=t</code> 进行一步交换。（但是这玩意儿很容易打错，编译器的警告也奇奇怪怪，<strong>慎用！！</strong>）</li>
+</ol>
+<p>注：本贴提供的局部代码，除第 5 点外，其余 4 点均已运用。</p>
+<h2 id="这个后缀数组能干什么">这个后缀数组能干什么？
+</h2><p>在上文，我们用了大量的篇幅来介绍什么是后缀数组、怎么代码实现求出后缀数组。那我们学会了后缀数组后，能用它解决什么问题呢？</p>
+<p>现在回答这个问题还为之过早。要想理解后缀数组的应用，先来了解一下 $\text{height}$ 数组。</p>
+<h2 id="什么是-textheight-数组">什么是 $\text{height}$ 数组
+</h2><p>定义 $\text{height}[i]=\text{lcp}(\text{suf}(\text{SA}[i-1]),\text{suf}(\text{SA}[i]))$，$\text{lcp}(a,b)$ 即为 $a$ 和 $b$ 的最长公共前缀。</p>
+<p>对于 $j,k(\text{Rank}[j]&lt;\text{Rank}[k])$，有以下性质：</p>
+$$
+\text{lcp}(\text{suf}(j),\text{suf}(k))=\min\{\text{height}[\text{Rank}[j]+1],...,\text{height}[\text{Rank}[k]]\}
+$$
+<p>以字符串 <code>aabaaaab</code>，求 <code>abaaaab</code> 和 <code>aaab</code> 的最长公共前缀为例：</p>
+<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/t412yt9c.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="img"
+	
+	
+></p>
+<h3 id="如何高效得到-textheight-数组">如何高效得到 $\text{height}$ 数组？
+</h3><p>如果直接从 $\text{height}[2]$ 计算到 $\text{height}[n]$，时间复杂度是 $\text{O}(n^2)$ 的。并没有利用上字符串的一些性质。</p>
+<p>如果我们定义数组 $\text{h}[i]=\text{height}[\text{Rank}[i]]$，也就是 $\text{suf}(i) $ 和他前一名的后缀的最长公共前缀。将有以下性质：</p>
+$$
+\text{h}[i]\geq \text{h}[i-1]-1
+$$
+<p>考虑证明（这里借鉴了 <a class="link" href="https://oiwiki.org/string/sa/#on-%E6%B1%82-height-%E6%95%B0%E7%BB%84%E9%9C%80%E8%A6%81%E7%9A%84%E4%B8%80%E4%B8%AA%E5%BC%95%E7%90%86"  target="_blank" rel="noopener"
+    >oi-wiki</a>）：</p>
+<p>如果你不想看证明，或者看不懂，可以跳到 <strong>一个方向</strong> 部分。</p>
+<blockquote>
+<p>当 $\text{height}[\text{Rank}[i-1]]\leq 1$ 时，不等式成立（右边 $\leq 0$）。</p>
+<p>当 $\text{height}[\text{Rank}[i-1]] &gt;1$ 时：</p>
+<p>根据定义，转化为：</p>
+$$
+> \text{lcp}(\text{SA}[\text{Rank}[i-1]],\text{SA}[\text{Rank}[i-1]-1]) > 1
+> $$
+<p>既然 $\text{suf}(i),\text{suf}(\text{SA}[\text{Rank}[i-1]-1])$ 有长度为 $\text{height}[\text{Rank}[i-1]]$ 的最长公共前缀。</p>
+<p>不妨设这个前缀为 $aA$，即一个字符和一个长为 $\text{height}[\text{Rank}[i-1]]-1$ 的非空字符串。</p>
+<p>那么 $\text{suf}(i-1)=aAD$，$\text{suf}(\text{SA}[\text{Rank}[i-1]-1])=aAB$。（$B&lt;D$，$B$ 或为空串，$D$ 非空）</p>
+<p>因此，$\text{suf}(i)=AD$，$\text{suf}(\text{SA}[\text{Rank}[i-1]-1]+1)=AB$。</p>
+<p>因为 $\text{suf}(\text{SA}[\text{Rank}[i]-1])$ 在大小排名上仅比 $\text{suf}(\text{SA}[\text{Rank}[i]]))$（即 $\text{suf}(i)$）少一位，而 $AB&lt;AD$。</p>
+<p>所以 $AB\leq \text{suf}(\text{SA}[\text{Rank}[i]-1])&lt;AD$，显然 $\text{suf}(i)$ 与 $\text{suf}(\text{SA}[\text{Rank}[i]-1])$ 有公共前缀 $A$。</p>
+<p>于是可得，$\text{lcp}(i,\text{SA}[\text{Rank}[i-1]])$ 至少是 $\text{height}[\text{Rank}[i-1]]-1$。</p>
+<p>即 $\text{height}[\text{Rank}[i]]\geq \text{height}[\text{Rank}[i-1]]-1$。</p>
+<p>令 $\text{h}[i]=\text{height}[\text{Rank}[i]]$，则</p>
+$$
+ \text{h}[i]\geq \text{h}[i-1]-1
+> $$
+<p>证毕。</p>
+</blockquote>
+<h4 id="一个方向">一个方向
+</h4><p>得知此性质后，我们就有了明确的方向。按照 $\text{h}[1],&hellip;,\text{h}[n]$ 的顺序计算，并利用 $\text{h}$ 数组的性质。时间复杂度为 $\text{O}(n)$。</p>
+<h3 id="代码实现获得-textheight-数组">代码实现获得 $\text{height}$ 数组
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="n">rk</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">--</span><span class="n">k</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">while</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="n">k</span><span class="p">]</span> <span class="o">==</span> <span class="n">s</span><span class="p">[</span><span class="n">sa</span><span class="p">[</span><span class="n">rk</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">k</span><span class="p">])</span> <span class="o">++</span><span class="n">k</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">height</span><span class="p">[</span><span class="n">rk</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">=</span> <span class="n">k</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这里 $k$ 不会超过 $n$，最多减 $n$ 次，所以最多加 $2n$ 次，复杂度 $\text{O}(n)$。</p>
+<h2 id="textheight-数组能干些什么后缀数组算法的应用">$\text{height}$ 数组能干些什么——后缀数组算法的应用
+</h2><p>文章到这里，就是后缀算法的应用了。</p>
+<p>先简单介绍一下能应用在什么问题之上。</p>
+<ol>
+<li>最长公共前缀</li>
+<li>单个字符串的相关问题
+<ul>
+<li>重复子串</li>
+<li>字串的个数</li>
+<li>回文子串</li>
+<li>连续重复子串</li>
+</ul>
+</li>
+<li>两个字符串的相关问题
+<ul>
+<li>公共子串</li>
+<li>字串的个数</li>
+</ul>
+</li>
+<li>多个字符串的相关问题</li>
+</ol>
+<p>由于本人还没有做相关练习，这里先只介绍问题 1。其他的我先溜去做题了。</p>
+<h3 id="例-1最长公共前缀">例 1：最长公共前缀
+</h3><p>给定一个字符串，每次询问某两个后缀的最长公共前缀。</p>
+<h4 id="分析">分析：
+</h4><p>根据性质</p>
+$$
+\text{lcp}(\text{suf}(j),\text{suf}(k))=\min\{\text{height}[\text{Rank}[j]+1],...,\text{height}[\text{Rank}[k]]\}
+$$
+<p>可以将问题转化成 RMQ 问题。如果用 ST 表，那么 $\text{O}(n\log n)$ 预处理， $\text{O}(1)$ 查询。</p>
+<p>如果用 $\text{O}(n)$ 预处理 RMQ 问题，那么本题可以做到 $\text{O}(n)$。（虽然作者不会 $\text{O}(n)$ 预处理）</p>
+<h2 id="参考文献">参考文献
+</h2><ul>
+<li>
+<p>[1] 罗穗骞，IOI2009 国家集训队论文<a class="link" href="https://wenku.baidu.com/view/5b886b1ea76e58fafab00374.html?_wkts_=1705281107045&amp;needWelcomeRecommand=1"  target="_blank" rel="noopener"
+    >《后缀数组——处理字符串的有力工具》</a></p>
+</li>
+<li>
+<p>[2] <a class="link" href="https://oi-wiki.org/"  target="_blank" rel="noopener"
+    >OI-Wiki</a>，<a class="link" href="https://oiwiki.org/string/sa/"  target="_blank" rel="noopener"
+    >《后缀数组简介》</a></p>
+</li>
+<li>
+<p>[3] <a class="link" href="https://blog.csdn.net/YxuanwKeith?type=blog"  target="_blank" rel="noopener"
+    >YxuanwKeith</a>，<a class="link" href="https://blog.csdn.net/YxuanwKeith/article/details/50636898"  target="_blank" rel="noopener"
+    >《五分钟搞懂后缀数组！后缀数组解析以及应用(附详解代码)》</a></p>
+</li>
+</ul>
+<h2 id="结尾">结尾
+</h2><p>这篇笔记写得匆匆忙忙，昨天晚修开始写，写到今天早上。</p>
+<p>有错误时不可避免的，欢迎读者指出我的错误。如有疑问或高见，也可以评论。</p>
+<p>由于一上完课就来写笔记，还没做多少题目，这里只讲了最长公共前缀的算法分析，实在抱歉。</p>
+<p>本人版权意识薄弱，如有侵权部分，请联系作者解决。</p>
+<p>希望这篇笔记能帮到你，Thank you~</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <div id="cusdis_thread"
+    data-host="https://cusdis.com"
+    data-app-id="a764b0e5-5fb3-453b-900a-cf7a524d196f"
+    data-page-id="e94b462f57bee85c08b327bbe5a0668a"
+    data-page-url="https://werchange.github.io/p/%E8%B6%85%E7%BA%A7%E7%AE%80%E5%8D%95%E7%9A%84%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84sa/"
+    data-page-title="超级简单的后缀数组（SA）！！"></div>
+<script async defer src="https://cusdis.com/js/widget/lang/zh-cn.js"></script>
+<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+
+<script>
+    function setCusdisTheme(theme) {
+        let cusdis = document.querySelector('#cusdis_thread iframe');
+        if (cusdis) {
+            window.CUSDIS.setTheme(theme)
+        }
+    }
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        setCusdisTheme(e.detail)
+    })
+</script>
+
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2022 - 
+        
+        2024 WerChange
+    </section>
+    
+    <section class="powerby">
+        
+            WerChange's Blog <br/>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

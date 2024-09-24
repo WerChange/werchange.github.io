@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>排序 on WerChange</title>
+        <link>https://werchange.github.io/tags/%E6%8E%92%E5%BA%8F/</link>
+        <description>Recent content in 排序 on WerChange</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>WerChange</copyright>
+        <lastBuildDate>Mon, 15 Jan 2024 22:09:00 +0800</lastBuildDate><atom:link href="https://werchange.github.io/tags/%E6%8E%92%E5%BA%8F/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>浅谈基数排序</title>
+        <link>https://werchange.github.io/p/%E6%B5%85%E8%B0%88%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/</link>
+        <pubDate>Mon, 15 Jan 2024 22:09:00 +0800</pubDate>
+        
+        <guid>https://werchange.github.io/p/%E6%B5%85%E8%B0%88%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/</guid>
+        <description>&lt;img src="https://werchange.github.io/img/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/p1.png" alt="Featured image of post 浅谈基数排序" /&gt;&lt;h1 id=&#34;浅谈基数排序&#34;&gt;浅谈基数排序
+&lt;/h1&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;注意，本贴的算法是&lt;strong&gt;基数排序&lt;/strong&gt;而不是&lt;strong&gt;计数排序&lt;/strong&gt;。这两者差别不大，但是存在着一定差异。&lt;/p&gt;
+&lt;h2 id=&#34;一句话做法&#34;&gt;一句话做法
+&lt;/h2&gt;&lt;p&gt;从低位到高位，每次都把所有要排序的数（含前导 $0$）丢入相应的桶（$0$~$9$），再从小到大（对于桶的编号而言从小到大）取出来，一定次数后，原数组有序。&lt;/p&gt;
+&lt;h2 id=&#34;数据模拟&#34;&gt;数据模拟
+&lt;/h2&gt;&lt;p&gt;假如要对以下几个数排序。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;103 7 65 234 932 45
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;第一轮看个位&#34;&gt;第一轮，看个位
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://werchange.github.io/img/%e5%9f%ba%e6%95%b0%e6%8e%92%e5%ba%8f/p1.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;此刻数组为：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;932 103 234 45 65 7
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;第二轮看十位&#34;&gt;第二轮，看十位
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://werchange.github.io/img/%e5%9f%ba%e6%95%b0%e6%8e%92%e5%ba%8f/p2.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;此刻数组为：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;7 103 932 234 45 65
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;第三轮看百位&#34;&gt;第三轮，看百位
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://werchange.github.io/img/%e5%9f%ba%e6%95%b0%e6%8e%92%e5%ba%8f/p3.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;此刻数组为：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;7 45 65 103 234 932
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;此时尽管数组已经有序，但过程并未完整。因为对于一些数据是不一定如此凑巧提前就能排好序的。&lt;/p&gt;
+&lt;h3 id=&#34;第四轮看千位&#34;&gt;第四轮，看千位
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://werchange.github.io/img/%e5%9f%ba%e6%95%b0%e6%8e%92%e5%ba%8f/p4.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;此刻数组为：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;7 45 65 103 234 932
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;数组已经有序。&lt;/p&gt;
+&lt;h2 id=&#34;证明&#34;&gt;证明
+&lt;/h2&gt;&lt;p&gt;注：以下考虑正整数。“数字”是 $[0,9]$ 之间的，“数”是 $[0,+\infty)$。&lt;/p&gt;
+&lt;p&gt;在小学一年级的时候，我们就已学过如何比较数之间的大小。&lt;/p&gt;
+&lt;p&gt;首先看数的位数，位数大的，肯定较大。&lt;/p&gt;
+&lt;p&gt;其次从高到低比较每位上的数字大小，一直到不等的时候，哪个数字大，那个数就大。&lt;/p&gt;
+&lt;p&gt;因此，基数排序的原理也是一样的。&lt;/p&gt;
+&lt;p&gt;首先从最低位开始放，就可以确定当前位的数字的相对大小关系。&lt;/p&gt;
+&lt;p&gt;然后考虑再高一位的时候（不妨称为“升位”），那些位数不够的数就会全部放入 $0$ 的桶里。&lt;/p&gt;
+&lt;p&gt;由于我们是按从小到大的顺序将不同的桶的元素放入 $0$ 号桶，所以保证了“桶底”的一定是最小的。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

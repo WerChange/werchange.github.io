@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="浅谈 AC 自动机 前言 这不是第一次看到这个算法。第一次是在 OI-wiki 上瞄到的。当时我还是一个什么也不懂的初一蒟蒻，看到这个名字就十分兴奋：“‘AC 自动机’">
+<title>浅谈 AC 自动机</title>
+
+<link rel='canonical' href='https://werchange.github.io/p/%E6%B5%85%E8%B0%88-ac-%E8%87%AA%E5%8A%A8%E6%9C%BA/'>
+
+<link rel="stylesheet" href="/scss/style.min.46b014bcd81355ac4fa4b0113be0f78589502d595e9e9c4ab35776b148d0407b.css"><meta property='og:title' content="浅谈 AC 自动机">
+<meta property='og:description' content="浅谈 AC 自动机 前言 这不是第一次看到这个算法。第一次是在 OI-wiki 上瞄到的。当时我还是一个什么也不懂的初一蒟蒻，看到这个名字就十分兴奋：“‘AC 自动机’">
+<meta property='og:url' content='https://werchange.github.io/p/%E6%B5%85%E8%B0%88-ac-%E8%87%AA%E5%8A%A8%E6%9C%BA/'>
+<meta property='og:site_name' content='WerChange'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='字符串' /><meta property='article:published_time' content='2024-01-16T22:24:00&#43;08:00'/><meta property='article:modified_time' content='2024-01-16T22:24:00&#43;08:00'/><meta property='og:image' content='https://werchange.github.io/img/AC/p1.png' />
+<meta name="twitter:title" content="浅谈 AC 自动机">
+<meta name="twitter:description" content="浅谈 AC 自动机 前言 这不是第一次看到这个算法。第一次是在 OI-wiki 上瞄到的。当时我还是一个什么也不懂的初一蒟蒻，看到这个名字就十分兴奋：“‘AC 自动机’"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://werchange.github.io/img/AC/p1.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu8c3c1d874d717a899c9fcbab108aff70_5877_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">✍</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">WerChange</a></h1>
+            <h2 class="site-description">广东中山一只现役 OIer</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%8F%8B%E9%93%BE/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="5" cy="19" r="1" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <path d="M4 11a9 9 0 0 1 9 9" />
+</svg>
+
+
+
+                
+                <span>友链</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E9%93%BE%E6%8E%A5/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#ac-自动机到底是什么">AC 自动机到底是什么？</a></li>
+    <li><a href="#ac-自动机可以用来干什么">AC 自动机可以用来干什么？</a></li>
+    <li><a href="#算法思路">算法思路</a></li>
+    <li><a href="#trie-树">Trie 树</a></li>
+    <li><a href="#失配指针">失配指针</a>
+      <ol>
+        <li><a href="#与-kmp-的-textnext-失配指针关系">与 KMP 的 $\text{next}$ 失配指针关系</a></li>
+        <li><a href="#构建-textfail-指针">构建 $\text{fail}$ 指针</a></li>
+        <li><a href="#代码实现构建-textfail-指针">代码实现构建 $\text{fail}$ 指针</a>
+          <ol>
+            <li><a href="#for-循环为什么这么写神仙操作路径压缩">for 循环为什么这么写？——“神仙操作”，路径压缩</a></li>
+            <li><a href="#简单粗暴的理解">简单粗暴的理解</a></li>
+            <li><a href="#神仙操作的好处">“神仙操作”的好处</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#多模式匹配">多模式匹配</a>
+      <ol>
+        <li><a href="#代码实现">代码实现</a></li>
+      </ol>
+    </li>
+    <li><a href="#优化代码效率">优化代码效率</a>
+      <ol>
+        <li><a href="#拓扑排序优化建图">拓扑排序优化建图</a>
+          <ol>
+            <li><a href="#建图实现">建图实现</a></li>
+            <li><a href="#查询实现">查询实现</a></li>
+            <li><a href="#主函数">主函数</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#参考文献">参考文献</a></li>
+    <li><a href="#结尾">结尾</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E6%B5%85%E8%B0%88-ac-%E8%87%AA%E5%8A%A8%E6%9C%BA/">
+                
+                    <img src="/img/AC/p1.png" loading="lazy" alt="Featured image of post 浅谈 AC 自动机" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E7%AE%97%E6%B3%95/" style="background-color: #2a9d8f; color: #fff;">
+                算法
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E6%B5%85%E8%B0%88-ac-%E8%87%AA%E5%8A%A8%E6%9C%BA/">浅谈 AC 自动机</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jan 16, 2024 22:24 CST</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 8 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="浅谈-ac-自动机">浅谈 AC 自动机
+</h1><h2 id="前言">前言
+</h2><blockquote>
+<p>这不是第一次看到这个算法。第一次是在 <a class="link" href="https://oiwiki.org/string/ac-automaton/"  target="_blank" rel="noopener"
+    >OI-wiki</a> 上瞄到的。当时我还是一个什么也不懂的初一蒟蒻，看到这个名字就十分兴奋：“‘AC 自动机’耶！是不是可以帮我自动 AC ！?”</p>
+<p>后来看到只是一个字符串算法，就离开了。今天上课讲了这个，感觉原理及实现没有后缀数组那么难（还没做几道应用题）。趁一节晚修，来写篇笔记吧。</p>
+<p>食用指南：要先学会 <a class="link" href="https://www.cnblogs.com/wang-holmes/p/17966971"  target="_blank" rel="noopener"
+    >Trie树</a>；KMP的话，理解到思想（$\text{next}$ 数组）就可以了，不一定要学得透透的。</p>
+</blockquote>
+<h2 id="ac-自动机到底是什么">AC 自动机到底是什么？
+</h2><p>AC 自动机是 <strong>以 Trie 的结构为基础</strong>，结合 <strong>KMP 的思想</strong> 建立的自动机。</p>
+<p>之所以称为 AC 自动机，是因为此算法是由 Alfred V. Aho 和 Margaret J.Corasick 发明的，称为 Aho–Corasick 算法。</p>
+<p>所以他不是 Automation，更不是 Accepted，而是 Automaton（自动机）。</p>
+<h2 id="ac-自动机可以用来干什么">AC 自动机可以用来干什么？
+</h2><p>他是处理字符串的算法。</p>
+<p>具体的，他可以解决<strong>多模式匹配</strong>的问题。</p>
+<p>KMP 算法也是解决字符串匹配的，但他处理的问题<strong>只有一个</strong>模式串（需要寻找的串）和一个文本串（在这个串里寻找）。</p>
+<p>而 AC 自动机，就可以解决多模式串匹配的问题。</p>
+<h2 id="算法思路">算法思路
+</h2><p>简单来说，建立一个 AC 自动机有两个步骤：</p>
+<ol>
+<li>Trie 结构：将所有的模式串构建成一棵 Trie 树。</li>
+<li>KMP 的思想：在 KMP 中，一旦失配，就跳到 $\text{next}$ 失配指针所指的下一个字符；所以 AC 自动机中，也要对整颗 Trie 树所有节点构造失配指针。</li>
+</ol>
+<p>那我们现在就开始吧。</p>
+<h2 id="trie-树">Trie 树
+</h2><p>回忆一下 AC 自动机的思路：首先把所有的字符串全部丢进 Trie 树里面，然后再在 Trie 树上构建自动机。</p>
+<p>这个 Trie 树构建就很简单了，该怎么建就怎么建。详细内容可以看我的其他博客。</p>
+<p>这里有一些需要理解的，就是一个节点到根节点的路径正是一个（或多个）模式串的前缀。</p>
+<p>下文也把节点 $x$ 到根节点的路径上的字符串称为状态 $x$。</p>
+<h2 id="失配指针">失配指针
+</h2><p>首先要明确一点：这里的“指针”并不是 C++ 中真正的“指针类型”，只是一个形象化的称号。</p>
+<p>AC 自动机通过失配指针（下文称为 $\text{fail}$ 指针）来辅助多模式串的匹配。</p>
+<h3 id="与-kmp-的-textnext-失配指针关系">与 KMP 的 $\text{next}$ 失配指针关系
+</h3><ul>
+<li>相同点：两者同样是在失配的时候用于跳转的指针。</li>
+<li>不同点：$\text{next}$ 求的是最长的相同前后缀；而 $\text{fail}$ 指针指向所有模式串的前缀中与当前节点“匹配”的“最长后缀”。</li>
+</ul>
+<p>等等！这个“匹配”和这个“最长后缀”都是些什么东西？</p>
+<p>先解释一下 $\text{fail}$ 指针吧。</p>
+<p>如果状态 $x$ 的 $\text{fail}$ 值是状态 $y$，要求是：$y$ 是 $x$ 的最长后缀。</p>
+<p>用人话说，就是：</p>
+<blockquote>
+<p>先规定从节点 $x$ 到根节点路径上形成的字符串为 $\text{sub}(x)$；这个字符串中，第一个是根节点，最后一个是 $x$ 节点上的字母。</p>
+<p>如果 $\text{sub}(y)$ 正好是 $\text{sub}(x)$ 的后缀，并且不存在任意一个 $\text{sub}(y&rsquo;)$ 的长度大于 $\text{sub}(y)$ 的长度。</p>
+<p>那么 $\text{fail}(x)=y$。</p>
+</blockquote>
+<p>举个例子：</p>
+<blockquote>
+<p>如果以 <code>i</code>,<code>he</code>,<code>his</code>,<code>she</code>,<code>hers</code> 这些单词构建 $\text{fail}$ 指针：</p>
+<p><img src="/img/AC/p1.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>假设紫圈是 $3$ 号节点，红圈是 $7$ 号节点，那么 $\text{fail}[3]=7$。</p>
+<p>因为 <code>she</code> 的最长后缀（整棵 Trie 中）是 <code>he</code>。</p>
+</blockquote>
+<p>如果你看到这里，还是看不懂与KMP的区别，不要紧；你只需知道 AC 自动机的失配指针指向当前状态的最长后缀状态即可。</p>
+<p>有一点提一下，AC 自动机在做匹配时，同一位上可匹配多个模式串。</p>
+<h3 id="构建-textfail-指针">构建 $\text{fail}$ 指针
+</h3><p>构建 $\text{fail}$，可以参考 KMP 中构建 $\text{next}$ 的思想。</p>
+<p>假设字典树中当前节点为 $u$，父节点为 $fa$，并且 $\text{sub}(u)=\text{sub}(fa)+c$（记为 $\text{trie}[fa,c]=u$）我们考虑深度比 $u$ 小的节点的 $\text{fail}$ 都已得到。</p>
+<ol>
+<li>如果 $\text{trie}[\text{fail}[fa],c]$ 存在，则 $\text{fail}[u]=\text{trie}[\text{fail}[fa],c]$。相当于分别在 $fa$ 和 $\text{fail}[fa]$ 下面加了一个字符 $c$，分别对应 $u$ 和 $\text{fail}[u]$。</li>
+<li>如果 $\text{trie}[\text{fail}[fa],c]$ 不存在，则继续寻找 $\text{trie}[\text{fail}[\text{fail}[fa]],c]$。重复 1 的判断，一直跳到根节点。</li>
+<li>一直跳到了根节点都没有，那就让 $\text{fail}[u]$ 指向根节点。</li>
+</ol>
+<p>通过以上过程就可以完成 $\text{fail}$ 的构建。</p>
+<h3 id="代码实现构建-textfail-指针">代码实现构建 $\text{fail}$ 指针
+</h3><p>尽管网上有许多实现方式，这里我们来看一下 <a class="link" href="https://oiwiki.org/string/ac-automaton/#%E5%AD%97%E5%85%B8%E6%A0%91%E4%B8%8E%E5%AD%97%E5%85%B8%E5%9B%BE"  target="_blank" rel="noopener"
+    >OI-wiki</a> 上的一种实现。</p>
+<p>code</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">build</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">26</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">tr</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="p">])</span> <span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">tr</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">while</span> <span class="p">(</span><span class="n">q</span><span class="p">.</span><span class="n">size</span><span class="p">())</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">u</span> <span class="o">=</span> <span class="n">q</span><span class="p">.</span><span class="n">front</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="n">q</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">26</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="n">tr</span><span class="p">[</span><span class="n">u</span><span class="p">][</span><span class="n">i</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">        <span class="n">fail</span><span class="p">[</span><span class="n">tr</span><span class="p">[</span><span class="n">u</span><span class="p">][</span><span class="n">i</span><span class="p">]]</span> <span class="o">=</span> <span class="n">tr</span><span class="p">[</span><span class="n">fail</span><span class="p">[</span><span class="n">u</span><span class="p">]][</span><span class="n">i</span><span class="p">],</span> <span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">tr</span><span class="p">[</span><span class="n">u</span><span class="p">][</span><span class="n">i</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">      <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        <span class="n">tr</span><span class="p">[</span><span class="n">u</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">tr</span><span class="p">[</span><span class="n">fail</span><span class="p">[</span><span class="n">u</span><span class="p">]][</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这里的 <code>tr[u,c]</code> 有两种理解方式：</p>
+<ol>
+<li>字典树上的一条边，即 $\text{trie}[u,c]$。</li>
+<li>状态（节点） $u$ 后加一个字符 $c$ 到达的新节点（状态）。</li>
+</ol>
+<p>这里采用第 2 种方式讲解。</p>
+<p>先讲一下这两行为什么这么写：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">26</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">tr</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="p">])</span> <span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">tr</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="p">]);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>我们为什么是把根节点的儿子入队，而非直接把根节点入队呢？</p>
+<p>试想一下，如果将根节点入队，那么第一次 bfs 的时候根节点儿子的 $\text{fail}$ 指针就会指向自己。</p>
+<p>常规 bfs 这里就不提及了，主要讲一下 <code>for</code> 循环中的 <code>if</code> 与 <code>else</code> 的“神仙实现”。</p>
+<h4 id="for-循环为什么这么写神仙操作路径压缩">for 循环为什么这么写？——“神仙操作”，路径压缩
+</h4><p>先解释一下代码最基础的意思：</p>
+<ol>
+<li>如果 <code>tr[u][i]</code> 存在，我们就将 <code>tr[u][i]</code> 的 $\text{fail}$ 指针赋值为 <code>tr[fail[u]][i]</code>。</li>
+<li>否则，令 <code>tr[u][i]</code> 指向 <code>tr[fail[u]][i]</code>。</li>
+</ol>
+<p>操作 1 貌似和上文讲的不太一样啊？——</p>
+<p>根据上文，不应该是用 <code>while</code> 循环不停地跳、跳、跳 $\text{fail}$ 指针，直到存在字符 <code>i</code> 对应的节点后再赋值吗？而且 <code>else</code> 里的操作直接改变了树的结构了呀？！！</p>
+<p>其实这里做了一点“神仙处理”。</p>
+<p>这个处理就是通过 <code>else</code> 改变字典树的结构。但值得注意的是，尽管我们将一个不存在的节点添加了一些指向关系，但是节点所代表的的字符串还是不变的。</p>
+<p>由于 <code>tr[S][c]</code> 表示在 $S$ 后增加一个字符 $c$ 得到新字符串 $S&rsquo;$，这里要考虑 $S&rsquo;$ 是否存在。</p>
+<ul>
+<li>存在，说明有某个模式串的前缀为 $S&rsquo;$。</li>
+<li>不存在，让 <code>tr[S][c]</code> 指向 <code>tr[fail[S]][c]</code>。这是因为 <code>fail[S]</code> 对应的字符串是 $S$ 的后缀，那么 <code>tr[fail[S]][c]</code> 对应的字符串也就是 $S&rsquo;$ 的后缀。</li>
+</ul>
+<p>但为什么可以这么写？</p>
+<p>在 Trie 树上跳的时候，是从 $S$ 跳到了 $S&rsquo;$；但是在 AC 自动机上，是从 $S$ 跳到了 $S&rsquo;$ 的后缀。——因为 AC 自动机本质上是为了匹配，舍弃掉前面一些前缀也是可以匹配的，所以这里没有问题。</p>
+<p>溯回本源，我们这个 <code>Build()</code> 说到底是在构建 $\text{fail}$，现在我们来考虑一下 $\text{fail}$ 是否也满足“舍弃前缀依然可匹配”这一推论。</p>
+<p>显然可以，一旦文本串匹配 $S$，自然能匹配 $S$ 的后缀。所谓的 $\text{fail}$ 指针其实是 $S$ 的一个后缀集合。</p>
+<p>什么？还是看不懂？其实还有一种简单粗暴的理解方式。</p>
+<h4 id="简单粗暴的理解">简单粗暴的理解
+</h4><p>如果在位置 $x$ 失配，我们跳到 $\text{fail}[x]$。因此有的时候需要跳、跳、跳很多次才能来到下一个匹配的位置。</p>
+<p>所以我们可以用 <code>tr</code> 数组直接记录下一个能匹配的位置，以省时间。</p>
+<p>本质上，与并查集路径压缩一样，这其实就是一种路径压缩。</p>
+<h4 id="神仙操作的好处">“神仙操作”的好处
+</h4><p>通过这种修改过后，匹配转移更加的完善，同时将 $\text{fail}$ 指针跳转路径做了压缩。</p>
+<p>这里本来想放图的，但是画出来很乱，不美观，所以建议去 OI-wiki 上看 gif（虽然也很乱，但起码比作者画得好）。</p>
+<h2 id="多模式匹配">多模式匹配
+</h2><h3 id="代码实现">代码实现
+</h3><p>code</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">query</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">t</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">u</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">len</span> <span class="o">=</span> <span class="n">strlen</span><span class="p">(</span><span class="n">t</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">len</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">u</span> <span class="o">=</span> <span class="n">tr</span><span class="p">[</span><span class="n">u</span><span class="p">][</span><span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="sc">&#39;a&#39;</span><span class="p">];</span>  <span class="c1">// 转移
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">u</span><span class="p">;</span> <span class="n">j</span> <span class="o">&amp;&amp;</span> <span class="n">e</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">=</span> <span class="n">fail</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="n">res</span> <span class="o">+=</span> <span class="n">e</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">e</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>$u$ 表示当前匹配到的节点，<code>res</code> 表示答案，<code>e[j]</code> 表示节点存储的信息（根据题目变化）。</p>
+<p>循环遍历匹配串，$u$ 则不断跟踪字符，利用 $\text{fail}$ 指针找出所有匹配的模式串，累加到 <code>res</code>，然后标记已访问。</p>
+<h2 id="优化代码效率">优化代码效率
+</h2><p>这里可不是卡常，而是算法上的优化。</p>
+<p>首先，大家可以去做一下 <a class="link" href="https://www.luogu.com.cn/problem/P5357"  target="_blank" rel="noopener"
+    >这道题</a>。</p>
+<p>发现会 T。这是因为在 AC 自动机中，每次匹配都会向 $\text{fail}$ 边跳来找到所有的匹配。这样效率极低，即是路径压缩也没用。</p>
+<p>考虑一下 $\text{fail}$ 的性质：</p>
+<blockquote>
+<p>一个 AC 自动机中，如果值保留 $\text{fail}$ 边，剩余的图一定是一棵树。</p>
+</blockquote>
+<p>这个很显然，因为 $\text{fail}$ 不会成环，且深度一定比现在低。</p>
+<p>AC 自动机的匹配就可以转化成在 $\text{fail}$ 树上的链求和问题了。</p>
+<p>这里介绍拓扑排序。</p>
+<h3 id="拓扑排序优化建图">拓扑排序优化建图
+</h3><p>原来时间都浪费在“跳 $\text{fail}$”上了。如果预先记录，最后一并求和，那么效率就会被优化。</p>
+<p>代码实现中，不需要真正的建图，记录入度就可以了。</p>
+<p>查询操作也只需要给找到的节点的 <code>ans</code> 打标记，最后拓扑排序求答案就好了。</p>
+<h4 id="建图实现">建图实现
+</h4><p>code</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">getfail</span><span class="p">()</span>  <span class="c1">// 实际上也可以叫 build
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">26</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">trie</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">son</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="n">trie</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">fail</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">q</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">u</span> <span class="o">=</span> <span class="n">q</span><span class="p">.</span><span class="n">front</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="n">q</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">Fail</span> <span class="o">=</span> <span class="n">trie</span><span class="p">[</span><span class="n">u</span><span class="p">].</span><span class="n">fail</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">26</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="kt">int</span> <span class="n">v</span> <span class="o">=</span> <span class="n">trie</span><span class="p">[</span><span class="n">u</span><span class="p">].</span><span class="n">son</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">v</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">trie</span><span class="p">[</span><span class="n">u</span><span class="p">].</span><span class="n">son</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">trie</span><span class="p">[</span><span class="n">Fail</span><span class="p">].</span><span class="n">son</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">        <span class="k">continue</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="n">trie</span><span class="p">[</span><span class="n">v</span><span class="p">].</span><span class="n">fail</span> <span class="o">=</span> <span class="n">trie</span><span class="p">[</span><span class="n">Fail</span><span class="p">].</span><span class="n">son</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">      <span class="n">indeg</span><span class="p">[</span><span class="n">trie</span><span class="p">[</span><span class="n">Fail</span><span class="p">].</span><span class="n">son</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="o">++</span><span class="p">;</span>  <span class="c1">// 修改点在这里，增加了入度记录
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">v</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="查询实现">查询实现
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">query</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">s</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">u</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">len</span> <span class="o">=</span> <span class="n">strlen</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">len</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">u</span> <span class="o">=</span> <span class="n">trie</span><span class="p">[</span><span class="n">u</span><span class="p">].</span><span class="n">son</span><span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="sc">&#39;a&#39;</span><span class="p">],</span> <span class="n">trie</span><span class="p">[</span><span class="n">u</span><span class="p">].</span><span class="n">ans</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">topu</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">cnt</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">indeg</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">q</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">fr</span> <span class="o">=</span> <span class="n">q</span><span class="p">.</span><span class="n">front</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="n">q</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="n">vis</span><span class="p">[</span><span class="n">trie</span><span class="p">[</span><span class="n">fr</span><span class="p">].</span><span class="n">flag</span><span class="p">]</span> <span class="o">=</span> <span class="n">trie</span><span class="p">[</span><span class="n">fr</span><span class="p">].</span><span class="n">ans</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">u</span> <span class="o">=</span> <span class="n">trie</span><span class="p">[</span><span class="n">fr</span><span class="p">].</span><span class="n">fail</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">trie</span><span class="p">[</span><span class="n">u</span><span class="p">].</span><span class="n">ans</span> <span class="o">+=</span> <span class="n">trie</span><span class="p">[</span><span class="n">fr</span><span class="p">].</span><span class="n">ans</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="o">--</span><span class="n">indeg</span><span class="p">[</span><span class="n">u</span><span class="p">]))</span> <span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">u</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="主函数">主函数
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// do_something();
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%s&#34;</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="n">query</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="n">topu</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">vis</span><span class="p">[</span><span class="n">rev</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// do_another_thing();
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>完整代码就不挂了，洛谷题解区有一堆。</p>
+<h2 id="参考文献">参考文献
+</h2><ul>
+<li>[1] <a class="link" href="https://oiwiki.org"  target="_blank" rel="noopener"
+    >OI-wiki</a>，<a class="link" href="https://oiwiki.org/string/ac-automaton/"  target="_blank" rel="noopener"
+    >《AC 自动机》</a></li>
+<li>[2] <a class="link" href="https://www.luogu.com.cn/blog/DengDuck/"  target="_blank" rel="noopener"
+    >DengDuck</a>，<a class="link" href="https://www.luogu.com.cn/blog/DengDuck/ac-zi-dong-ji-acam-xue-xi-bi-ji"  target="_blank" rel="noopener"
+    >《AC 自动机 ACAM 学习笔记》</a></li>
+</ul>
+<h2 id="结尾">结尾
+</h2><p>一节晚修写完，除了板题，其他的题还没做，作者溜去做题了。</p>
+<p>如有侵权，联系作者解决。</p>
+<p>希望能帮到你，Thank you!</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <div id="cusdis_thread"
+    data-host="https://cusdis.com"
+    data-app-id="a764b0e5-5fb3-453b-900a-cf7a524d196f"
+    data-page-id="8c8afec4f788dca2fd2e3f01deb9191f"
+    data-page-url="https://werchange.github.io/p/%E6%B5%85%E8%B0%88-ac-%E8%87%AA%E5%8A%A8%E6%9C%BA/"
+    data-page-title="浅谈 AC 自动机"></div>
+<script async defer src="https://cusdis.com/js/widget/lang/zh-cn.js"></script>
+<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+
+<script>
+    function setCusdisTheme(theme) {
+        let cusdis = document.querySelector('#cusdis_thread iframe');
+        if (cusdis) {
+            window.CUSDIS.setTheme(theme)
+        }
+    }
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        setCusdisTheme(e.detail)
+    })
+</script>
+
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2022 - 
+        
+        2024 WerChange
+    </section>
+    
+    <section class="powerby">
+        
+            WerChange's Blog <br/>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
