@@ -6,6 +6,106 @@
         <description>Recent content in 游记 on WerChange</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>WerChange</copyright><atom:link href="https://werchange.github.io/categories/%E6%B8%B8%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+        <copyright>WerChange</copyright>
+        <lastBuildDate>Sat, 28 Oct 2023 16:27:00 +0800</lastBuildDate><atom:link href="https://werchange.github.io/categories/%E6%B8%B8%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>CSP2023 总结</title>
+        <link>https://werchange.github.io/p/csp2023-%E6%80%BB%E7%BB%93/</link>
+        <pubDate>Sat, 28 Oct 2023 16:27:00 +0800</pubDate>
+        
+        <guid>https://werchange.github.io/p/csp2023-%E6%80%BB%E7%BB%93/</guid>
+        <description>&lt;h1 id=&#34;csp2023-总结&#34;&gt;CSP2023 总结
+&lt;/h1&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;这次 CSP2023 并没有考出水平。经过深刻反思，我总结了个人目前存在的一些问题与改进的方案。&lt;/p&gt;
+&lt;h2 id=&#34;上午-csp-j&#34;&gt;上午 CSP-J
+&lt;/h2&gt;&lt;p&gt;开始后，手忙脚乱地建好了目录文件、配置好了 DEV-C++ 的语法环境、切换好了 ENG 输入法。&lt;/p&gt;
+&lt;h3 id=&#34;t1&#34;&gt;T1
+&lt;/h3&gt;&lt;p&gt;看到 T1 发现不如去年简单，有些慌张。&lt;br&gt;
+努力冷静下来后，推了一下，就得出了结论，码完之后测了大样例，都过了。还是不放心，又搓了几手小数据，没什么问题，检查完文操后就过了。&lt;br&gt;
+但是由于第一题的小心检查，不仅耗去了不少时间，也使得接下来我陷入了“小心猜想”的怪圈。&lt;/p&gt;
+&lt;h3 id=&#34;t2&#34;&gt;T2
+&lt;/h3&gt;&lt;p&gt;T2 是今年最遗憾的一题。不是因为不会做、没做出来，而是因为在 T2 消耗了太多时间。&lt;br&gt;
+本应是很快就应该切掉的一题，我却复杂化了题目。&lt;br&gt;
+第一遍猜想时，其实就想到了贪心正解。但是我陷入了“小心猜想、大胆求证”的错误思维怪圈，导致当时不知为什么就直接否了这个猜想。&lt;br&gt;
+过程中跑去看了 T3,T4。&lt;br&gt;
+后面不知过了多久重新读一遍题时，才反应过来这题被我复杂化了。&lt;br&gt;
+此时时间已经超出了我对切 T1,T2 的计划。&lt;/p&gt;
+&lt;h3 id=&#34;t3&#34;&gt;T3
+&lt;/h3&gt;&lt;p&gt;与去年一样，T3 还是大模拟。一看到还是有信心的，毕竟这题用不着太多思考，尤其是在已经消耗了太多时间的情况下。&lt;br&gt;
+码完之后大样例没过，小调一手就都过了。搓了两组很小的小数据。匆匆检查完文操后就跳了 T4。&lt;/p&gt;
+&lt;h3 id=&#34;t4&#34;&gt;T4
+&lt;/h3&gt;&lt;p&gt;看到 T4 的时候已经没有时间思考了。虽然卡在 T2 的时候看了一眼题面，但是没有思考过。&lt;/p&gt;
+&lt;p&gt;思考一会儿后，只得到一些小性质。&lt;br&gt;
+现在我还有 3 个选择：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;跑去完整检查一遍 T1,T2,T3 ，放弃 T4。&lt;/li&gt;
+&lt;li&gt;死磕 T4，相信之前的“平推检查”。&lt;/li&gt;
+&lt;li&gt;打 T4 部分分，再返回检查文操等细节问题&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;本来我是想着选择死磕，如果前面一分不挂、今年 T4 像去年一样简单，那我的检查就没有效益。&lt;br&gt;
+但是出于之前模拟赛的经验，我知道这种压力环境下是很难想的。所以我选择了放弃 AK 梦。&lt;/p&gt;
+&lt;p&gt;我决定看着数据范围打拼盘。（相信数据！）&lt;/p&gt;
+&lt;p&gt;由于样例都没有特殊性质的数据，自己搓了一些，打了文操就过了。&lt;/p&gt;
+&lt;h3 id=&#34;估分&#34;&gt;估分
+&lt;/h3&gt;&lt;p&gt;$100+100+80+5=285$&lt;/p&gt;
+&lt;p&gt;T3 是 T 了两个点，我觉得应该是有一部分卡死了。可惜的是，考场上没有检查 T3 代码，只检查了细节。T4 不知道实际到底能骗多少分，应该不止 5 分。&lt;/p&gt;
+&lt;h2 id=&#34;下午-csp-s&#34;&gt;下午 CSP-S
+&lt;/h2&gt;&lt;p&gt;下午开始前，整个人的状态是很好的，好到有些飘。因为自以为拿了 300+ pts，所以莫名信心++。为后面“暴毙”埋下伏笔。&lt;/p&gt;
+&lt;p&gt;开始后，有了上午的经验，飞快地完成了硬性要求操作。开始读题。&lt;/p&gt;
+&lt;h3 id=&#34;t1-1&#34;&gt;T1
+&lt;/h3&gt;&lt;p&gt;简单看了两眼，有点难。&lt;br&gt;
+再看一眼，怎么就 5 位密码？&lt;br&gt;
+再看一眼数据，$n\leq 8$，直接 $O(10^5n)$ 走起！&lt;/p&gt;
+&lt;p&gt;飞快地打完了，再次严谨地检查了时间复杂度，确认不会 T，检查完文操、搓了一手数据后跑路。&lt;/p&gt;
+&lt;h3 id=&#34;t2-1&#34;&gt;T2
+&lt;/h3&gt;&lt;p&gt;区间？试一下线段树/分治。&lt;br&gt;
+思考了很久，不知道怎么处理两个区间相邻部分。赛后听 cjx 说是 cdq 分治。没学，幸好当时没有继续往分治想。&lt;br&gt;
+现在看我的代码，我已经说不清当时怎么想的了。总之糊了一个类似正确的做法。&lt;/p&gt;
+&lt;p&gt;一测大样例，直接错误。&lt;/p&gt;
+&lt;p&gt;由于大样例很大，很难判断，我尽可能的举出小并且能证伪的数据。幸运的是举了几个出来、答案也越来越接近大样例的 &lt;code&gt;.ans&lt;/code&gt;；不幸的是，再往后就举不出来了，可是始终有两个大样例过不了。&lt;/p&gt;
+&lt;p&gt;此时时间已经超过预计了。按理，我不会 T，是 WA，但是有些数据下是可以过的、不会 0 pts，例如大样例3 就惊奇的被我糊过了。所以我应该跳题。去打部分分。&lt;/p&gt;
+&lt;p&gt;但是，出于上午 J组的自信。我做了最愚蠢的决定——死磕 T2。&lt;/p&gt;
+&lt;p&gt;这一死磕，就真的是没有尽头了。&lt;/p&gt;
+&lt;p&gt;等我反应过来的时候，想上个厕所冷静一下。上厕所的人很多，我抬头看了一眼，总有人进进出出。我想我是排不到了，所以没有申请上厕所。但是我注意到，外面的天都已经黑了。——我慌了。&lt;/p&gt;
+&lt;p&gt;我犹豫过，要不要跳 T3，我看到一眼就知道了是大模拟。但是我执迷不悟，看了一眼后不打算跳。T4 我题目都没看懂（匆匆看了两眼），想起去年最后一题是紫题，所以没有勇气去花时间看懂。&lt;/p&gt;
+&lt;p&gt;但是最后我慌了，要是再打不出来，200+ pts 是无望了。一等也就无望了。我选择认怂。&lt;/p&gt;
+&lt;p&gt;跳题。&lt;/p&gt;
+&lt;h3 id=&#34;t3-1&#34;&gt;T3
+&lt;/h3&gt;&lt;p&gt;看了题目，按理来说照着题面打就能打A。毕竟是大模拟。但是我连看懂题目的时间也没有了。我清楚这道题是要丢了。&lt;/p&gt;
+&lt;p&gt;看到 &lt;code&gt;opt 4&lt;/code&gt; 有无解情况。又有了去年“总司令”的经验，那就试试。即使这次的数据全部输出无解情况非常渺茫，但总比 0 pts 好。&lt;/p&gt;
+&lt;h3 id=&#34;t4-1&#34;&gt;T4
+&lt;/h3&gt;&lt;p&gt;随便看了一眼，输出了 $n+1$。打上文操，回去检查。&lt;/p&gt;
+&lt;h3 id=&#34;估分-1&#34;&gt;估分
+&lt;/h3&gt;&lt;p&gt;洛谷：$100+25+0+0=125$&lt;br&gt;
+小图灵：$100+35+0+0=135$&lt;/p&gt;
+&lt;p&gt;今年 S组是我第一次打进 S组复赛，所以没有任何经验。&lt;br&gt;
+但是今年我看是没有奇迹般的一等了。&lt;/p&gt;
+&lt;h2 id=&#34;总结&#34;&gt;总结
+&lt;/h2&gt;&lt;p&gt;两场都没有发挥好。&lt;/p&gt;
+&lt;p&gt;J组：反映出来我很容易陷入“小心猜想、大胆求证”的惰性思维。不勤于思考。&lt;/p&gt;
+&lt;p&gt;S组：反映出来我策略不当、心里防线薄弱。很容易因处境改变心里想法。&lt;/p&gt;
+&lt;p&gt;以上也都反映了最近乃至前段时间我模拟赛成绩垫底的原因——不勤于思考、总是随便推翻自己却又找不到严谨理由、心里防线薄弱、心态崩溃后大脑宕机。&lt;/p&gt;
+&lt;h2 id=&#34;计划&#34;&gt;计划
+&lt;/h2&gt;&lt;p&gt;不能一味地批判，要提建设性计划。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;改变思考方式，大胆猜想、小心求证。&lt;/li&gt;
+&lt;li&gt;多于思考，勤于思考，善于思考。&lt;/li&gt;
+&lt;li&gt;调整考试策略，找到合适自己的思考时间与代码实现时间。&lt;/li&gt;
+&lt;li&gt;要善于调整合理心理状态、建设强大的心理防线。&lt;/li&gt;
+&lt;li&gt;总结经验，相同错误不犯第二遍。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;end&#34;&gt;End
+&lt;/h2&gt;&lt;p&gt;今年是有遗憾的。&lt;/p&gt;
+&lt;p&gt;最后一年 J组破碎了 AK梦。&lt;br&gt;
+初三的 S组不见了一等梦。&lt;/p&gt;
+&lt;p&gt;NOIP2023 估计是没机会去了。今年的赛季也大多与我无关了。&lt;/p&gt;
+&lt;p&gt;夯实基础、勤学善思，明年还是有很大机会的！&lt;/p&gt;
+&lt;h2 id=&#34;查分&#34;&gt;查分
+&lt;/h2&gt;&lt;p&gt;CSP-J：$100+100+100+0=300$，一等。&lt;/p&gt;
+&lt;p&gt;CSP-S：$100+30+0+0=130$，二等。&lt;/p&gt;
+&lt;p&gt;寄了，135pts才能去NOIP，150pts才有一等。。&lt;/p&gt;
+&lt;p&gt;赛季报销。。&lt;/p&gt;
+</description>
+        </item>
+        
     </channel>
 </rss>
