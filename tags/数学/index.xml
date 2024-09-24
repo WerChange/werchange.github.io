@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>数学 on WerChange</title>
+        <link>https://werchange.github.io/tags/%E6%95%B0%E5%AD%A6/</link>
+        <description>Recent content in 数学 on WerChange</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>WerChange</copyright>
+        <lastBuildDate>Tue, 29 Nov 2022 19:23:00 +0800</lastBuildDate><atom:link href="https://werchange.github.io/tags/%E6%95%B0%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>凸透镜成像原理</title>
+        <link>https://werchange.github.io/p/%E5%87%B8%E9%80%8F%E9%95%9C%E6%88%90%E5%83%8F%E5%8E%9F%E7%90%86/</link>
+        <pubDate>Tue, 29 Nov 2022 19:23:00 +0800</pubDate>
+        
+        <guid>https://werchange.github.io/p/%E5%87%B8%E9%80%8F%E9%95%9C%E6%88%90%E5%83%8F%E5%8E%9F%E7%90%86/</guid>
+        <description>&lt;img src="https://werchange.github.io/img/%E5%87%B8%E9%80%8F%E9%95%9C/p1.png" alt="Featured image of post 凸透镜成像原理" /&gt;&lt;h1 id=&#34;凸透镜成像原理&#34;&gt;凸透镜成像原理
+&lt;/h1&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;凸透镜成像原理是个有意思的知识。初二教科书会以实验的方式告诉我们原理。&lt;/p&gt;
+&lt;p&gt;快要参加中考了，复习的时候老师说了一条公式：&lt;/p&gt;
+$$
+\frac{1}{u}+\frac{1}{v}=\frac{1}{f}
+$$
+&lt;p&gt;但它为什么是对的，所以来证明一下。&lt;/p&gt;
+&lt;h2 id=&#34;几何法&#34;&gt;几何法
+&lt;/h2&gt;&lt;p&gt;要点：三角形相似。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://werchange.github.io/img/%e5%87%b8%e9%80%8f%e9%95%9c/p1.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;几何法&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;证明&lt;/p&gt;
+$$
+\frac{1}{u}+\frac{1}{v}=\frac{1}{f}
+$$
+&lt;p&gt;$证：$&lt;/p&gt;
+&lt;p&gt;$\because\triangle ABO\triangle A&amp;rsquo;B&amp;rsquo;O$ $\qquad$ (三角形ABO相似于三角形A&amp;rsquo;B&amp;rsquo;O)&lt;/p&gt;
+&lt;p&gt;$\therefore AB:A&amp;rsquo;B&amp;rsquo;=u:v$&lt;/p&gt;
+&lt;p&gt;$\because\triangle COF∽\triangle A&amp;rsquo;B&amp;rsquo;F$&lt;/p&gt;
+&lt;p&gt;$\therefore CO:A&amp;rsquo;B&amp;rsquo;=f:(v-f)$&lt;/p&gt;
+&lt;p&gt;$\because 四边形ABOC为矩形$&lt;/p&gt;
+&lt;p&gt;$\therefore AB=CO$&lt;/p&gt;
+&lt;p&gt;$\therefore AB:A&amp;rsquo;B&amp;rsquo;=f:(v-f)$
+$\therefore u:v=f:(v-f)$&lt;/p&gt;
+&lt;p&gt;$\therefore u(v-f)=vf$&lt;/p&gt;
+&lt;p&gt;$\therefore uv-uf=vf$&lt;/p&gt;
+&lt;p&gt;$\because uvf\neq 0$&lt;/p&gt;
+&lt;p&gt;$\therefore \frac{uv}{uvf}-\frac{uf}{uvf}=\frac{vf}{uvf}$&lt;/p&gt;
+&lt;p&gt;$\therefore \frac{1}{f}-\frac{1}{v}=\frac{1}{u}$&lt;/p&gt;
+&lt;p&gt;$即$&lt;/p&gt;
+&lt;p&gt;$\frac{1}{u}+\frac{1}{v}=\frac{1}{f}$&lt;/p&gt;
+&lt;p&gt;$证毕$.&lt;/p&gt;
+&lt;h2 id=&#34;函数法&#34;&gt;函数法
+&lt;/h2&gt;&lt;p&gt;要点：一次函数，正比例函数。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://werchange.github.io/img/%e5%87%b8%e9%80%8f%e9%95%9c/p2.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;函数法&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;证明&lt;/p&gt;
+$$
+\frac{1}{u}+\frac{1}{v}=\frac{1}{f}
+$$
+&lt;p&gt;步骤&lt;/p&gt;
+&lt;p&gt;　　（一）为便于用函数法解决此问题，将凸透镜的主光轴与平面直角坐标系的横坐标轴（$x$ 轴）关联（即重合），将凸透镜的理想折射面与纵坐标轴（$y$ 轴）关联，将凸透镜的光心与坐标原点关联.则：点 $A$ 的坐标为 $(-u,c)$，点 $F$ 的坐标为 $(f,0)$，点 $A&amp;rsquo;$ 的坐标为 $(v,-d)$，点 $C$ 的坐标为 $(0,c)$.&lt;/p&gt;
+&lt;p&gt;　　（二）将 $AA&amp;rsquo;$，$A&amp;rsquo;C$ 双向延长为直线 $l_1$,$l_2$，视作两条函数图象.由图象可知：直线 $l_1$ 为正比例函数图象，直线 $l_2$ 为一次函数图象.&lt;/p&gt;
+&lt;p&gt;　　（三）设直线 $l_1$ 的解析式为 $y=k_1x$，直线 $l_2$ 的解析式为 $y=k_2x+b$.&lt;/p&gt;
+&lt;p&gt;依题意，将 $A(-u,c)$，$C(0,c)$，$F(f,0)$ 代入相应解析式，得&lt;/p&gt;
+$$
+\begin{cases}
+c=-uk_1\\
+c=b\\
+0=k_2f+b
+\end{cases}
+$$
+&lt;p&gt;得&lt;/p&gt;
+$$
+\begin{cases}
+k_1=-\frac{c}{u}x\\
+k_2=-\frac{c}{f}
+\end{cases}
+$$
+&lt;p&gt;$\therefore 两函数解析式为$&lt;/p&gt;
+$$
+y=-\frac{c}{u}x\\
+y=-\frac{c}{f}x+c
+$$
+&lt;p&gt;$\therefore 两函数交点 A&amp;rsquo;(x,y) 满足方程组$&lt;/p&gt;
+$$
+\begin{cases}
+y=-\frac{c}{u}x\\
+y=-\frac{c}{f}x+c
+\end{cases}
+$$
+&lt;p&gt;$\because A&amp;rsquo;(v,-d)$&lt;/p&gt;
+$$\therefore
+\begin{cases}
+-d=-\frac{c}{u}v\\-d=-\frac{c}{f}v+c
+\end{cases}$$
+&lt;p&gt;$\therefore -\frac{c}{u}v=-\frac{c}{f}v+c=-d$&lt;/p&gt;
+&lt;p&gt;$\therefore \frac{c}{u}v=\frac{c}{f}v+c=d$&lt;/p&gt;
+&lt;p&gt;$\therefore \frac{cv}{u}=\frac{cv}{f}+c$&lt;/p&gt;
+&lt;p&gt;$\therefore cvf=cuv-cuf$（两边同乘 $uf$）&lt;/p&gt;
+&lt;p&gt;$\therefore vf=uv-uf$&lt;/p&gt;
+&lt;p&gt;$\because uvf\neq0$&lt;/p&gt;
+&lt;p&gt;$\therefore \frac{vf}{uvf}=\frac{uv}{uvf}-\frac{uf}{uvf}$&lt;/p&gt;
+&lt;p&gt;$\therefore \frac{1}{u}=\frac{1}{f}-\frac{1}{v}$&lt;/p&gt;
+&lt;p&gt;$即$&lt;/p&gt;
+&lt;p&gt;$\frac{1}{u}+\frac{1}{v}=\frac{1}{f}$&lt;/p&gt;
+&lt;p&gt;$证毕.$&lt;/p&gt;
+&lt;h2 id=&#34;结尾&#34;&gt;结尾
+&lt;/h2&gt;&lt;p&gt;这篇文章之前写过了，2024.6.6 进行了修改，使其更加可读。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
