@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Atcoder on WerChange</title>
+        <link>https://werchange.github.io/tags/atcoder/</link>
+        <description>Recent content in Atcoder on WerChange</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>WerChange</copyright>
+        <lastBuildDate>Mon, 12 Aug 2024 10:42:00 +0800</lastBuildDate><atom:link href="https://werchange.github.io/tags/atcoder/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>ABC366E 题解</title>
+        <link>https://werchange.github.io/p/abc366e-%E9%A2%98%E8%A7%A3/</link>
+        <pubDate>Mon, 12 Aug 2024 10:42:00 +0800</pubDate>
+        
+        <guid>https://werchange.github.io/p/abc366e-%E9%A2%98%E8%A7%A3/</guid>
+        <description>&lt;h1 id=&#34;solution&#34;&gt;Solution
+&lt;/h1&gt;&lt;h2 id=&#34;题意简述&#34;&gt;题意简述
+&lt;/h2&gt;&lt;p&gt;二维平面上有 $N$ 个点 $(x_1,y_1),\dots,(x_N,y_N)$ 和一个非负整数 $D$。&lt;/p&gt;
+&lt;p&gt;求有多少对点对 $(x,y)$ 满足 $\sum\limits_{i=1}^N (|x-x_i|+|y-y_i|)\le D$。&lt;/p&gt;
+&lt;h2 id=&#34;思路&#34;&gt;思路
+&lt;/h2&gt;&lt;p&gt;发现 $x_i$ 与 $y_i$ 的捆绑关系不强（其实是几乎没有关联），所以我们分开考虑，也就是先考虑 $\sum\limits_{i=1}^n|x-x_i|$，得到结论后另外一边也是一样的。&lt;/p&gt;
+&lt;p&gt;见到绝对值先拆绝对值，我们可以先对 $x_i$ 排个序，就可以通过枚举知道 $x$ 的相对位置，结合前缀和，可以 $O(1)$ 得到上面这个和式的值。设这个值为 $A_x$，我们可以直接枚举 $x\in [-10^6,10^6]$，然后 $O(M)$ 得到 $A_x$。另外一边照葫芦画瓢，也可以快速得知 $B_y$ 的值。&lt;/p&gt;
+&lt;p&gt;现在考虑计数。首先可以枚举值域内的每个 $x$，枚举中的子任务为求有多少个 $y$ 满足 $B_y\leq D-A_x$。这是很简单的，对所有 $B_y$ 排个序，二分答案即可。&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://atcoder.jp/contests/abc366/submissions/56620096&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;code&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

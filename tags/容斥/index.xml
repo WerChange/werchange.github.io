@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>容斥 on WerChange</title>
+        <link>https://werchange.github.io/tags/%E5%AE%B9%E6%96%A5/</link>
+        <description>Recent content in 容斥 on WerChange</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>WerChange</copyright>
+        <lastBuildDate>Mon, 12 Aug 2024 11:45:00 +0800</lastBuildDate><atom:link href="https://werchange.github.io/tags/%E5%AE%B9%E6%96%A5/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>ABC366D 题解</title>
+        <link>https://werchange.github.io/p/abc366d-%E9%A2%98%E8%A7%A3/</link>
+        <pubDate>Mon, 12 Aug 2024 11:45:00 +0800</pubDate>
+        
+        <guid>https://werchange.github.io/p/abc366d-%E9%A2%98%E8%A7%A3/</guid>
+        <description>&lt;img src="https://oi-wiki.org/math/combinatorics/images/incexcp.png" alt="Featured image of post ABC366D 题解" /&gt;&lt;h1 id=&#34;solution&#34;&gt;Solution
+&lt;/h1&gt;&lt;h2 id=&#34;题意简述&#34;&gt;题意简述
+&lt;/h2&gt;&lt;p&gt;给你一个正整数 $N$ 和 $N^3$ 个非负整数，表示为 $A_{x,y,z}$ 其中 $1 \leq x, y, z \leq N$ 。&lt;/p&gt;
+&lt;p&gt;您将得到以下格式的 $Q$ 个查询，必须按顺序处理。&lt;/p&gt;
+&lt;p&gt;对于第 $i$ 次查询 $(1 \leq i \leq Q)$ ，您将得到一个整数元组 $(Lx_i, Rx_i, Ly_i, Ry_i, Lz_i, Rz_i)$ ，其中 $1 \leq Lx_i \leq Rx_i \leq N$ , $1 \leq Ly_i \leq Ry_i \leq N$ , 和 $1 \leq Lz_i \leq Rz_i \leq N$ 。求&lt;/p&gt;
+$$
+\sum\limits_{x=Lx_i}^{Rx_i} \sum\limits_{y=Ly_i}^{Ry_i} \sum\limits_{z=Lz_i}^{Rz_i} A_{x,y,z}
+$$
+&lt;h2 id=&#34;题解&#34;&gt;题解
+&lt;/h2&gt;&lt;p&gt;简单三维前缀和。考虑一下容斥关系就好了。&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://atcoder.jp/contests/abc366/submissions/56535751&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;code&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;容斥知识补充&#34;&gt;容斥知识补充
+&lt;/h2&gt;&lt;p&gt;既然题解写都写了，写详细一点。&lt;/p&gt;
+&lt;p&gt;首先引入容斥的最经典的就是这张韦恩图（来自 OI-wiki）：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://oi-wiki.org/math/combinatorics/images/incexcp.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;现在我想知道 $|A\cup B\cup C|$，并不是简单粗暴的三个集合大小相加，因为互相有重叠部分。正确答案是：$|A\cup B\cup C|=|A|+|B|+|C|-|A\cap B|-|A\cap C|-|B\cap C|+|A\cap B\cap C|$。相信还是很好理解的这里不赘述了。&lt;/p&gt;
+&lt;p&gt;把它推广到一般情况，就是我们熟悉的容斥原理了。&lt;/p&gt;
+&lt;h3 id=&#34;定义&#34;&gt;定义
+&lt;/h3&gt;$$
+\left|\bigcup_{i=1}^nS_i\right|=\sum\limits_i\left|S_i\right|-\sum\limits_{i&lt;j}\left|S_i\cap S_j\right|+\sum\limits_{i&lt;j&lt;k}\left|S_i\cap S_j\cap S_k\right|-\dots\\
++(-1)^{m-1}\sum\limits_{a_i&lt;a_{i+1}}\left|\bigcap_{i=1}^mS_{a_i}\right|+\dots+(-1)^{n-1}\left|S_1\cap\dots\cap S_n\right|
+$$
+&lt;p&gt;整理，得&lt;/p&gt;
+$$
+\left|\bigcup_{i=1}^nS_i\right|=\sum\limits_{m=1}^n(-1)^{m-1}\sum\limits_{a_i&lt;a_{i+1}}\left|\bigcap_{i=1}^mS_{a_i}\right|
+$$
+&lt;h3 id=&#34;证明&#34;&gt;证明
+&lt;/h3&gt;&lt;p&gt;我们计算每个元素出现的次数，对于 $x$，假设它出现在 $T_1,\dots,T_m$ 的集合中。&lt;/p&gt;
+$$
+\begin{aligned}
+Cnt&amp;=|\{T_i\}|+\dots+(-1)^{k-1}\left|\left\{\bigcap_{i=1}^kT_{a_i}|a_i&lt;a_{i+1}\right\}\right|+\dots+(-1)^{m-1}|\{T_1\cap\dots\cap T_m\}|\\
+&amp;=\binom{m}{1}-\binom{m}{2}+\dots+(-1)^{m-1}\binom{m}{m}\\
+&amp;=\binom{m}{0}-\sum\limits_{i=0}^m(-1)^i\binom{m}{i}\\
+&amp;=1-(1-1)^m=1
+\end{aligned}
+$$
+&lt;p&gt;每个元素出现次数为 $1$，合并起来就是并集了，证毕。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

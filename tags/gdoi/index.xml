@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>GDOI on WerChange</title>
+        <link>https://werchange.github.io/tags/gdoi/</link>
+        <description>Recent content in GDOI on WerChange</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>WerChange</copyright>
+        <lastBuildDate>Tue, 05 Mar 2024 19:27:00 +0800</lastBuildDate><atom:link href="https://werchange.github.io/tags/gdoi/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>GDOI2024 游记</title>
+        <link>https://werchange.github.io/p/gdoi2024-%E6%B8%B8%E8%AE%B0/</link>
+        <pubDate>Tue, 05 Mar 2024 19:27:00 +0800</pubDate>
+        
+        <guid>https://werchange.github.io/p/gdoi2024-%E6%B8%B8%E8%AE%B0/</guid>
+        <description>&lt;h1 id=&#34;gdoi2024-游记&#34;&gt;GDOI2024 游记
+&lt;/h1&gt;&lt;h2 id=&#34;day--6&#34;&gt;Day -6
+&lt;/h2&gt;&lt;p&gt;元宵节，得知自己可以参加 GDOI，惊喜坏了。&lt;/p&gt;
+&lt;p&gt;要知道，我 CSP-S 2=，NOIP 没参加。居然去了 GDOI！&lt;/p&gt;
+&lt;p&gt;真的有很多很多想说的话，非常非常感谢教练。但是这里不作抒情了，“此中有真意，欲辨已忘言”。&lt;/p&gt;
+&lt;h2 id=&#34;day--4&#34;&gt;Day -4
+&lt;/h2&gt;&lt;p&gt;知道可以参加 GDOI，肯定疯狂卷卷题、刷刷数据结构呀（虽然并没有什么用）。&lt;/p&gt;
+&lt;p&gt;但是开学考。计划打乱。重新制定计划。&lt;/p&gt;
+&lt;h2 id=&#34;day--1&#34;&gt;Day -1
+&lt;/h2&gt;&lt;p&gt;这一整天都非常兴奋，感觉肾上腺素飙升。晚上在机房还是复习了一会儿，思考了一下比赛计划。&lt;/p&gt;
+&lt;h2 id=&#34;day-0&#34;&gt;Day 0
+&lt;/h2&gt;&lt;p&gt;到了松山湖中学，学校是老学校了，建在山上，走了好远。&lt;/p&gt;
+&lt;p&gt;cjx 一路上拍拍拍（拍照），你看，这就是进省队的苗子——大考当前仍然心态如此平和。&lt;/p&gt;
+&lt;p&gt;试了机，敲了一遍区修区查线段树。不得不说这个 DEV 依旧很痛苦，没有 vscode 好用。这个键盘的键程也太长了，敲完几十行的代码还是没怎么适应。&lt;/p&gt;
+&lt;p&gt;虽然区修区查 &lt;code&gt;pushdown&lt;/code&gt; 打挂了，但是很快调了过来，然后就结束了。试机还算顺利，就是旁边那老哥的凳子太靠我这边了。&lt;/p&gt;
+&lt;h2 id=&#34;day-1&#34;&gt;Day 1
+&lt;/h2&gt;&lt;h3 id=&#34;上午&#34;&gt;上午
+&lt;/h3&gt;&lt;p&gt;有了昨天的经验，我提前进了考场，抢在那老哥之前坐下，让他无便宜可占。&lt;/p&gt;
+&lt;p&gt;看 T1，觉得可做就打了。看起来是二分。&lt;/p&gt;
+&lt;p&gt;后面调的时候看到不止一个峰，所以无脑三分。&lt;/p&gt;
+&lt;p&gt;打完了又发现好像多峰，不知道怎么办，随便套了个 &lt;code&gt;for&lt;/code&gt; 循环三分，打完就跑了。此时还剩 1.5h，我不想重蹈 CSP-S2023 的覆辙。&lt;/p&gt;
+&lt;p&gt;T2 暴力分，拿了之后思考了一下性质。打了、调了，差不多了就看 T3。&lt;/p&gt;
+&lt;p&gt;T3 真的不懂，虽然暴力分可打，但是当我打完 T3 输入的时候只剩 10min。随便全部输出 0，跑路。&lt;/p&gt;
+&lt;p&gt;跑去检查文操，checker 一遍。然后关闭程序，静静等待这最后的 5 min。&lt;/p&gt;
+&lt;p&gt;出来考场的时候腿都在抖，想着 Day1 一道题也没切怎么办。&lt;/p&gt;
+&lt;p&gt;说来也怪，考前、考时都不紧张，一结束就紧张地打颤。&lt;/p&gt;
+&lt;h3 id=&#34;下午&#34;&gt;下午
+&lt;/h3&gt;&lt;p&gt;后来听 blln 说好像 $O(n)$ 扫一遍，就可以解决。或许是吧。&lt;/p&gt;
+&lt;p&gt;食堂还是挺好吃的，虽然猪扒（牛扒？）吃起来像科技，但管他呢，好吃。嗝。&lt;/p&gt;
+&lt;p&gt;下午就去骑行松山湖，环湖骑了一圈。&lt;/p&gt;
+&lt;p&gt;不得不说真的景色很好看，还有西式建筑，估计是华为总部的一些建筑。玩了一下午，心情真的放松多了。&lt;/p&gt;
+&lt;p&gt;晚上简单打了道 cdq，都不记得晚上还有 AtCoder，大失败。&lt;/p&gt;
+&lt;h2 id=&#34;day-2&#34;&gt;Day 2
+&lt;/h2&gt;&lt;h3 id=&#34;上午-1&#34;&gt;上午
+&lt;/h3&gt;&lt;p&gt;依旧早到，精神有点不佳，趴在桌上眯了一会儿，直到监考老师宣读规则。&lt;/p&gt;
+&lt;p&gt;T1 明显比昨天难，我想着今天肯定更不可能切一道题，但此刻我很冷静，甚至还有点放松：可以好好享受这 4.5h 的思考了。&lt;/p&gt;
+&lt;p&gt;光速看完 T2、T3，没有什么头绪，还是 T1 可做，开打。&lt;/p&gt;
+&lt;p&gt;看着性质打，每个性质、每个数据梯度都思考了，然后算出来这样下去 T1 可以拿 70pts。&lt;/p&gt;
+&lt;p&gt;当时第一次算算成了 50pts，但还是快乐开打。后面一个一个性质打完，快乐地过了 3 个大样例，就是第 3 个死活过不去。&lt;/p&gt;
+&lt;p&gt;我不清楚是该弃疗还是坚持。我就又去看看 T2、T3。&lt;/p&gt;
+&lt;p&gt;好吧。&lt;/p&gt;
+&lt;p&gt;坚持的勇气是 T2、T3 给的。&lt;/p&gt;
+&lt;p&gt;调调调，终于调对了，并且稳过手造数据。&lt;/p&gt;
+&lt;p&gt;真的，当你 4 次 &lt;code&gt;fc maze.out maze.ans&lt;/code&gt; 都是找不到文件差异的时候，那种感觉简直起飞！重算了一遍部分分，居然有 70pts！！&lt;/p&gt;
+&lt;p&gt;第 5 个大样例没过，我也不打算调了，因为样例大、时间少，更何况我的计划并没打算死磕 T1。而且如果我死磕 T1，据我的比赛经验来看，这样的效益最低（详见 CSP-S2023）。&lt;/p&gt;
+&lt;p&gt;后面 T2 表了个 1，没想到云斗有 5pts！高兴坏了。&lt;/p&gt;
+&lt;p&gt;T3 也是全部表 1，这是一场豪赌。&lt;/p&gt;
+&lt;p&gt;比赛还剩 12min 吧，我也不打算思考了，并不是不乐意去想，而是万一我又有点头绪，却苦于没时间打，那种折磨劝退了我。&lt;/p&gt;
+&lt;p&gt;况且我怎么可能做到 10min 切紫/黑呢？&lt;/p&gt;
+&lt;p&gt;检查完后就提前关掉所有程序，回到桌面，静静看着大屏上时间一点一点的消逝，享受这来之不易的 GDOI 考场上最后的 10min。&lt;/p&gt;
+&lt;p&gt;一瞬间闪过一个念头：我想参加 NOI 了。&lt;/p&gt;
+&lt;p&gt;结束了，出来的时候上了个厕所，回来就发现德芙和士力架被拿完了……&lt;/p&gt;
+&lt;p&gt;还是在发抖，拿了个牛角包，去吃饭。&lt;/p&gt;
+&lt;h3 id=&#34;下午-1&#34;&gt;下午
+&lt;/h3&gt;&lt;p&gt;下午就坐车回校了，这两天的感冒也好了（虽然和我同住的 hzx 感冒了）。&lt;/p&gt;
+&lt;p&gt;车上也不知道是抽了还是怎样，竟然开始和 wzy 玩蛋仔派对。&lt;/p&gt;
+&lt;p&gt;DK 中途加入，谁知道 DK 还是个蛋仔派对高手。&lt;/p&gt;
+&lt;p&gt;一到校就晕车了，洗了热水澡，来机房看看云斗，GDOI 就算正式结束了。&lt;/p&gt;
+&lt;h3 id=&#34;day-5&#34;&gt;Day 5
+&lt;/h3&gt;&lt;p&gt;估分：50+12+0+40+5+0=107。&lt;/p&gt;
+&lt;p&gt;不是？T1 挂得也太惨了吧，估的 70pts 呢？我的 30pts 呜呜。&lt;/p&gt;
+&lt;p&gt;今年 GDOI 算是结束了，上文化课的时候还是会梦回考场，以及住酒店的欢乐。&lt;/p&gt;
+&lt;p&gt;希望今年再努力一点吧，实现我在考场中一闪而过的念想：我想去 NOI。&lt;/p&gt;
+&lt;p&gt;文末再次感谢教练 Orz。&lt;/p&gt;
+&lt;p&gt;The End.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

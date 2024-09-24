@@ -7,7 +7,37 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>WerChange</copyright>
-        <lastBuildDate>Mon, 22 Jan 2024 11:49:00 +0800</lastBuildDate><atom:link href="https://werchange.github.io/tags/dp/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 12 Aug 2024 11:13:00 +0800</lastBuildDate><atom:link href="https://werchange.github.io/tags/dp/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>ABC366F 题解</title>
+        <link>https://werchange.github.io/p/abc366f-%E9%A2%98%E8%A7%A3/</link>
+        <pubDate>Mon, 12 Aug 2024 11:13:00 +0800</pubDate>
+        
+        <guid>https://werchange.github.io/p/abc366f-%E9%A2%98%E8%A7%A3/</guid>
+        <description>&lt;h1 id=&#34;solution&#34;&gt;Solution
+&lt;/h1&gt;&lt;h2 id=&#34;题意简述&#34;&gt;题意简述
+&lt;/h2&gt;&lt;p&gt;现在有 $N$ 个线性函数 $f_1,\dots,f_N$。函数 $f_i(x)=A_ix+B_i$。&lt;/p&gt;
+&lt;p&gt;找到一个长度为 $K$ 的序列 $p=(p_1,\dots,p_k)$，序列元素为 $K$ 个大小在 $[1,N]$ 的&lt;strong&gt;不同整数&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;输出 $f_{p_1}(f_{p_2}(\dots f_{p_k}(1)\dots))$ 可能的最大值。&lt;/p&gt;
+&lt;h2 id=&#34;思路&#34;&gt;思路
+&lt;/h2&gt;&lt;p&gt;贪心+DP。&lt;/p&gt;
+&lt;p&gt;假设现在已经选出了序列 $p$，考虑怎么放（放外层还是内层）答案更优。&lt;/p&gt;
+&lt;p&gt;钦定 $i&amp;lt;j$，则有两种放法：$f_i(f_j(x))$ 和 $f_j(f_i(x))$。&lt;/p&gt;
+&lt;p&gt;把 $A$，$B$ 代入：$A_iA_jx+A_iB_j+B_i$ 和 $A_iA_jx+A_jB_i+B_j$。发现其实只有后两项不同，我们钦定排序后越前面的放在越里层，所以我们可以定下排序规则为：&lt;/p&gt;
+$$
+A_iB_j+B_i&lt;A_jB_i+B_j
+$$
+&lt;p&gt;移项一下：&lt;/p&gt;
+$$
+\frac{A_i-1}{B_i}&lt;\frac{A_j-1}{B_j}
+$$
+&lt;p&gt;现在取序列 $p$ 是直接取后 $k$ 个就可以了吗？&lt;/p&gt;
+&lt;p&gt;不对。因为以上排序规则只是解决了怎么放的问题，都是在已经选好了 $p$ 的前提假设下。那怎么取呢？考虑 DP 即可。&lt;/p&gt;
+&lt;p&gt;经典二维 DP：$f_{i,j}$ 表示当前第 $i$ 个，已选 $j$ 个的最大可能答案。转移就是选与不选，由于我们的排序规则是想越前面的放里层，所以直接从前往后转移就好了，不用倒着转移。&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://atcoder.jp/contests/abc366/submissions/56620226&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;code&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>CF1920E 题解</title>
         <link>https://werchange.github.io/p/cf1920e-%E9%A2%98%E8%A7%A3/</link>
         <pubDate>Mon, 22 Jan 2024 11:49:00 +0800</pubDate>

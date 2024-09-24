@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="莫比乌斯反演速通 前言 由于请假错过了讲课，所以莫反是我第一个需要自学的难度不小的数学知识。 自学的过程的狼狈的，旁边也曾是自学的 czn 告诉我如果学会">
+<title>莫比乌斯反演及狄利克雷卷积速通</title>
+
+<link rel='canonical' href='https://werchange.github.io/p/%E8%8E%AB%E6%AF%94%E4%B9%8C%E6%96%AF%E5%8F%8D%E6%BC%94%E5%8F%8A%E7%8B%84%E5%88%A9%E5%85%8B%E9%9B%B7%E5%8D%B7%E7%A7%AF%E9%80%9F%E9%80%9A/'>
+
+<link rel="stylesheet" href="/scss/style.min.46b014bcd81355ac4fa4b0113be0f78589502d595e9e9c4ab35776b148d0407b.css"><meta property='og:title' content="莫比乌斯反演及狄利克雷卷积速通">
+<meta property='og:description' content="莫比乌斯反演速通 前言 由于请假错过了讲课，所以莫反是我第一个需要自学的难度不小的数学知识。 自学的过程的狼狈的，旁边也曾是自学的 czn 告诉我如果学会">
+<meta property='og:url' content='https://werchange.github.io/p/%E8%8E%AB%E6%AF%94%E4%B9%8C%E6%96%AF%E5%8F%8D%E6%BC%94%E5%8F%8A%E7%8B%84%E5%88%A9%E5%85%8B%E9%9B%B7%E5%8D%B7%E7%A7%AF%E9%80%9F%E9%80%9A/'>
+<meta property='og:site_name' content='WerChange'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='数论' /><meta property='article:published_time' content='2024-05-21T22:48:00&#43;08:00'/><meta property='article:modified_time' content='2024-05-21T22:48:00&#43;08:00'/>
+<meta name="twitter:title" content="莫比乌斯反演及狄利克雷卷积速通">
+<meta name="twitter:description" content="莫比乌斯反演速通 前言 由于请假错过了讲课，所以莫反是我第一个需要自学的难度不小的数学知识。 自学的过程的狼狈的，旁边也曾是自学的 czn 告诉我如果学会">
+    <link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu8c3c1d874d717a899c9fcbab108aff70_5877_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">✍</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">WerChange</a></h1>
+            <h2 class="site-description">广东中山一只现役 OIer</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%8F%8B%E9%93%BE/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="5" cy="19" r="1" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <path d="M4 11a9 9 0 0 1 9 9" />
+</svg>
+
+
+
+                
+                <span>友链</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E9%93%BE%E6%8E%A5/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#数论函数">数论函数</a></li>
+    <li><a href="#狄利克雷卷积">狄利克雷卷积</a>
+      <ol>
+        <li><a href="#一些运算律">一些运算律</a></li>
+        <li><a href="#一些函数意义">一些函数意义</a></li>
+        <li><a href="#一些式子">一些式子</a></li>
+        <li><a href="#简单性质">简单性质</a></li>
+        <li><a href="#狄利克雷的逆元">狄利克雷的逆元</a></li>
+      </ol>
+    </li>
+    <li><a href="#莫比乌斯反演">莫比乌斯反演</a>
+      <ol>
+        <li><a href="#莫比乌斯反演公式">莫比乌斯反演公式</a></li>
+        <li><a href="#莫比乌斯函数的性质">莫比乌斯函数的性质</a></li>
+        <li><a href="#代码实现预处理-mu">代码实现预处理 $\mu$</a></li>
+      </ol>
+    </li>
+    <li><a href="#参考文献">参考文献</a></li>
+    <li><a href="#式子七答案">式子七答案</a></li>
+    <li><a href="#结尾">结尾</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E7%AE%97%E6%B3%95/" style="background-color: #2a9d8f; color: #fff;">
+                算法
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E8%8E%AB%E6%AF%94%E4%B9%8C%E6%96%AF%E5%8F%8D%E6%BC%94%E5%8F%8A%E7%8B%84%E5%88%A9%E5%85%8B%E9%9B%B7%E5%8D%B7%E7%A7%AF%E9%80%9F%E9%80%9A/">莫比乌斯反演及狄利克雷卷积速通</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">May 21, 2024 22:48 CST</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 5 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="莫比乌斯反演速通">莫比乌斯反演速通
+</h1><h2 id="前言">前言
+</h2><p>由于请假错过了讲课，所以莫反是我第一个需要自学的难度不小的数学知识。</p>
+<p>自学的过程的狼狈的，旁边也曾是自学的 czn 告诉我如果学会“狄利克雷卷积”就可以对“莫比乌斯反演”的理解进行“降维打击”。他还十分热心地带着我速通了一遍狄卷与莫反。</p>
+<p>一知半解，就自学了很多资料。终于是补全了每一块知识碎片。</p>
+<p>秉着造福后人的原则，我想写一篇非常非常通俗易懂的学习笔记。</p>
+<p>易懂到什么程度呢？——就是初一的同学，也能速通。</p>
+<blockquote>
+<p>食用指南：备好草稿纸，遇到式子先自己推导，培养推式子的习惯。</p>
+</blockquote>
+<h2 id="数论函数">数论函数
+</h2><p>这是狄利克雷卷积（后文简称“狄卷”）的前置知识。</p>
+<p>数论函数是一类这样的函数：定义域为正整数，值域是一个数集。</p>
+<p>数论函数间的简单运算有<strong>加法</strong>与<strong>数乘</strong>。</p>
+<ul>
+<li>加法：定义为两个函数逐位相加。$(f+g)(n)=f(n)+g(n)$</li>
+<li>数乘：定义为其函数每位都乘一个数。$(xf)(n)=x\cdot f(n)$</li>
+</ul>
+<h2 id="狄利克雷卷积">狄利克雷卷积
+</h2><p>狄卷是数论函数间的运算，记为：</p>
+$$
+f*g=h
+$$
+<p>等号左侧展开为：</p>
+$$
+f*g=\sum\limits_{i|n}f(i)\cdot g(\frac{n}{i})
+$$
+<h3 id="一些运算律">一些运算律
+</h3><p>交换律：$f<em>g=g</em>f$，这个显然。</p>
+<p>结合律：$(f<em>g)<em>h=f</em>(g</em>h)$，因为：</p>
+$$
+\sum\limits_{i\cdot j\cdot k=n}(f(i)g(j))\cdot h(k)=\sum\limits_{i\cdot j\cdot k=n}f(i)\cdot (g(j)h(k))
+$$
+<p>分配律：$f<em>h+g</em>h=(f+g)*h$，因为：</p>
+$$
+\begin{aligned}
+f*h+g*h&=\sum\limits_{i|n}f(i)h(\frac{n}{i})+\sum\limits_{i|n}g(i)h(\frac{n}{i})\\
+&=\sum\limits_{i|n} f(i)h(\frac{n}{i})+g(i)h(\frac{n}{i})\\
+&=\sum\limits_{i|n} (f(i)+g(i))\cdot h(\frac{n}{i})\\
+&=\sum\limits_{i|n} (f+g)(i)\cdot h(\frac{n}{i})\\
+&=(f+g)*h
+\end{aligned}
+$$
+<h3 id="一些函数意义">一些函数意义
+</h3><ol>
+<li>
+<p>$\varphi(n)$：$[1,n]$ 中与 $n$ 互质的数的个数。
+性质：$\varphi(1)=1$，$\varphi(n)=n-1$ 当且仅当 $n$ 为质数。</p>
+</li>
+<li>
+<p>$\mu(n)$：莫比乌斯函数。
+定义：</p>
+<ul>
+<li>$\mu(n)=1$，（$n=1$）</li>
+<li>$\mu(n)=(-1)^k$，（$n=\prod\limits _{i=1}^{k} p_i$ 且 $p_i$ 为指数为 $1$ 的质数）</li>
+<li>$\mu(n)=0$，（其他情况）</li>
+</ul>
+</li>
+<li>
+<p>$Id_k(n)$：幂函数，$Id_k(n)=n^k$。</p>
+</li>
+<li>
+<p>$\sigma_k(n)$：$n$ 的所有因数的 $k$ 次方和。</p>
+</li>
+<li>
+<p>$\epsilon(n)$：值为 $[n=1]$。即当且仅当 $n=1$ 时值为 $1$，否则为 $0$。</p>
+</li>
+<li>
+<p>$d(n)$：$n$ 的所有因数个数，即 $\sigma_0(n)$。</p>
+</li>
+<li>
+<p>$I(n)$：常函数，值恒为 $1$，即 $Id_0(n)$。</p>
+</li>
+</ol>
+<p>这里说明一下第七条，在一些参考书中写作 $\mathbf{1}(n)$，本文为了区分函数与常数，这里用 $I(n)$ 代替 $\mathbf{1}(n)$。</p>
+<h3 id="一些式子">一些式子
+</h3><blockquote>
+<p>这里会有很多公式，可以再看证明之前自己先证一遍，难度从易到难。</p>
+</blockquote>
+<p>式子一：$(xf)<em>g=x(f</em>g)$，因为：</p>
+$$
+\begin{aligned}
+(xf)*g&=\sum\limits_{i|n} (xf)(i)\cdot g(\frac{n}{i})\\
+&=\sum\limits_{i|n} x\cdot f(i)\cdot g(\frac{n}{i})\\
+&=x\cdot \sum\limits_{i|n} f(i)g(\frac{n}{i})\\
+&=x(f*g)
+\end{aligned}
+$$
+<p>式子二：$f*\epsilon=f$，因为：</p>
+$$
+\begin{aligned}
+(f*\epsilon) (n)&=\sum\limits_{i|n} f(i)\epsilon(\frac{n}{i})\\
+&=f(n)
+\end{aligned}
+$$
+<p>式子三：$I*I=d$，因为：</p>
+$$
+\begin{aligned}
+I*I&=\sum\limits_{i|n} I(i)I(\frac{n}{i})\\
+&=\sum\limits_{i|n} 1\\
+&=d
+\end{aligned}
+$$
+<p>式子四：$I*Id_k=\sigma_k$，因为：</p>
+$$
+\begin{aligned}
+I*Id_k&=\sum\limits_{i|n} I(i)Id_k(\frac{n}{i})\\
+&=\sum\limits_{i|n} Id_k(i)\\
+&=\sigma_k
+\end{aligned}
+$$
+<p>式子五：$\mu*I=\epsilon$，因为：</p>
+$$
+\begin{aligned}
+\mu*I&=\sum\limits_{i|n} \mu(i)I(\frac{n}{i})\\
+&=\sum\limits_{i|n} \mu(i)
+\end{aligned}
+$$
+<ul>
+<li>当 $n=1$，显然成立。</li>
+<li>当 $n\neq 1$，将 $n$ 分解为 $n=p_1^{m_1}p_2^{m_2}\dots p_k^{m_k}$。
+计算有效的 $\mu$，肯定质因子的指数为 $1$。
+所以每次在 $k$ 个质因数选择 $r$ 个，即 $C_k^r$ 个。
+那就可以继续推式子了。</li>
+</ul>
+$$
+\begin{aligned}
+\sum\limits_{i|n} \mu(i)&=C_k^0-C_k^1+C_k^2-C_k^3+\dots +(-1)^kC_k^k\\
+&=\sum\limits_{i=0}^k (-1)^iC_k^i\\
+&=(1-1)^k=0
+\end{aligned}
+$$
+<p>因此，$\mu *I=\sum\limits_{i|n} \mu(i)=[n=1]=\epsilon$。</p>
+<p>这里解释一下是怎么得到 $(1-1)^k$ 的：</p>
+<blockquote>
+<p>二项式定理：$(x+y)^k=\sum\limits_{i=0}^k C_k^ix^{k-i}y^i$。</p>
+<p>这里把 $x=1$，$y=-1$ 带进去得证。</p>
+</blockquote>
+<p>式子六：$\varphi*I=Id_1$，因为：</p>
+<p>设 $p$ 为质数，$m&gt;0$，则：</p>
+$$
+\begin{aligned}
+(\varphi*I)(p^m)&=\sum\limits_{i|p^m} \varphi(p^m)\\
+&=\sum\limits_{i=0}^m \varphi(p^i)\\
+&=p^0+\sum\limits_{i=1}^m \varphi(p^i)\\
+&=p^0+\sum\limits_{i=1}^m (p^i-p^{i-1})\\
+&=p^m
+\end{aligned}
+$$
+<p>因为 $n$ 可分解为 $p_1^{m_1}p_2^{m_2}\dots p_k^{m_k}$，可由积性函数的性质得证 $(\varphi*I)(n)=n=Id_1(n)$。</p>
+<p>即 $\varphi*I=Id_1$。</p>
+<p>式子七：$\varphi=\mu*Id_1$。</p>
+<p>这个留作作业，答案放在文尾。</p>
+<h3 id="简单性质">简单性质
+</h3><p>上文的式子二、四、六就是主要性质，除此之外还有积性函数性质：</p>
+<p>若 $f$，$g$ 为积性函数，则 $f*g$ 也为积性函数。</p>
+<h3 id="狄利克雷的逆元">狄利克雷的逆元
+</h3><p>对于每个 $f(1)\ne 0$ 的 $f$，都存在一个 $g$ 使得 $f*g=\epsilon$。</p>
+<p>如何求 $g$？</p>
+<p>先推一下式子：</p>
+$$
+\begin{aligned}
+f*g&=\sum\limits_{i|n} f(i)g(\frac{n}{i})\\
+&=f(1)g(n)+\sum\limits_{i|n,i\ne 1}f(i)g(\frac{n}{i})\\
+&=\epsilon=[n=1]
+\end{aligned}
+$$
+<p>现在目标为定义 $g(n)$ 使得等式成立。</p>
+<p>可以定义：$g(n)=\frac{1}{f(1)}([n=1]-\sum\limits_{i|n,i\ne 1}f(i)g(\frac{n}{i}))$。</p>
+<p>$g$ 就是 $f$ 的逆元，也可写作 $f^{-1}$。</p>
+<h2 id="莫比乌斯反演">莫比乌斯反演
+</h2><h3 id="莫比乌斯反演公式">莫比乌斯反演公式
+</h3><p>在“狄卷”的“一些函数意义”中我们直接给出了 $\mu$ 的定义与运算方式。</p>
+<p>但其实是要推的，仅知道的条件是“定义 $I$ 的逆为 $\mu$”。</p>
+<p>让我们来看看如何用狄卷推出莫反的式子——看看狄卷是怎么降维打击的。</p>
+<p>如果 $g=f*I$，则</p>
+$$
+f=f*I*\mu=g*\mu
+$$
+<p>一展开，即：</p>
+<p>如果 $g(n)=\sum\limits_{i|n}f(i)$，则</p>
+$$
+f(i)=\sum\limits_{i|n}\mu(i)g(\frac{n}{i})
+$$
+<p>写得优美一点：</p>
+$$
+g(n)=\sum\limits_{i|n}f(i)\Leftrightarrow f(i)=\sum\limits_{i|n}\mu(i)g(\frac{n}{i})
+$$
+<p>而这个就是我们的莫反公式了！</p>
+<p>别忘了，我们尚未知道 $\mu$ 的值，现在来讲讲怎么求。</p>
+<p>由于 $I$ 是积性函数，所以 $\mu$ 也是积性函数。简单算数可得：</p>
+$$
+\mu(p^k)=\begin{cases}
+1 & k=0\\
+-1 & k=1\\
+0 & k>1
+\end{cases}
+$$
+<p>再根据积性函数，就得到了：</p>
+$$
+\mu(n)=\begin{cases}
+1 & n=1\\
+(-1)^k & n=p_1p_2\dots p_k\\
+0 & \text{other situation}
+\end{cases}
+$$
+<p>于是华丽结束。</p>
+<p>有没有体味到降维打击呀朋友们！</p>
+<h3 id="莫比乌斯函数的性质">莫比乌斯函数的性质
+</h3><p>如果不讲狄卷，这里应该是第二章，但是学过狄卷的我们可以速通以下三个性质。</p>
+<ol>
+<li>$\sum\limits_{i|n}\mu(i)=[n=1]$。这个用 $\mu*I=\epsilon$ 秒了。</li>
+<li>$n=\sum\limits_{i|n}\varphi(i)$。用 $\varphi*I=Id_1$ 秒了。</li>
+<li>$\sum\limits_{i|n}\frac{\mu(i)}{i} = \frac{\varphi(n)}{n}$。因为 $\varphi=\mu*Id_1$，所以展开得
+$\sum\limits_{i|n} \frac{\mu(i)\cdot n}{i}=\varphi(n)\Rightarrow \sum\limits_{i|n} \frac{\mu(i)}{i}=\frac{\varphi(n)}{n}$，秒了。</li>
+<li>$\mu(n)$ 是积性函数，这个上文解释过了。</li>
+</ol>
+<h3 id="代码实现预处理-mu">代码实现预处理 $\mu$
+</h3><p>$\mu$ 是积性函数，线性筛带走。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">init</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">mu</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">x</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">vis</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">            <span class="n">pri</span><span class="p">[</span><span class="o">++</span><span class="n">cnt</span><span class="p">]</span><span class="o">=</span><span class="n">i</span><span class="p">,</span><span class="n">mu</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=-</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;=</span><span class="n">cnt</span><span class="o">&amp;&amp;</span><span class="n">i</span><span class="o">*</span><span class="n">pri</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">&lt;=</span><span class="n">x</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">vis</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="n">pri</span><span class="p">[</span><span class="n">j</span><span class="p">]]</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="o">%</span><span class="n">pri</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">mu</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="n">pri</span><span class="p">[</span><span class="n">j</span><span class="p">]]</span><span class="o">=-</span><span class="n">mu</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="参考文献">参考文献
+</h2><ul>
+<li>[1]，<a class="link" href="https://www.cnblogs.com/mcggvc"  target="_blank" rel="noopener"
+    >Mcggvc</a>，<a class="link" href="https://www.cnblogs.com/mcggvc/p/16900584.html"  target="_blank" rel="noopener"
+    >《狄利克雷卷积》</a></li>
+<li>[2]，<a class="link" href="https://www.luogu.com/user/39914"  target="_blank" rel="noopener"
+    >An_Account</a>，<a class="link" href="https://www.luogu.com/article/998kttnc"  target="_blank" rel="noopener"
+    >《莫比乌斯反演-让我们从基础开始》</a></li>
+<li>[3]，<a class="link" href="https://www.luogu.com.cn/user/18000"  target="_blank" rel="noopener"
+    >铃悬</a>，<a class="link" href="https://www.luogu.com/article/2sx79hkz"  target="_blank" rel="noopener"
+    >《铃悬的数学小讲堂——狄利克雷卷积与莫比乌斯反演》</a></li>
+</ul>
+<h2 id="式子七答案">式子七答案
+</h2>$$
+\begin{aligned}
+\varphi&=\varphi *\epsilon\\
+&=\varphi*I*\mu\\
+&=Id_1*\mu
+\end{aligned}
+$$
+<h2 id="结尾">结尾
+</h2><p>有没有感受到用狄卷理解莫反“降维打击”的快感？</p>
+<p>由于我是自学的，有一些地方会有纰漏，欢迎指出。</p>
+<p>没有例题是因为还没去刷，大家如果想锻炼推式子能力可以看参考文献 2。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E6%95%B0%E8%AE%BA/">数论</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <div id="cusdis_thread"
+    data-host="https://cusdis.com"
+    data-app-id="a764b0e5-5fb3-453b-900a-cf7a524d196f"
+    data-page-id="7c184196144337744c66dfa046efed6e"
+    data-page-url="https://werchange.github.io/p/%E8%8E%AB%E6%AF%94%E4%B9%8C%E6%96%AF%E5%8F%8D%E6%BC%94%E5%8F%8A%E7%8B%84%E5%88%A9%E5%85%8B%E9%9B%B7%E5%8D%B7%E7%A7%AF%E9%80%9F%E9%80%9A/"
+    data-page-title="莫比乌斯反演及狄利克雷卷积速通"></div>
+<script async defer src="https://cusdis.com/js/widget/lang/zh-cn.js"></script>
+<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+
+<script>
+    function setCusdisTheme(theme) {
+        let cusdis = document.querySelector('#cusdis_thread iframe');
+        if (cusdis) {
+            window.CUSDIS.setTheme(theme)
+        }
+    }
+
+    window.addEventListener('onColorSchemeChange', (e) => {
+        setCusdisTheme(e.detail)
+    })
+</script>
+
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2022 - 
+        
+        2024 WerChange
+    </section>
+    
+    <section class="powerby">
+        
+            WerChange's Blog <br/>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.27.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
