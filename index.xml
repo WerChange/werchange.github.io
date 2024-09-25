@@ -15199,16 +15199,18 @@ Floyd：$O(n^3)$&lt;/p&gt;
         
         <guid>https://werchange.github.io/%E5%85%B3%E4%BA%8E/</guid>
         <description>&lt;h3 id=&#34;about-me&#34;&gt;About me
-&lt;/h3&gt;&lt;p&gt;性别：男&lt;/p&gt;
-&lt;p&gt;身份：高一学生、OIer&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;生日年月：2008 年 12 月&lt;/p&gt;
+&lt;p&gt;性别：男&lt;/p&gt;
+&lt;p&gt;身份：2027 届高考毕业生、OIer&lt;/p&gt;
 &lt;p&gt;学校：&lt;a class=&#34;link&#34; href=&#34;http://www.dyschool.cn/#/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;中山市迪茵公学&lt;/a&gt;&lt;/p&gt;
+    &gt;DYGX&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;坐标：广东中山&lt;/p&gt;
 &lt;p&gt;邮箱：werchange@tutamail.com&lt;/p&gt;
 &lt;h3 id=&#34;abuot-my-blog&#34;&gt;Abuot my blog
-&lt;/h3&gt;&lt;p&gt;这个博客于 2024.09.23 正式搭建成功，所有以往文章于 2024.09.24 全部补档。&lt;/p&gt;
-&lt;p&gt;此前最新文章是《AC 自动机查漏补缺》，此后的文章都只会发布在此博客。&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;这个博客于 2024.09.23 正式搭建成功，所有以往文章于 2024.09.24 已全部补档。&lt;/p&gt;
+&lt;p&gt;此前最新文章是《AC 自动机查漏补缺》，大部分可以在博客园、CSDN 找到。此后的文章都只会发布在此博客。&lt;/p&gt;
 &lt;p&gt;如果你也想搭建 Hugo 博客可以邮箱联系我。&lt;/p&gt;
+&lt;p&gt;另外，如有侵权内容也可以邮箱联系删除。&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -15217,7 +15219,9 @@ Floyd：$O(n^3)$&lt;/p&gt;
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://werchange.github.io/%E9%93%BE%E6%8E%A5/</guid>
-        <description></description>
+        <description>&lt;p&gt;这里的链接与我有关或有我推荐。&lt;/p&gt;
+&lt;p&gt;如果有疑问或问题可以在评论区告诉我。&lt;/p&gt;
+</description>
         </item>
         <item>
         <title>搜索</title>
@@ -15233,7 +15237,10 @@ Floyd：$O(n^3)$&lt;/p&gt;
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://werchange.github.io/%E5%8F%8B%E9%93%BE/</guid>
-        <description></description>
+        <description>&lt;p&gt;下面这些是好友的博客链接，有一些跳转到自己搭建的博客、有一些是博客园、CSDN。&lt;/p&gt;
+&lt;p&gt;大家可以去关注他们~&lt;/p&gt;
+&lt;p&gt;如果是搭建的博客挂了可以在评论区告诉我，我去问问最新网址。&lt;/p&gt;
+</description>
         </item>
         
     </channel>
