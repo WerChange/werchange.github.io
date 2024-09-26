@@ -25,7 +25,7 @@
 &lt;/ol&gt;
 &lt;p&gt;题目采用 $\text{SPJ}$ 评测。&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
-&lt;/h2&gt;&lt;p&gt;首先一眼发现这个 $\text{SPJ}$ 是假的，因为很难通过若干个数的乘积（模 $998244353$ 的情况下）来还原出唯一的 $S$。~~结合出题人比较懒的特点，~~应该是不会真的把所有可能都列出在 $\text{SPJ}$ 里面的。所以答案是唯一的。&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;首先一眼发现这个 $\text{SPJ}$ 是假的，因为很难通过若干个数的乘积（模 $998244353$ 的情况下）来还原出唯一的 $S$。&lt;del&gt;结合出题人比较懒的特点，&lt;/del&gt; 应该是不会真的把所有可能都列出在 $\text{SPJ}$ 里面的。所以答案是唯一的。&lt;/p&gt;
 &lt;p&gt;&lt;del&gt;但是我没看出来。&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;当然可以证明，&lt;del&gt;但是我不会，&lt;/del&gt; 现在会了：&lt;/p&gt;
 &lt;blockquote&gt;
