@@ -7,7 +7,31 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>WerChange</copyright>
-        <lastBuildDate>Fri, 27 Sep 2024 10:44:00 +0800</lastBuildDate><atom:link href="https://werchange.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 27 Sep 2024 15:31:00 +0800</lastBuildDate><atom:link href="https://werchange.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>分块</title>
+        <link>https://werchange.github.io/tags/%E5%88%86%E5%9D%97/</link>
+        <pubDate>Fri, 27 Sep 2024 15:31:00 +0800</pubDate>
+        
+        <guid>https://werchange.github.io/tags/%E5%88%86%E5%9D%97/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>根号分治</title>
+        <link>https://werchange.github.io/tags/%E6%A0%B9%E5%8F%B7%E5%88%86%E6%B2%BB/</link>
+        <pubDate>Fri, 27 Sep 2024 15:31:00 +0800</pubDate>
+        
+        <guid>https://werchange.github.io/tags/%E6%A0%B9%E5%8F%B7%E5%88%86%E6%B2%BB/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>扫描线</title>
+        <link>https://werchange.github.io/tags/%E6%89%AB%E6%8F%8F%E7%BA%BF/</link>
+        <pubDate>Fri, 27 Sep 2024 15:31:00 +0800</pubDate>
+        
+        <guid>https://werchange.github.io/tags/%E6%89%AB%E6%8F%8F%E7%BA%BF/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>欧拉回路</title>
         <link>https://werchange.github.io/tags/%E6%AC%A7%E6%8B%89%E5%9B%9E%E8%B7%AF/</link>
         <pubDate>Fri, 27 Sep 2024 10:44:00 +0800</pubDate>
