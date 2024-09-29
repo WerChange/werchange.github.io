@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>数论 on WerChange</title>
-        <link>http://localhost:1313/tags/%E6%95%B0%E8%AE%BA/</link>
+        <link>https://werchange.github.io/tags/%E6%95%B0%E8%AE%BA/</link>
         <description>Recent content in 数论 on WerChange</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>WerChange</copyright>
-        <lastBuildDate>Tue, 21 May 2024 22:48:00 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E6%95%B0%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 21 May 2024 22:48:00 +0800</lastBuildDate><atom:link href="https://werchange.github.io/tags/%E6%95%B0%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>莫比乌斯反演及狄利克雷卷积速通</title>
-        <link>http://localhost:1313/p/%E8%8E%AB%E6%AF%94%E4%B9%8C%E6%96%AF%E5%8F%8D%E6%BC%94%E5%8F%8A%E7%8B%84%E5%88%A9%E5%85%8B%E9%9B%B7%E5%8D%B7%E7%A7%AF%E9%80%9F%E9%80%9A/</link>
+        <link>https://werchange.github.io/p/%E8%8E%AB%E6%AF%94%E4%B9%8C%E6%96%AF%E5%8F%8D%E6%BC%94%E5%8F%8A%E7%8B%84%E5%88%A9%E5%85%8B%E9%9B%B7%E5%8D%B7%E7%A7%AF%E9%80%9F%E9%80%9A/</link>
         <pubDate>Tue, 21 May 2024 22:48:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E8%8E%AB%E6%AF%94%E4%B9%8C%E6%96%AF%E5%8F%8D%E6%BC%94%E5%8F%8A%E7%8B%84%E5%88%A9%E5%85%8B%E9%9B%B7%E5%8D%B7%E7%A7%AF%E9%80%9F%E9%80%9A/</guid>
+        <guid>https://werchange.github.io/p/%E8%8E%AB%E6%AF%94%E4%B9%8C%E6%96%AF%E5%8F%8D%E6%BC%94%E5%8F%8A%E7%8B%84%E5%88%A9%E5%85%8B%E9%9B%B7%E5%8D%B7%E7%A7%AF%E9%80%9F%E9%80%9A/</guid>
         <description>&lt;h1 id=&#34;莫比乌斯反演速通&#34;&gt;莫比乌斯反演速通
 &lt;/h1&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;由于请假错过了讲课，所以莫反是我第一个需要自学的难度不小的数学知识。&lt;/p&gt;

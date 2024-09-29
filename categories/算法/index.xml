@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>算法 on WerChange</title>
-        <link>http://localhost:1313/categories/%E7%AE%97%E6%B3%95/</link>
+        <link>https://werchange.github.io/categories/%E7%AE%97%E6%B3%95/</link>
         <description>Recent content in 算法 on WerChange</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>WerChange</copyright>
-        <lastBuildDate>Thu, 22 Aug 2024 21:34:00 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 22 Aug 2024 21:34:00 +0800</lastBuildDate><atom:link href="https://werchange.github.io/categories/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>AC 自动机查漏补缺</title>
-        <link>http://localhost:1313/p/ac-%E8%87%AA%E5%8A%A8%E6%9C%BA%E6%9F%A5%E6%BC%8F%E8%A1%A5%E7%BC%BA/</link>
+        <link>https://werchange.github.io/p/ac-%E8%87%AA%E5%8A%A8%E6%9C%BA%E6%9F%A5%E6%BC%8F%E8%A1%A5%E7%BC%BA/</link>
         <pubDate>Thu, 22 Aug 2024 21:34:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/ac-%E8%87%AA%E5%8A%A8%E6%9C%BA%E6%9F%A5%E6%BC%8F%E8%A1%A5%E7%BC%BA/</guid>
+        <guid>https://werchange.github.io/p/ac-%E8%87%AA%E5%8A%A8%E6%9C%BA%E6%9F%A5%E6%BC%8F%E8%A1%A5%E7%BC%BA/</guid>
         <description>&lt;h1 id=&#34;ac-自动机查漏补缺&#34;&gt;AC 自动机查漏补缺
 &lt;/h1&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;今年 1 月份学过一次，当时自以为掌握得很好，实际上就是依托答辩。而且还有很多地方是有严重误导性的。所以这篇查漏补缺就是记录一下自己对 AC 自动机尚不完全掌握的地方。并对之前的那篇不太正确的题解进行纠正。&lt;/p&gt;
@@ -592,10 +592,10 @@
         </item>
         <item>
         <title>重学 KMP 小记</title>
-        <link>http://localhost:1313/p/%E9%87%8D%E5%AD%A6-kmp-%E5%B0%8F%E8%AE%B0/</link>
+        <link>https://werchange.github.io/p/%E9%87%8D%E5%AD%A6-kmp-%E5%B0%8F%E8%AE%B0/</link>
         <pubDate>Sat, 03 Aug 2024 22:00:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E9%87%8D%E5%AD%A6-kmp-%E5%B0%8F%E8%AE%B0/</guid>
+        <guid>https://werchange.github.io/p/%E9%87%8D%E5%AD%A6-kmp-%E5%B0%8F%E8%AE%B0/</guid>
         <description>&lt;h1 id=&#34;重学-kmp-小记&#34;&gt;重学 KMP 小记
 &lt;/h1&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;KMP 这个东西赛时用到的几率很小（虽然圣人说概率不小、也不是很大），但是如果一旦考字符串类的题又极可能考匹配问题。当时掌握得也是一知半解，所以现在来重学来了。&lt;/p&gt;
@@ -786,10 +786,10 @@
         </item>
         <item>
         <title>莫比乌斯反演及狄利克雷卷积速通</title>
-        <link>http://localhost:1313/p/%E8%8E%AB%E6%AF%94%E4%B9%8C%E6%96%AF%E5%8F%8D%E6%BC%94%E5%8F%8A%E7%8B%84%E5%88%A9%E5%85%8B%E9%9B%B7%E5%8D%B7%E7%A7%AF%E9%80%9F%E9%80%9A/</link>
+        <link>https://werchange.github.io/p/%E8%8E%AB%E6%AF%94%E4%B9%8C%E6%96%AF%E5%8F%8D%E6%BC%94%E5%8F%8A%E7%8B%84%E5%88%A9%E5%85%8B%E9%9B%B7%E5%8D%B7%E7%A7%AF%E9%80%9F%E9%80%9A/</link>
         <pubDate>Tue, 21 May 2024 22:48:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E8%8E%AB%E6%AF%94%E4%B9%8C%E6%96%AF%E5%8F%8D%E6%BC%94%E5%8F%8A%E7%8B%84%E5%88%A9%E5%85%8B%E9%9B%B7%E5%8D%B7%E7%A7%AF%E9%80%9F%E9%80%9A/</guid>
+        <guid>https://werchange.github.io/p/%E8%8E%AB%E6%AF%94%E4%B9%8C%E6%96%AF%E5%8F%8D%E6%BC%94%E5%8F%8A%E7%8B%84%E5%88%A9%E5%85%8B%E9%9B%B7%E5%8D%B7%E7%A7%AF%E9%80%9F%E9%80%9A/</guid>
         <description>&lt;h1 id=&#34;莫比乌斯反演速通&#34;&gt;莫比乌斯反演速通
 &lt;/h1&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;由于请假错过了讲课，所以莫反是我第一个需要自学的难度不小的数学知识。&lt;/p&gt;
@@ -1073,10 +1073,10 @@ $$
         </item>
         <item>
         <title>可持久化线段树 2</title>
-        <link>http://localhost:1313/p/%E5%8F%AF%E6%8C%81%E4%B9%85%E5%8C%96%E7%BA%BF%E6%AE%B5%E6%A0%91-2/</link>
+        <link>https://werchange.github.io/p/%E5%8F%AF%E6%8C%81%E4%B9%85%E5%8C%96%E7%BA%BF%E6%AE%B5%E6%A0%91-2/</link>
         <pubDate>Sun, 25 Feb 2024 21:47:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E5%8F%AF%E6%8C%81%E4%B9%85%E5%8C%96%E7%BA%BF%E6%AE%B5%E6%A0%91-2/</guid>
+        <guid>https://werchange.github.io/p/%E5%8F%AF%E6%8C%81%E4%B9%85%E5%8C%96%E7%BA%BF%E6%AE%B5%E6%A0%91-2/</guid>
         <description>&lt;h1 id=&#34;可持久化线段树&#34;&gt;可持久化线段树
 &lt;/h1&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;这个东西之前讲过，但是用得少，很快就忘了。&lt;/p&gt;
@@ -1418,10 +1418,10 @@ $$
         </item>
         <item>
         <title>DK 树</title>
-        <link>http://localhost:1313/p/dk-%E6%A0%91/</link>
+        <link>https://werchange.github.io/p/dk-%E6%A0%91/</link>
         <pubDate>Sat, 24 Feb 2024 09:41:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/dk-%E6%A0%91/</guid>
+        <guid>https://werchange.github.io/p/dk-%E6%A0%91/</guid>
         <description>&lt;h2 id=&#34;引入&#34;&gt;引入
 &lt;/h2&gt;&lt;p&gt;这是由 DengDuck 总结整理的一种处理线段树类问题的算法。&lt;/p&gt;
 &lt;h2 id=&#34;板题引入&#34;&gt;板题引入
@@ -1437,17 +1437,17 @@ $$
         </item>
         <item>
         <title>Tarjan 算法（超详细！！）</title>
-        <link>http://localhost:1313/p/tarjan-%E7%AE%97%E6%B3%95%E8%B6%85%E8%AF%A6%E7%BB%86/</link>
+        <link>https://werchange.github.io/p/tarjan-%E7%AE%97%E6%B3%95%E8%B6%85%E8%AF%A6%E7%BB%86/</link>
         <pubDate>Wed, 24 Jan 2024 22:16:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/tarjan-%E7%AE%97%E6%B3%95%E8%B6%85%E8%AF%A6%E7%BB%86/</guid>
-        <description>&lt;img src="http://localhost:1313/img/tar/1.png" alt="Featured image of post Tarjan 算法（超详细！！）" /&gt;&lt;h1 id=&#34;tarjan-算法&#34;&gt;Tarjan 算法
+        <guid>https://werchange.github.io/p/tarjan-%E7%AE%97%E6%B3%95%E8%B6%85%E8%AF%A6%E7%BB%86/</guid>
+        <description>&lt;img src="https://werchange.github.io/img/tar/1.png" alt="Featured image of post Tarjan 算法（超详细！！）" /&gt;&lt;h1 id=&#34;tarjan-算法&#34;&gt;Tarjan 算法
 &lt;/h1&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;说来惭愧，这个模板仅是绿的算法至今我才学会。&lt;/p&gt;
 &lt;p&gt;我还记得去年 CSP2023 坐大巴路上拿着书背 Tarjan 的模板。虽然那年没有考连通分量类似的题目。&lt;/p&gt;
 &lt;p&gt;现在做题遇到了 Tarjan，那么，重学，开写！&lt;/p&gt;
 &lt;p&gt;另，要想学好此算法的第一件事——膜拜 Tarjan 爷爷。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/tar/1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://werchange.github.io/img/tar/1.png&#34;
 	
 	
 	
@@ -1463,7 +1463,7 @@ $$
 &lt;h2 id=&#34;算法思路&#34;&gt;算法思路
 &lt;/h2&gt;&lt;p&gt;Tarjan 是基于 DFS 实现的，走过的边会形成一棵搜索树。可以看作是原图删去一些边留下来而形成的。&lt;/p&gt;
 &lt;p&gt;看个图吧：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/tar/2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://werchange.github.io/img/tar/2.png&#34;
 	
 	
 	
@@ -1478,7 +1478,7 @@ $$
 &lt;li&gt;后向边（黄）&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;上图把抛弃的边画出来就是这样了：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/tar/3.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://werchange.github.io/img/tar/3.png&#34;
 	
 	
 	
@@ -1760,10 +1760,10 @@ $$
         </item>
         <item>
         <title>欧拉路径、欧拉回路、欧拉图傻傻分不清楚？看这一篇就够了！</title>
-        <link>http://localhost:1313/p/%E6%AC%A7%E6%8B%89%E8%B7%AF%E5%BE%84%E6%AC%A7%E6%8B%89%E5%9B%9E%E8%B7%AF%E6%AC%A7%E6%8B%89%E5%9B%BE%E5%82%BB%E5%82%BB%E5%88%86%E4%B8%8D%E6%B8%85%E6%A5%9A%E7%9C%8B%E8%BF%99%E4%B8%80%E7%AF%87%E5%B0%B1%E5%A4%9F%E4%BA%86/</link>
+        <link>https://werchange.github.io/p/%E6%AC%A7%E6%8B%89%E8%B7%AF%E5%BE%84%E6%AC%A7%E6%8B%89%E5%9B%9E%E8%B7%AF%E6%AC%A7%E6%8B%89%E5%9B%BE%E5%82%BB%E5%82%BB%E5%88%86%E4%B8%8D%E6%B8%85%E6%A5%9A%E7%9C%8B%E8%BF%99%E4%B8%80%E7%AF%87%E5%B0%B1%E5%A4%9F%E4%BA%86/</link>
         <pubDate>Wed, 24 Jan 2024 20:39:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E6%AC%A7%E6%8B%89%E8%B7%AF%E5%BE%84%E6%AC%A7%E6%8B%89%E5%9B%9E%E8%B7%AF%E6%AC%A7%E6%8B%89%E5%9B%BE%E5%82%BB%E5%82%BB%E5%88%86%E4%B8%8D%E6%B8%85%E6%A5%9A%E7%9C%8B%E8%BF%99%E4%B8%80%E7%AF%87%E5%B0%B1%E5%A4%9F%E4%BA%86/</guid>
+        <guid>https://werchange.github.io/p/%E6%AC%A7%E6%8B%89%E8%B7%AF%E5%BE%84%E6%AC%A7%E6%8B%89%E5%9B%9E%E8%B7%AF%E6%AC%A7%E6%8B%89%E5%9B%BE%E5%82%BB%E5%82%BB%E5%88%86%E4%B8%8D%E6%B8%85%E6%A5%9A%E7%9C%8B%E8%BF%99%E4%B8%80%E7%AF%87%E5%B0%B1%E5%A4%9F%E4%BA%86/</guid>
         <description>&lt;h1 id=&#34;欧拉路径回路图&#34;&gt;欧拉路径、回路、图
 &lt;/h1&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;当一手标题党，快乐~&lt;/p&gt;
@@ -1905,11 +1905,11 @@ $$
         </item>
         <item>
         <title>浅谈差分约束系统</title>
-        <link>http://localhost:1313/p/%E6%B5%85%E8%B0%88%E5%B7%AE%E5%88%86%E7%BA%A6%E6%9D%9F%E7%B3%BB%E7%BB%9F/</link>
+        <link>https://werchange.github.io/p/%E6%B5%85%E8%B0%88%E5%B7%AE%E5%88%86%E7%BA%A6%E6%9D%9F%E7%B3%BB%E7%BB%9F/</link>
         <pubDate>Wed, 24 Jan 2024 11:13:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E6%B5%85%E8%B0%88%E5%B7%AE%E5%88%86%E7%BA%A6%E6%9D%9F%E7%B3%BB%E7%BB%9F/</guid>
-        <description>&lt;img src="http://localhost:1313/img/%E5%B7%AE%E5%88%86%E7%BA%A6%E6%9D%9F/1.png" alt="Featured image of post 浅谈差分约束系统" /&gt;&lt;h1 id=&#34;差分约束系统&#34;&gt;差分约束系统
+        <guid>https://werchange.github.io/p/%E6%B5%85%E8%B0%88%E5%B7%AE%E5%88%86%E7%BA%A6%E6%9D%9F%E7%B3%BB%E7%BB%9F/</guid>
+        <description>&lt;img src="https://werchange.github.io/img/%E5%B7%AE%E5%88%86%E7%BA%A6%E6%9D%9F/1.png" alt="Featured image of post 浅谈差分约束系统" /&gt;&lt;h1 id=&#34;差分约束系统&#34;&gt;差分约束系统
 &lt;/h1&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;真的好久好久都没打过这个算法了。当时学的时候学得不明不白，又不写总结、又不刷题（我都不知道自己咋想的），所以今天刷图论题的时候，发现一车子的差分约束都没打过。&lt;/p&gt;
@@ -2094,7 +2094,7 @@ $$
 &lt;p&gt;溜去做题了。&lt;/p&gt;
 &lt;p&gt;如果你想问为什么有些题目用的差分约束是跑最长路，这个我还不能回答你（我也不知道），但是可以先放张图，等我学会后再回来更（当然也可能忘记了，如果你正在看，可以在评论区踢我）。&lt;/p&gt;
 &lt;p&gt;图：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/%e5%b7%ae%e5%88%86%e7%ba%a6%e6%9d%9f/1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://werchange.github.io/img/%e5%b7%ae%e5%88%86%e7%ba%a6%e6%9d%9f/1.png&#34;
 	
 	
 	
@@ -2107,10 +2107,10 @@ $$
         </item>
         <item>
         <title>优美的暴力——树上启发式合并（dsu on tree）</title>
-        <link>http://localhost:1313/p/%E4%BC%98%E7%BE%8E%E7%9A%84%E6%9A%B4%E5%8A%9B%E6%A0%91%E4%B8%8A%E5%90%AF%E5%8F%91%E5%BC%8F%E5%90%88%E5%B9%B6dsu-on-tree/</link>
+        <link>https://werchange.github.io/p/%E4%BC%98%E7%BE%8E%E7%9A%84%E6%9A%B4%E5%8A%9B%E6%A0%91%E4%B8%8A%E5%90%AF%E5%8F%91%E5%BC%8F%E5%90%88%E5%B9%B6dsu-on-tree/</link>
         <pubDate>Wed, 24 Jan 2024 09:47:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E4%BC%98%E7%BE%8E%E7%9A%84%E6%9A%B4%E5%8A%9B%E6%A0%91%E4%B8%8A%E5%90%AF%E5%8F%91%E5%BC%8F%E5%90%88%E5%B9%B6dsu-on-tree/</guid>
+        <guid>https://werchange.github.io/p/%E4%BC%98%E7%BE%8E%E7%9A%84%E6%9A%B4%E5%8A%9B%E6%A0%91%E4%B8%8A%E5%90%AF%E5%8F%91%E5%BC%8F%E5%90%88%E5%B9%B6dsu-on-tree/</guid>
         <description>&lt;h1 id=&#34;dsu-on-tree&#34;&gt;dsu on tree
 &lt;/h1&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;在我认为，这个并不能说单独列出来成为一个算法，更恰当的说，是一种思想、技巧。反正挺简单的，也很有趣（谁会拒绝一个优美的暴力呢），所以写篇笔记记录一手。&lt;/p&gt;
@@ -2623,11 +2623,11 @@ $$
         </item>
         <item>
         <title>浅谈 ST 表</title>
-        <link>http://localhost:1313/p/%E6%B5%85%E8%B0%88-st-%E8%A1%A8/</link>
+        <link>https://werchange.github.io/p/%E6%B5%85%E8%B0%88-st-%E8%A1%A8/</link>
         <pubDate>Mon, 22 Jan 2024 11:42:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E6%B5%85%E8%B0%88-st-%E8%A1%A8/</guid>
-        <description>&lt;img src="http://localhost:1313/img/ST/p1.png" alt="Featured image of post 浅谈 ST 表" /&gt;&lt;h1 id=&#34;浅谈-st-表&#34;&gt;浅谈 ST 表
+        <guid>https://werchange.github.io/p/%E6%B5%85%E8%B0%88-st-%E8%A1%A8/</guid>
+        <description>&lt;img src="https://werchange.github.io/img/ST/p1.png" alt="Featured image of post 浅谈 ST 表" /&gt;&lt;h1 id=&#34;浅谈-st-表&#34;&gt;浅谈 ST 表
 &lt;/h1&gt;&lt;p&gt;这种东西还是很简单的，但是涉及左移右移，模板容易打挂，写篇笔记。&lt;/p&gt;
 &lt;h2 id=&#34;st-表是什么&#34;&gt;ST 表是什么
 &lt;/h2&gt;&lt;p&gt;虽然这个是通过二维数组来实现的，但是我不是很喜欢称之为“表”。我觉得完全可以看作是在一维序列上的区间，看作“表”的话关联性就会很鬼畜。&lt;/p&gt;
@@ -2677,7 +2677,7 @@ $$
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;转换没看懂？&lt;/p&gt;
 &lt;p&gt;看个图吧&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/ST/p1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://werchange.github.io/img/ST/p1.png&#34;
 	
 	
 	
@@ -2833,11 +2833,11 @@ $$
         </item>
         <item>
         <title>浅谈 AC 自动机</title>
-        <link>http://localhost:1313/p/%E6%B5%85%E8%B0%88-ac-%E8%87%AA%E5%8A%A8%E6%9C%BA/</link>
+        <link>https://werchange.github.io/p/%E6%B5%85%E8%B0%88-ac-%E8%87%AA%E5%8A%A8%E6%9C%BA/</link>
         <pubDate>Tue, 16 Jan 2024 22:24:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E6%B5%85%E8%B0%88-ac-%E8%87%AA%E5%8A%A8%E6%9C%BA/</guid>
-        <description>&lt;img src="http://localhost:1313/img/AC/p1.png" alt="Featured image of post 浅谈 AC 自动机" /&gt;&lt;h1 id=&#34;浅谈-ac-自动机&#34;&gt;浅谈 AC 自动机
+        <guid>https://werchange.github.io/p/%E6%B5%85%E8%B0%88-ac-%E8%87%AA%E5%8A%A8%E6%9C%BA/</guid>
+        <description>&lt;img src="https://werchange.github.io/img/AC/p1.png" alt="Featured image of post 浅谈 AC 自动机" /&gt;&lt;h1 id=&#34;浅谈-ac-自动机&#34;&gt;浅谈 AC 自动机
 &lt;/h1&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;这不是第一次看到这个算法。第一次是在 &lt;a class=&#34;link&#34; href=&#34;https://oiwiki.org/string/ac-automaton/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -2887,7 +2887,7 @@ $$
 &lt;p&gt;举个例子：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;如果以 &lt;code&gt;i&lt;/code&gt;,&lt;code&gt;he&lt;/code&gt;,&lt;code&gt;his&lt;/code&gt;,&lt;code&gt;she&lt;/code&gt;,&lt;code&gt;hers&lt;/code&gt; 这些单词构建 $\text{fail}$ 指针：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/AC/p1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://werchange.github.io/img/AC/p1.png&#34;
 	
 	
 	
@@ -3175,11 +3175,11 @@ $$
         </item>
         <item>
         <title>浅谈 Trie 树</title>
-        <link>http://localhost:1313/p/%E6%B5%85%E8%B0%88-trie-%E6%A0%91/</link>
+        <link>https://werchange.github.io/p/%E6%B5%85%E8%B0%88-trie-%E6%A0%91/</link>
         <pubDate>Tue, 16 Jan 2024 09:54:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E6%B5%85%E8%B0%88-trie-%E6%A0%91/</guid>
-        <description>&lt;img src="http://localhost:1313/img/trie/1.png" alt="Featured image of post 浅谈 Trie 树" /&gt;&lt;h1 id=&#34;浅谈-trie-树&#34;&gt;浅谈 Trie 树
+        <guid>https://werchange.github.io/p/%E6%B5%85%E8%B0%88-trie-%E6%A0%91/</guid>
+        <description>&lt;img src="https://werchange.github.io/img/trie/1.png" alt="Featured image of post 浅谈 Trie 树" /&gt;&lt;h1 id=&#34;浅谈-trie-树&#34;&gt;浅谈 Trie 树
 &lt;/h1&gt;&lt;h2 id=&#34;什么是-trie-树&#34;&gt;什么是 Trie 树？
 &lt;/h2&gt;&lt;p&gt;Trie 树，又称字典树，可用于存储单词。&lt;/p&gt;
 &lt;p&gt;Trie 树的根节点不表示任何字母，但是除了根节点的所有字母都表示一个字母。&lt;/p&gt;
@@ -3187,7 +3187,7 @@ $$
 &lt;blockquote&gt;
 &lt;p&gt;举个例子：要存储 work,word,world,hello 这些单词。&lt;/p&gt;
 &lt;p&gt;红色节点表示“结束”标记。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/trie/1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://werchange.github.io/img/trie/1.png&#34;
 	
 	
 	
@@ -3199,7 +3199,7 @@ $$
 &lt;p&gt;可以看到，&lt;strong&gt;叶子节点都是一个单词的结尾&lt;/strong&gt;；但是并不是&lt;strong&gt;所有的单词结尾都是叶子节点&lt;/strong&gt;。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;再举个例子：假如要多存储一个 worker 单词。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/trie/2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://werchange.github.io/img/trie/2.png&#34;
 	
 	
 	
@@ -3346,11 +3346,11 @@ $$
         </item>
         <item>
         <title>浅谈基数排序</title>
-        <link>http://localhost:1313/p/%E6%B5%85%E8%B0%88%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/</link>
+        <link>https://werchange.github.io/p/%E6%B5%85%E8%B0%88%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/</link>
         <pubDate>Mon, 15 Jan 2024 22:09:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E6%B5%85%E8%B0%88%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/</guid>
-        <description>&lt;img src="http://localhost:1313/img/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/p1.png" alt="Featured image of post 浅谈基数排序" /&gt;&lt;h1 id=&#34;浅谈基数排序&#34;&gt;浅谈基数排序
+        <guid>https://werchange.github.io/p/%E6%B5%85%E8%B0%88%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/</guid>
+        <description>&lt;img src="https://werchange.github.io/img/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/p1.png" alt="Featured image of post 浅谈基数排序" /&gt;&lt;h1 id=&#34;浅谈基数排序&#34;&gt;浅谈基数排序
 &lt;/h1&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;注意，本贴的算法是&lt;strong&gt;基数排序&lt;/strong&gt;而不是&lt;strong&gt;计数排序&lt;/strong&gt;。这两者差别不大，但是存在着一定差异。&lt;/p&gt;
 &lt;h2 id=&#34;一句话做法&#34;&gt;一句话做法
@@ -3366,7 +3366,7 @@ $$
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;第一轮看个位&#34;&gt;第一轮，看个位
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/%e5%9f%ba%e6%95%b0%e6%8e%92%e5%ba%8f/p1.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://werchange.github.io/img/%e5%9f%ba%e6%95%b0%e6%8e%92%e5%ba%8f/p1.png&#34;
 	
 	
 	
@@ -3384,7 +3384,7 @@ $$
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;第二轮看十位&#34;&gt;第二轮，看十位
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/%e5%9f%ba%e6%95%b0%e6%8e%92%e5%ba%8f/p2.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://werchange.github.io/img/%e5%9f%ba%e6%95%b0%e6%8e%92%e5%ba%8f/p2.png&#34;
 	
 	
 	
@@ -3402,7 +3402,7 @@ $$
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;第三轮看百位&#34;&gt;第三轮，看百位
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/%e5%9f%ba%e6%95%b0%e6%8e%92%e5%ba%8f/p3.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://werchange.github.io/img/%e5%9f%ba%e6%95%b0%e6%8e%92%e5%ba%8f/p3.png&#34;
 	
 	
 	
@@ -3421,7 +3421,7 @@ $$
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;此时尽管数组已经有序，但过程并未完整。因为对于一些数据是不一定如此凑巧提前就能排好序的。&lt;/p&gt;
 &lt;h3 id=&#34;第四轮看千位&#34;&gt;第四轮，看千位
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/%e5%9f%ba%e6%95%b0%e6%8e%92%e5%ba%8f/p4.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://werchange.github.io/img/%e5%9f%ba%e6%95%b0%e6%8e%92%e5%ba%8f/p4.png&#34;
 	
 	
 	
@@ -3452,11 +3452,11 @@ $$
         </item>
         <item>
         <title>超级简单的后缀数组（SA）！！</title>
-        <link>http://localhost:1313/p/%E8%B6%85%E7%BA%A7%E7%AE%80%E5%8D%95%E7%9A%84%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84sa/</link>
+        <link>https://werchange.github.io/p/%E8%B6%85%E7%BA%A7%E7%AE%80%E5%8D%95%E7%9A%84%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84sa/</link>
         <pubDate>Sun, 14 Jan 2024 22:00:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E8%B6%85%E7%BA%A7%E7%AE%80%E5%8D%95%E7%9A%84%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84sa/</guid>
-        <description>&lt;img src="http://localhost:1313/img/%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84/p1.png" alt="Featured image of post 超级简单的后缀数组（SA）！！" /&gt;&lt;h1 id=&#34;超级简单的后缀数组sa&#34;&gt;超级简单的后缀数组（SA）！！
+        <guid>https://werchange.github.io/p/%E8%B6%85%E7%BA%A7%E7%AE%80%E5%8D%95%E7%9A%84%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84sa/</guid>
+        <description>&lt;img src="https://werchange.github.io/img/%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84/p1.png" alt="Featured image of post 超级简单的后缀数组（SA）！！" /&gt;&lt;h1 id=&#34;超级简单的后缀数组sa&#34;&gt;超级简单的后缀数组（SA）！！
 &lt;/h1&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;这里选择当一手标题党。&lt;/p&gt;
@@ -3487,7 +3487,7 @@ $$
 &lt;p&gt;“简单的说，后缀数组是‘排第几的是谁？’，名次数组是‘你排第几？’。”——罗穗骞&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;显然，这俩玩意儿就是双映射关系，说白了就是运算互逆。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/%e5%90%8e%e7%bc%80%e6%95%b0%e7%bb%84/p1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://werchange.github.io/img/%e5%90%8e%e7%bc%80%e6%95%b0%e7%bb%84/p1.png&#34;
 	
 	
 	
@@ -3506,7 +3506,7 @@ $$
 &lt;blockquote&gt;
 &lt;p&gt;举个例子：&lt;/p&gt;
 &lt;p&gt;以字符串“aabaaaab”为例，整个过程如图所示。其中 $x,y$ 是表示长度为 $2^k$ 的字符串的两个关键字 。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/%e5%90%8e%e7%bc%80%e6%95%b0%e7%bb%84/p2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://werchange.github.io/img/%e5%90%8e%e7%bc%80%e6%95%b0%e7%bb%84/p2.png&#34;
 	
 	
 	
@@ -3817,10 +3817,10 @@ $$
         </item>
         <item>
         <title>01 分数规划</title>
-        <link>http://localhost:1313/p/01-%E5%88%86%E6%95%B0%E8%A7%84%E5%88%92/</link>
+        <link>https://werchange.github.io/p/01-%E5%88%86%E6%95%B0%E8%A7%84%E5%88%92/</link>
         <pubDate>Mon, 14 Aug 2023 21:07:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/01-%E5%88%86%E6%95%B0%E8%A7%84%E5%88%92/</guid>
+        <guid>https://werchange.github.io/p/01-%E5%88%86%E6%95%B0%E8%A7%84%E5%88%92/</guid>
         <description>&lt;h1 id=&#34;01-分数规划&#34;&gt;01 分数规划
 &lt;/h1&gt;&lt;h2 id=&#34;什么是-01-分数规划&#34;&gt;什么是 01 分数规划
 &lt;/h2&gt;&lt;p&gt;用人话说，就是：&lt;/p&gt;
@@ -3952,11 +3952,11 @@ $$\sum\limits_{i=1}^{n} (x_i-y_i\times L)\times z_i\geq0$$
         </item>
         <item>
         <title>二分图最大匹配匈牙利算法</title>
-        <link>http://localhost:1313/p/%E4%BA%8C%E5%88%86%E5%9B%BE%E6%9C%80%E5%A4%A7%E5%8C%B9%E9%85%8D%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95/</link>
+        <link>https://werchange.github.io/p/%E4%BA%8C%E5%88%86%E5%9B%BE%E6%9C%80%E5%A4%A7%E5%8C%B9%E9%85%8D%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95/</link>
         <pubDate>Sun, 21 May 2023 00:05:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E4%BA%8C%E5%88%86%E5%9B%BE%E6%9C%80%E5%A4%A7%E5%8C%B9%E9%85%8D%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95/</guid>
-        <description>&lt;img src="http://localhost:1313/img/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95/p2.png" alt="Featured image of post 二分图最大匹配匈牙利算法" /&gt;&lt;h1 id=&#34;二分图最大匹配&#34;&gt;二分图最大匹配
+        <guid>https://werchange.github.io/p/%E4%BA%8C%E5%88%86%E5%9B%BE%E6%9C%80%E5%A4%A7%E5%8C%B9%E9%85%8D%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95/</guid>
+        <description>&lt;img src="https://werchange.github.io/img/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95/p2.png" alt="Featured image of post 二分图最大匹配匈牙利算法" /&gt;&lt;h1 id=&#34;二分图最大匹配&#34;&gt;二分图最大匹配
 &lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;前言：其实老早就学了，但是之前学的时候不透彻，稀里糊涂背背模板就过去了。果然，在最近一次原题检测上找到了我，然后就“暴毙”了。&lt;br&gt;
 我就意识到学算法不能这么学，要摸清楚规律、掌握证明方法、思考推论过程。&lt;br&gt;
@@ -3978,7 +3978,7 @@ $$\sum\limits_{i=1}^{n} (x_i-y_i\times L)\times z_i\geq0$$
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;但其实可以简化成一张图去理解：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/%e5%8c%88%e7%89%99%e5%88%a9%e7%ae%97%e6%b3%95/p1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://werchange.github.io/img/%e5%8c%88%e7%89%99%e5%88%a9%e7%ae%97%e6%b3%95/p1.png&#34;
 	
 	
 	
@@ -4011,7 +4011,7 @@ $$\sum\limits_{i=1}^{n} (x_i-y_i\times L)\times z_i\geq0$$
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;如下图，可判定为一个二分图：&lt;br&gt;
-&lt;img src=&#34;http://localhost:1313/img/%e5%8c%88%e7%89%99%e5%88%a9%e7%ae%97%e6%b3%95/p2.png&#34;
+&lt;img src=&#34;https://werchange.github.io/img/%e5%8c%88%e7%89%99%e5%88%a9%e7%ae%97%e6%b3%95/p2.png&#34;
 	
 	
 	
@@ -4026,7 +4026,7 @@ $$\sum\limits_{i=1}^{n} (x_i-y_i\times L)\times z_i\geq0$$
 &lt;blockquote&gt;
 &lt;p&gt;给定一个二分图 $G$，在 $G$ 的一个子图 $M$ 中，$M$ 的边集 ${E}$ 中的任意两条边都不依附于同一个顶点，则称 $M$ 是一个匹配。&lt;/p&gt;
 &lt;p&gt;图中加粗的边是数量为 $2$ 的匹配。&lt;br&gt;
-&lt;img src=&#34;http://localhost:1313/img/%e5%8c%88%e7%89%99%e5%88%a9%e7%ae%97%e6%b3%95/p3.png&#34;
+&lt;img src=&#34;https://werchange.github.io/img/%e5%8c%88%e7%89%99%e5%88%a9%e7%ae%97%e6%b3%95/p3.png&#34;
 	
 	
 	
@@ -4040,7 +4040,7 @@ $$\sum\limits_{i=1}^{n} (x_i-y_i\times L)\times z_i\geq0$$
 &lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;选择边数最大的子图称为图的&lt;strong&gt;最大匹配问题&lt;/strong&gt;。&lt;br&gt;
 如图加粗的边是一个最大匹配：&lt;br&gt;
-&lt;img src=&#34;http://localhost:1313/img/%e5%8c%88%e7%89%99%e5%88%a9%e7%ae%97%e6%b3%95/p4.png&#34;
+&lt;img src=&#34;https://werchange.github.io/img/%e5%8c%88%e7%89%99%e5%88%a9%e7%ae%97%e6%b3%95/p4.png&#34;
 	
 	
 	
@@ -4058,7 +4058,7 @@ $$\sum\limits_{i=1}^{n} (x_i-y_i\times L)\times z_i\geq0$$
 &lt;p&gt;为什么 $P$ 会有奇数条边呢？&lt;/p&gt;
 &lt;p&gt;根据定义，$P$ 路径的起点和终点不在同一个部，所以必然是奇数条边。&lt;/p&gt;
 &lt;p&gt;下面来根据这个图找一下增广路：&lt;br&gt;
-&lt;img src=&#34;http://localhost:1313/img/%e5%8c%88%e7%89%99%e5%88%a9%e7%ae%97%e6%b3%95/p5.png&#34;
+&lt;img src=&#34;https://werchange.github.io/img/%e5%8c%88%e7%89%99%e5%88%a9%e7%ae%97%e6%b3%95/p5.png&#34;
 	
 	
 	
@@ -4077,7 +4077,7 @@ $$
 可见&lt;strong&gt;不属于匹配的边要多一条&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;如果我们想让情况变成&lt;strong&gt;匹配边会多一条&lt;/strong&gt;，那就思考一下“取反”操作，即将匹配边变为非匹配边，反之同理。&lt;br&gt;
 可得：&lt;br&gt;
-&lt;img src=&#34;http://localhost:1313/img/%e5%8c%88%e7%89%99%e5%88%a9%e7%ae%97%e6%b3%95/p6.png&#34;
+&lt;img src=&#34;https://werchange.github.io/img/%e5%8c%88%e7%89%99%e5%88%a9%e7%ae%97%e6%b3%95/p6.png&#34;
 	
 	
 	
@@ -4465,10 +4465,10 @@ $$
         </item>
         <item>
         <title>可持续化线段树</title>
-        <link>http://localhost:1313/p/%E5%8F%AF%E6%8C%81%E7%BB%AD%E5%8C%96%E7%BA%BF%E6%AE%B5%E6%A0%91/</link>
+        <link>https://werchange.github.io/p/%E5%8F%AF%E6%8C%81%E7%BB%AD%E5%8C%96%E7%BA%BF%E6%AE%B5%E6%A0%91/</link>
         <pubDate>Tue, 16 May 2023 20:54:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E5%8F%AF%E6%8C%81%E7%BB%AD%E5%8C%96%E7%BA%BF%E6%AE%B5%E6%A0%91/</guid>
+        <guid>https://werchange.github.io/p/%E5%8F%AF%E6%8C%81%E7%BB%AD%E5%8C%96%E7%BA%BF%E6%AE%B5%E6%A0%91/</guid>
         <description>&lt;img src="https://cdn.luogu.com.cn/upload/image_hosting/xq5tpo51.png" alt="Featured image of post 可持续化线段树" /&gt;&lt;h1 id=&#34;可持续化线段树&#34;&gt;可持续化线段树
 &lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;前言：&lt;br&gt;
@@ -4849,11 +4849,11 @@ $n\leq 10^5，m\leq 10^5，1\leq l\leq r\leq n， 1\leq k\leq r-l+1，1\leq a_i\
         </item>
         <item>
         <title>平衡树详解</title>
-        <link>http://localhost:1313/p/%E5%B9%B3%E8%A1%A1%E6%A0%91%E8%AF%A6%E8%A7%A3/</link>
+        <link>https://werchange.github.io/p/%E5%B9%B3%E8%A1%A1%E6%A0%91%E8%AF%A6%E8%A7%A3/</link>
         <pubDate>Wed, 11 Jan 2023 09:21:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E5%B9%B3%E8%A1%A1%E6%A0%91%E8%AF%A6%E8%A7%A3/</guid>
-        <description>&lt;img src="http://localhost:1313/img/%E5%B9%B3%E8%A1%A1%E6%A0%91/p12.png" alt="Featured image of post 平衡树详解" /&gt;&lt;h1 id=&#34;平衡树&#34;&gt;平衡树
+        <guid>https://werchange.github.io/p/%E5%B9%B3%E8%A1%A1%E6%A0%91%E8%AF%A6%E8%A7%A3/</guid>
+        <description>&lt;img src="https://werchange.github.io/img/%E5%B9%B3%E8%A1%A1%E6%A0%91/p12.png" alt="Featured image of post 平衡树详解" /&gt;&lt;h1 id=&#34;平衡树&#34;&gt;平衡树
 &lt;/h1&gt;&lt;p&gt;是一种二叉查找树，其平衡性使得树的深度在$\log n$以内，增加、删除等操作可以做到 $O(\log n)$.&lt;/p&gt;
 &lt;p&gt;平衡树的实现有多种，本文主要介绍 AVL，Treap，FHQ Treap 与 Splay .&lt;/p&gt;
 &lt;h2 id=&#34;avl&#34;&gt;AVL
@@ -4872,7 +4872,7 @@ $n\leq 10^5，m\leq 10^5，1\leq l\leq r\leq n， 1\leq k\leq r-l+1，1\leq a_i\
 &lt;p&gt;为什么会有第2步的判断？&lt;/p&gt;
 &lt;p&gt;因为可能出现不同的情况，我们也需要做出不同的旋转.&lt;/p&gt;
 &lt;p&gt;如下图，左子树根节点（节点3）的左儿子（节点2）使左子树高度增加为2，而右子树高度为0，所以平衡树不平衡. &lt;br&gt;
-&lt;img src=&#34;http://localhost:1313/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p1.png&#34;
+&lt;img src=&#34;https://werchange.github.io/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p1.png&#34;
 	
 	
 	
@@ -4883,7 +4883,7 @@ $n\leq 10^5，m\leq 10^5，1\leq l\leq r\leq n， 1\leq k\leq r-l+1，1\leq a_i\
 	
 &gt; &lt;br&gt;
 再如下图，左子树根节点（节点15）的右儿子（节点18）使左子树高度增加为2，而右子树高度为0，所以平衡树不平衡. &lt;br&gt;
-&lt;img src=&#34;http://localhost:1313/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p2.png&#34;
+&lt;img src=&#34;https://werchange.github.io/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p2.png&#34;
 	
 	
 	
@@ -4894,7 +4894,7 @@ $n\leq 10^5，m\leq 10^5，1\leq l\leq r\leq n， 1\leq k\leq r-l+1，1\leq a_i\
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;同理，也有右子树高度高于左子树的情况. &lt;br&gt;
-&lt;img src=&#34;http://localhost:1313/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p3.png&#34;
+&lt;img src=&#34;https://werchange.github.io/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p3.png&#34;
 	
 	
 	
@@ -4904,7 +4904,7 @@ $n\leq 10^5，m\leq 10^5，1\leq l\leq r\leq n， 1\leq k\leq r-l+1，1\leq a_i\
 	
 	
 &gt; &lt;br&gt;
-&lt;img src=&#34;http://localhost:1313/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p4.png&#34;
+&lt;img src=&#34;https://werchange.github.io/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p4.png&#34;
 	
 	
 	
@@ -4918,7 +4918,7 @@ $n\leq 10^5，m\leq 10^5，1\leq l\leq r\leq n， 1\leq k\leq r-l+1，1\leq a_i\
 当不成一条线时，需要通过两次旋转.&lt;/p&gt;
 &lt;p&gt;单旋转分为两种，左旋（zag）与右旋（zig）.&lt;/p&gt;
 &lt;p&gt;如下图，为左旋. &lt;br&gt;
-&lt;img src=&#34;http://localhost:1313/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p5.gif&#34;
+&lt;img src=&#34;https://werchange.github.io/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p5.gif&#34;
 	
 	
 	
@@ -4929,7 +4929,7 @@ $n\leq 10^5，m\leq 10^5，1\leq l\leq r\leq n， 1\leq k\leq r-l+1，1\leq a_i\
 	
 &gt; &lt;br&gt;
 如下图，为右旋. &lt;br&gt;
-&lt;img src=&#34;http://localhost:1313/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p6.gif&#34;
+&lt;img src=&#34;https://werchange.github.io/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p6.gif&#34;
 	
 	
 	
@@ -4941,7 +4941,7 @@ $n\leq 10^5，m\leq 10^5，1\leq l\leq r\leq n， 1\leq k\leq r-l+1，1\leq a_i\
 &gt;&lt;/p&gt;
 &lt;p&gt;双旋转则多为先进行一次方向旋转，使其呈链状后，再进行一次反方向旋转.&lt;/p&gt;
 &lt;p&gt;如下图，为需要维护的不平衡状态. &lt;br&gt;
-&lt;img src=&#34;http://localhost:1313/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p7.png&#34;
+&lt;img src=&#34;https://werchange.github.io/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p7.png&#34;
 	
 	
 	
@@ -4952,7 +4952,7 @@ $n\leq 10^5，m\leq 10^5，1\leq l\leq r\leq n， 1\leq k\leq r-l+1，1\leq a_i\
 	
 &gt; &lt;br&gt;
 又如下图，为进行旋转（左旋A，B）使三点共链的状态. &lt;br&gt;
-&lt;img src=&#34;http://localhost:1313/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p8.png&#34;
+&lt;img src=&#34;https://werchange.github.io/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p8.png&#34;
 	
 	
 	
@@ -4963,7 +4963,7 @@ $n\leq 10^5，m\leq 10^5，1\leq l\leq r\leq n， 1\leq k\leq r-l+1，1\leq a_i\
 	
 &gt; &lt;br&gt;
 再如下图，为进行反方向旋转（右旋C，B）使其平衡的状态. &lt;br&gt;
-&lt;img src=&#34;http://localhost:1313/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p9.png&#34;
+&lt;img src=&#34;https://werchange.github.io/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p9.png&#34;
 	
 	
 	
@@ -6171,7 +6171,7 @@ $n\leq 10^5，m\leq 10^5，1\leq l\leq r\leq n， 1\leq k\leq r-l+1，1\leq a_i\
 以下 goal 节点为 root 根节点举例.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;情况一：节点 x 的父节点 y 是根节点. 这时如果 x 是 y 的左儿子，则进行一次 zig 操作；反之同理. 如图 1 所示.
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p10.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://werchange.github.io/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p10.png&#34;
 	
 	
 	
@@ -6183,7 +6183,7 @@ $n\leq 10^5，m\leq 10^5，1\leq l\leq r\leq n， 1\leq k\leq r-l+1，1\leq a_i\
 &gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;情况二：节点x的父节点y还有一个父节点z. 且此时三点成链，则进行一次zigzig操作或zagzag操作（是的，此处旋转不需要维护平衡，只是为了将x旋转到目标节点），如图2所示.
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p11.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://werchange.github.io/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p11.png&#34;
 	
 	
 	
@@ -6195,7 +6195,7 @@ $n\leq 10^5，m\leq 10^5，1\leq l\leq r\leq n， 1\leq k\leq r-l+1，1\leq a_i\
 &gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;情况三：节点x的父节点y还有父节点z. 且此时三点呈“之”字形，则进行一次zagzig操作或zigzag操作，如图3所示.
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p12.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://werchange.github.io/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p12.png&#34;
 	
 	
 	
@@ -6206,7 +6206,7 @@ $n\leq 10^5，m\leq 10^5，1\leq l\leq r\leq n， 1\leq k\leq r-l+1，1\leq a_i\
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;如图5，是一次splay(2,rt)的操作.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p13.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://werchange.github.io/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p13.png&#34;
 	
 	
 	
@@ -6685,11 +6685,11 @@ $n\leq 10^5，m\leq 10^5，1\leq l\leq r\leq n， 1\leq k\leq r-l+1，1\leq a_i\
         </item>
         <item>
         <title>图论——最短路径问题</title>
-        <link>http://localhost:1313/p/%E5%9B%BE%E8%AE%BA%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98/</link>
+        <link>https://werchange.github.io/p/%E5%9B%BE%E8%AE%BA%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98/</link>
         <pubDate>Thu, 02 Jun 2022 20:32:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E5%9B%BE%E8%AE%BA%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98/</guid>
-        <description>&lt;img src="http://localhost:1313/img/%E6%9C%80%E7%9F%AD%E8%B7%AF/spfa.png" alt="Featured image of post 图论——最短路径问题" /&gt;&lt;p&gt;update:2023.07.19 更新了堆优化版本的 Dijkstra&lt;br&gt;
+        <guid>https://werchange.github.io/p/%E5%9B%BE%E8%AE%BA%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98/</guid>
+        <description>&lt;img src="https://werchange.github.io/img/%E6%9C%80%E7%9F%AD%E8%B7%AF/spfa.png" alt="Featured image of post 图论——最短路径问题" /&gt;&lt;p&gt;update:2023.07.19 更新了堆优化版本的 Dijkstra&lt;br&gt;
 update:2023.09.21 更新了时间复杂度讨论并修改了堆优化 Dij&lt;/p&gt;
 &lt;h1 id=&#34;dijkstra&#34;&gt;Dijkstra
 &lt;/h1&gt;&lt;h2 id=&#34;什么是dijkstra&#34;&gt;什么是Dijkstra
@@ -7348,7 +7348,7 @@ SPFA：$O(nm)$（最坏情况）
 Floyd：$O(n^3)$&lt;/p&gt;
 &lt;p&gt;一般来说，无负边权就选择 Dij，对于是否采用堆优化，取决于图的稀疏程度。&lt;/p&gt;
 &lt;p&gt;关于 SPFA……
-&lt;img src=&#34;http://localhost:1313/img/%e6%9c%80%e7%9f%ad%e8%b7%af/spfa.png&#34;
+&lt;img src=&#34;https://werchange.github.io/img/%e6%9c%80%e7%9f%ad%e8%b7%af/spfa.png&#34;
 	
 	
 	

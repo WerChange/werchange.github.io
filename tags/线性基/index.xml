@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>线性基 on WerChange</title>
-        <link>http://localhost:1313/tags/%E7%BA%BF%E6%80%A7%E5%9F%BA/</link>
+        <link>https://werchange.github.io/tags/%E7%BA%BF%E6%80%A7%E5%9F%BA/</link>
         <description>Recent content in 线性基 on WerChange</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>WerChange</copyright>
-        <lastBuildDate>Thu, 01 Feb 2024 23:58:00 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E7%BA%BF%E6%80%A7%E5%9F%BA/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 01 Feb 2024 23:58:00 +0800</lastBuildDate><atom:link href="https://werchange.github.io/tags/%E7%BA%BF%E6%80%A7%E5%9F%BA/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>[ARC145E] Adjacent XOR 题解</title>
-        <link>http://localhost:1313/p/arc145e-adjacent-xor-%E9%A2%98%E8%A7%A3/</link>
+        <link>https://werchange.github.io/p/arc145e-adjacent-xor-%E9%A2%98%E8%A7%A3/</link>
         <pubDate>Thu, 01 Feb 2024 23:58:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/arc145e-adjacent-xor-%E9%A2%98%E8%A7%A3/</guid>
+        <guid>https://werchange.github.io/p/arc145e-adjacent-xor-%E9%A2%98%E8%A7%A3/</guid>
         <description>&lt;h1 id=&#34;arc145e-adjacent-xor-题解&#34;&gt;[ARC145E] Adjacent XOR 题解
 &lt;/h1&gt;&lt;p&gt;这道题真的是道神仙题，是那种考场想不出来、补题也补得十分艰难的题。可能我还是太菜了。&lt;/p&gt;
 &lt;p&gt;看了 APJ 大神的题解，琢磨很久才懂。为了帮助像我一样的同学，特地写一篇题解。&lt;/p&gt;

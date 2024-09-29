@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>最短路 on WerChange</title>
-        <link>http://localhost:1313/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/</link>
+        <link>https://werchange.github.io/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/</link>
         <description>Recent content in 最短路 on WerChange</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>WerChange</copyright>
-        <lastBuildDate>Tue, 22 Aug 2023 21:12:00 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 22 Aug 2023 21:12:00 +0800</lastBuildDate><atom:link href="https://werchange.github.io/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>[USACO JAN 2011]交通灯 题解</title>
-        <link>http://localhost:1313/p/usaco-jan-2011%E4%BA%A4%E9%80%9A%E7%81%AF-%E9%A2%98%E8%A7%A3/</link>
+        <link>https://werchange.github.io/p/usaco-jan-2011%E4%BA%A4%E9%80%9A%E7%81%AF-%E9%A2%98%E8%A7%A3/</link>
         <pubDate>Tue, 22 Aug 2023 21:12:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/usaco-jan-2011%E4%BA%A4%E9%80%9A%E7%81%AF-%E9%A2%98%E8%A7%A3/</guid>
+        <guid>https://werchange.github.io/p/usaco-jan-2011%E4%BA%A4%E9%80%9A%E7%81%AF-%E9%A2%98%E8%A7%A3/</guid>
         <description>&lt;p&gt;题意很清晰，直接跑 SPFA 求最短路。&lt;/p&gt;
 &lt;p&gt;只是我们在松弛操作时，需要注意从 $u$ 是否可以到达 $v$。&lt;/p&gt;
 &lt;p&gt;怎么判断呢？&lt;/p&gt;
@@ -484,11 +484,11 @@ code&lt;/p&gt;
         </item>
         <item>
         <title>图论——最短路径问题</title>
-        <link>http://localhost:1313/p/%E5%9B%BE%E8%AE%BA%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98/</link>
+        <link>https://werchange.github.io/p/%E5%9B%BE%E8%AE%BA%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98/</link>
         <pubDate>Thu, 02 Jun 2022 20:32:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E5%9B%BE%E8%AE%BA%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98/</guid>
-        <description>&lt;img src="http://localhost:1313/img/%E6%9C%80%E7%9F%AD%E8%B7%AF/spfa.png" alt="Featured image of post 图论——最短路径问题" /&gt;&lt;p&gt;update:2023.07.19 更新了堆优化版本的 Dijkstra&lt;br&gt;
+        <guid>https://werchange.github.io/p/%E5%9B%BE%E8%AE%BA%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98/</guid>
+        <description>&lt;img src="https://werchange.github.io/img/%E6%9C%80%E7%9F%AD%E8%B7%AF/spfa.png" alt="Featured image of post 图论——最短路径问题" /&gt;&lt;p&gt;update:2023.07.19 更新了堆优化版本的 Dijkstra&lt;br&gt;
 update:2023.09.21 更新了时间复杂度讨论并修改了堆优化 Dij&lt;/p&gt;
 &lt;h1 id=&#34;dijkstra&#34;&gt;Dijkstra
 &lt;/h1&gt;&lt;h2 id=&#34;什么是dijkstra&#34;&gt;什么是Dijkstra
@@ -1147,7 +1147,7 @@ SPFA：$O(nm)$（最坏情况）
 Floyd：$O(n^3)$&lt;/p&gt;
 &lt;p&gt;一般来说，无负边权就选择 Dij，对于是否采用堆优化，取决于图的稀疏程度。&lt;/p&gt;
 &lt;p&gt;关于 SPFA……
-&lt;img src=&#34;http://localhost:1313/img/%e6%9c%80%e7%9f%ad%e8%b7%af/spfa.png&#34;
+&lt;img src=&#34;https://werchange.github.io/img/%e6%9c%80%e7%9f%ad%e8%b7%af/spfa.png&#34;
 	
 	
 	

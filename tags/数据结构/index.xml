@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>数据结构 on WerChange</title>
-        <link>http://localhost:1313/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
+        <link>https://werchange.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
         <description>Recent content in 数据结构 on WerChange</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>WerChange</copyright>
-        <lastBuildDate>Sun, 25 Feb 2024 21:47:00 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 25 Feb 2024 21:47:00 +0800</lastBuildDate><atom:link href="https://werchange.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>可持久化线段树 2</title>
-        <link>http://localhost:1313/p/%E5%8F%AF%E6%8C%81%E4%B9%85%E5%8C%96%E7%BA%BF%E6%AE%B5%E6%A0%91-2/</link>
+        <link>https://werchange.github.io/p/%E5%8F%AF%E6%8C%81%E4%B9%85%E5%8C%96%E7%BA%BF%E6%AE%B5%E6%A0%91-2/</link>
         <pubDate>Sun, 25 Feb 2024 21:47:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E5%8F%AF%E6%8C%81%E4%B9%85%E5%8C%96%E7%BA%BF%E6%AE%B5%E6%A0%91-2/</guid>
+        <guid>https://werchange.github.io/p/%E5%8F%AF%E6%8C%81%E4%B9%85%E5%8C%96%E7%BA%BF%E6%AE%B5%E6%A0%91-2/</guid>
         <description>&lt;h1 id=&#34;可持久化线段树&#34;&gt;可持久化线段树
 &lt;/h1&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;这个东西之前讲过，但是用得少，很快就忘了。&lt;/p&gt;
@@ -354,11 +354,11 @@
         </item>
         <item>
         <title>浅谈 ST 表</title>
-        <link>http://localhost:1313/p/%E6%B5%85%E8%B0%88-st-%E8%A1%A8/</link>
+        <link>https://werchange.github.io/p/%E6%B5%85%E8%B0%88-st-%E8%A1%A8/</link>
         <pubDate>Mon, 22 Jan 2024 11:42:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E6%B5%85%E8%B0%88-st-%E8%A1%A8/</guid>
-        <description>&lt;img src="http://localhost:1313/img/ST/p1.png" alt="Featured image of post 浅谈 ST 表" /&gt;&lt;h1 id=&#34;浅谈-st-表&#34;&gt;浅谈 ST 表
+        <guid>https://werchange.github.io/p/%E6%B5%85%E8%B0%88-st-%E8%A1%A8/</guid>
+        <description>&lt;img src="https://werchange.github.io/img/ST/p1.png" alt="Featured image of post 浅谈 ST 表" /&gt;&lt;h1 id=&#34;浅谈-st-表&#34;&gt;浅谈 ST 表
 &lt;/h1&gt;&lt;p&gt;这种东西还是很简单的，但是涉及左移右移，模板容易打挂，写篇笔记。&lt;/p&gt;
 &lt;h2 id=&#34;st-表是什么&#34;&gt;ST 表是什么
 &lt;/h2&gt;&lt;p&gt;虽然这个是通过二维数组来实现的，但是我不是很喜欢称之为“表”。我觉得完全可以看作是在一维序列上的区间，看作“表”的话关联性就会很鬼畜。&lt;/p&gt;
@@ -408,7 +408,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;转换没看懂？&lt;/p&gt;
 &lt;p&gt;看个图吧&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/ST/p1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://werchange.github.io/img/ST/p1.png&#34;
 	
 	
 	
@@ -564,11 +564,11 @@
         </item>
         <item>
         <title>浅谈 Trie 树</title>
-        <link>http://localhost:1313/p/%E6%B5%85%E8%B0%88-trie-%E6%A0%91/</link>
+        <link>https://werchange.github.io/p/%E6%B5%85%E8%B0%88-trie-%E6%A0%91/</link>
         <pubDate>Tue, 16 Jan 2024 09:54:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E6%B5%85%E8%B0%88-trie-%E6%A0%91/</guid>
-        <description>&lt;img src="http://localhost:1313/img/trie/1.png" alt="Featured image of post 浅谈 Trie 树" /&gt;&lt;h1 id=&#34;浅谈-trie-树&#34;&gt;浅谈 Trie 树
+        <guid>https://werchange.github.io/p/%E6%B5%85%E8%B0%88-trie-%E6%A0%91/</guid>
+        <description>&lt;img src="https://werchange.github.io/img/trie/1.png" alt="Featured image of post 浅谈 Trie 树" /&gt;&lt;h1 id=&#34;浅谈-trie-树&#34;&gt;浅谈 Trie 树
 &lt;/h1&gt;&lt;h2 id=&#34;什么是-trie-树&#34;&gt;什么是 Trie 树？
 &lt;/h2&gt;&lt;p&gt;Trie 树，又称字典树，可用于存储单词。&lt;/p&gt;
 &lt;p&gt;Trie 树的根节点不表示任何字母，但是除了根节点的所有字母都表示一个字母。&lt;/p&gt;
@@ -576,7 +576,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;举个例子：要存储 work,word,world,hello 这些单词。&lt;/p&gt;
 &lt;p&gt;红色节点表示“结束”标记。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/trie/1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://werchange.github.io/img/trie/1.png&#34;
 	
 	
 	
@@ -588,7 +588,7 @@
 &lt;p&gt;可以看到，&lt;strong&gt;叶子节点都是一个单词的结尾&lt;/strong&gt;；但是并不是&lt;strong&gt;所有的单词结尾都是叶子节点&lt;/strong&gt;。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;再举个例子：假如要多存储一个 worker 单词。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/trie/2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://werchange.github.io/img/trie/2.png&#34;
 	
 	
 	
@@ -735,10 +735,10 @@
         </item>
         <item>
         <title>可持续化线段树</title>
-        <link>http://localhost:1313/p/%E5%8F%AF%E6%8C%81%E7%BB%AD%E5%8C%96%E7%BA%BF%E6%AE%B5%E6%A0%91/</link>
+        <link>https://werchange.github.io/p/%E5%8F%AF%E6%8C%81%E7%BB%AD%E5%8C%96%E7%BA%BF%E6%AE%B5%E6%A0%91/</link>
         <pubDate>Tue, 16 May 2023 20:54:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E5%8F%AF%E6%8C%81%E7%BB%AD%E5%8C%96%E7%BA%BF%E6%AE%B5%E6%A0%91/</guid>
+        <guid>https://werchange.github.io/p/%E5%8F%AF%E6%8C%81%E7%BB%AD%E5%8C%96%E7%BA%BF%E6%AE%B5%E6%A0%91/</guid>
         <description>&lt;img src="https://cdn.luogu.com.cn/upload/image_hosting/xq5tpo51.png" alt="Featured image of post 可持续化线段树" /&gt;&lt;h1 id=&#34;可持续化线段树&#34;&gt;可持续化线段树
 &lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;前言：&lt;br&gt;
@@ -1119,11 +1119,11 @@ $n\leq 10^5，m\leq 10^5，1\leq l\leq r\leq n， 1\leq k\leq r-l+1，1\leq a_i\
         </item>
         <item>
         <title>平衡树详解</title>
-        <link>http://localhost:1313/p/%E5%B9%B3%E8%A1%A1%E6%A0%91%E8%AF%A6%E8%A7%A3/</link>
+        <link>https://werchange.github.io/p/%E5%B9%B3%E8%A1%A1%E6%A0%91%E8%AF%A6%E8%A7%A3/</link>
         <pubDate>Wed, 11 Jan 2023 09:21:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E5%B9%B3%E8%A1%A1%E6%A0%91%E8%AF%A6%E8%A7%A3/</guid>
-        <description>&lt;img src="http://localhost:1313/img/%E5%B9%B3%E8%A1%A1%E6%A0%91/p12.png" alt="Featured image of post 平衡树详解" /&gt;&lt;h1 id=&#34;平衡树&#34;&gt;平衡树
+        <guid>https://werchange.github.io/p/%E5%B9%B3%E8%A1%A1%E6%A0%91%E8%AF%A6%E8%A7%A3/</guid>
+        <description>&lt;img src="https://werchange.github.io/img/%E5%B9%B3%E8%A1%A1%E6%A0%91/p12.png" alt="Featured image of post 平衡树详解" /&gt;&lt;h1 id=&#34;平衡树&#34;&gt;平衡树
 &lt;/h1&gt;&lt;p&gt;是一种二叉查找树，其平衡性使得树的深度在$\log n$以内，增加、删除等操作可以做到 $O(\log n)$.&lt;/p&gt;
 &lt;p&gt;平衡树的实现有多种，本文主要介绍 AVL，Treap，FHQ Treap 与 Splay .&lt;/p&gt;
 &lt;h2 id=&#34;avl&#34;&gt;AVL
@@ -1142,7 +1142,7 @@ $n\leq 10^5，m\leq 10^5，1\leq l\leq r\leq n， 1\leq k\leq r-l+1，1\leq a_i\
 &lt;p&gt;为什么会有第2步的判断？&lt;/p&gt;
 &lt;p&gt;因为可能出现不同的情况，我们也需要做出不同的旋转.&lt;/p&gt;
 &lt;p&gt;如下图，左子树根节点（节点3）的左儿子（节点2）使左子树高度增加为2，而右子树高度为0，所以平衡树不平衡. &lt;br&gt;
-&lt;img src=&#34;http://localhost:1313/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p1.png&#34;
+&lt;img src=&#34;https://werchange.github.io/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p1.png&#34;
 	
 	
 	
@@ -1153,7 +1153,7 @@ $n\leq 10^5，m\leq 10^5，1\leq l\leq r\leq n， 1\leq k\leq r-l+1，1\leq a_i\
 	
 &gt; &lt;br&gt;
 再如下图，左子树根节点（节点15）的右儿子（节点18）使左子树高度增加为2，而右子树高度为0，所以平衡树不平衡. &lt;br&gt;
-&lt;img src=&#34;http://localhost:1313/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p2.png&#34;
+&lt;img src=&#34;https://werchange.github.io/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p2.png&#34;
 	
 	
 	
@@ -1164,7 +1164,7 @@ $n\leq 10^5，m\leq 10^5，1\leq l\leq r\leq n， 1\leq k\leq r-l+1，1\leq a_i\
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;同理，也有右子树高度高于左子树的情况. &lt;br&gt;
-&lt;img src=&#34;http://localhost:1313/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p3.png&#34;
+&lt;img src=&#34;https://werchange.github.io/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p3.png&#34;
 	
 	
 	
@@ -1174,7 +1174,7 @@ $n\leq 10^5，m\leq 10^5，1\leq l\leq r\leq n， 1\leq k\leq r-l+1，1\leq a_i\
 	
 	
 &gt; &lt;br&gt;
-&lt;img src=&#34;http://localhost:1313/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p4.png&#34;
+&lt;img src=&#34;https://werchange.github.io/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p4.png&#34;
 	
 	
 	
@@ -1188,7 +1188,7 @@ $n\leq 10^5，m\leq 10^5，1\leq l\leq r\leq n， 1\leq k\leq r-l+1，1\leq a_i\
 当不成一条线时，需要通过两次旋转.&lt;/p&gt;
 &lt;p&gt;单旋转分为两种，左旋（zag）与右旋（zig）.&lt;/p&gt;
 &lt;p&gt;如下图，为左旋. &lt;br&gt;
-&lt;img src=&#34;http://localhost:1313/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p5.gif&#34;
+&lt;img src=&#34;https://werchange.github.io/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p5.gif&#34;
 	
 	
 	
@@ -1199,7 +1199,7 @@ $n\leq 10^5，m\leq 10^5，1\leq l\leq r\leq n， 1\leq k\leq r-l+1，1\leq a_i\
 	
 &gt; &lt;br&gt;
 如下图，为右旋. &lt;br&gt;
-&lt;img src=&#34;http://localhost:1313/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p6.gif&#34;
+&lt;img src=&#34;https://werchange.github.io/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p6.gif&#34;
 	
 	
 	
@@ -1211,7 +1211,7 @@ $n\leq 10^5，m\leq 10^5，1\leq l\leq r\leq n， 1\leq k\leq r-l+1，1\leq a_i\
 &gt;&lt;/p&gt;
 &lt;p&gt;双旋转则多为先进行一次方向旋转，使其呈链状后，再进行一次反方向旋转.&lt;/p&gt;
 &lt;p&gt;如下图，为需要维护的不平衡状态. &lt;br&gt;
-&lt;img src=&#34;http://localhost:1313/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p7.png&#34;
+&lt;img src=&#34;https://werchange.github.io/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p7.png&#34;
 	
 	
 	
@@ -1222,7 +1222,7 @@ $n\leq 10^5，m\leq 10^5，1\leq l\leq r\leq n， 1\leq k\leq r-l+1，1\leq a_i\
 	
 &gt; &lt;br&gt;
 又如下图，为进行旋转（左旋A，B）使三点共链的状态. &lt;br&gt;
-&lt;img src=&#34;http://localhost:1313/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p8.png&#34;
+&lt;img src=&#34;https://werchange.github.io/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p8.png&#34;
 	
 	
 	
@@ -1233,7 +1233,7 @@ $n\leq 10^5，m\leq 10^5，1\leq l\leq r\leq n， 1\leq k\leq r-l+1，1\leq a_i\
 	
 &gt; &lt;br&gt;
 再如下图，为进行反方向旋转（右旋C，B）使其平衡的状态. &lt;br&gt;
-&lt;img src=&#34;http://localhost:1313/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p9.png&#34;
+&lt;img src=&#34;https://werchange.github.io/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p9.png&#34;
 	
 	
 	
@@ -2441,7 +2441,7 @@ $n\leq 10^5，m\leq 10^5，1\leq l\leq r\leq n， 1\leq k\leq r-l+1，1\leq a_i\
 以下 goal 节点为 root 根节点举例.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;情况一：节点 x 的父节点 y 是根节点. 这时如果 x 是 y 的左儿子，则进行一次 zig 操作；反之同理. 如图 1 所示.
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p10.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://werchange.github.io/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p10.png&#34;
 	
 	
 	
@@ -2453,7 +2453,7 @@ $n\leq 10^5，m\leq 10^5，1\leq l\leq r\leq n， 1\leq k\leq r-l+1，1\leq a_i\
 &gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;情况二：节点x的父节点y还有一个父节点z. 且此时三点成链，则进行一次zigzig操作或zagzag操作（是的，此处旋转不需要维护平衡，只是为了将x旋转到目标节点），如图2所示.
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p11.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://werchange.github.io/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p11.png&#34;
 	
 	
 	
@@ -2465,7 +2465,7 @@ $n\leq 10^5，m\leq 10^5，1\leq l\leq r\leq n， 1\leq k\leq r-l+1，1\leq a_i\
 &gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;情况三：节点x的父节点y还有父节点z. 且此时三点呈“之”字形，则进行一次zagzig操作或zigzag操作，如图3所示.
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p12.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://werchange.github.io/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p12.png&#34;
 	
 	
 	
@@ -2476,7 +2476,7 @@ $n\leq 10^5，m\leq 10^5，1\leq l\leq r\leq n， 1\leq k\leq r-l+1，1\leq a_i\
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;如图5，是一次splay(2,rt)的操作.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p13.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://werchange.github.io/img/%e5%b9%b3%e8%a1%a1%e6%a0%91/p13.png&#34;
 	
 	
 	

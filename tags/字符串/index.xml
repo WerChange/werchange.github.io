@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>字符串 on WerChange</title>
-        <link>http://localhost:1313/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+        <link>https://werchange.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
         <description>Recent content in 字符串 on WerChange</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>WerChange</copyright>
-        <lastBuildDate>Thu, 22 Aug 2024 21:34:00 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 22 Aug 2024 21:34:00 +0800</lastBuildDate><atom:link href="https://werchange.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>AC 自动机查漏补缺</title>
-        <link>http://localhost:1313/p/ac-%E8%87%AA%E5%8A%A8%E6%9C%BA%E6%9F%A5%E6%BC%8F%E8%A1%A5%E7%BC%BA/</link>
+        <link>https://werchange.github.io/p/ac-%E8%87%AA%E5%8A%A8%E6%9C%BA%E6%9F%A5%E6%BC%8F%E8%A1%A5%E7%BC%BA/</link>
         <pubDate>Thu, 22 Aug 2024 21:34:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/ac-%E8%87%AA%E5%8A%A8%E6%9C%BA%E6%9F%A5%E6%BC%8F%E8%A1%A5%E7%BC%BA/</guid>
+        <guid>https://werchange.github.io/p/ac-%E8%87%AA%E5%8A%A8%E6%9C%BA%E6%9F%A5%E6%BC%8F%E8%A1%A5%E7%BC%BA/</guid>
         <description>&lt;h1 id=&#34;ac-自动机查漏补缺&#34;&gt;AC 自动机查漏补缺
 &lt;/h1&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;今年 1 月份学过一次，当时自以为掌握得很好，实际上就是依托答辩。而且还有很多地方是有严重误导性的。所以这篇查漏补缺就是记录一下自己对 AC 自动机尚不完全掌握的地方。并对之前的那篇不太正确的题解进行纠正。&lt;/p&gt;
@@ -592,10 +592,10 @@
         </item>
         <item>
         <title>重学 KMP 小记</title>
-        <link>http://localhost:1313/p/%E9%87%8D%E5%AD%A6-kmp-%E5%B0%8F%E8%AE%B0/</link>
+        <link>https://werchange.github.io/p/%E9%87%8D%E5%AD%A6-kmp-%E5%B0%8F%E8%AE%B0/</link>
         <pubDate>Sat, 03 Aug 2024 22:00:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E9%87%8D%E5%AD%A6-kmp-%E5%B0%8F%E8%AE%B0/</guid>
+        <guid>https://werchange.github.io/p/%E9%87%8D%E5%AD%A6-kmp-%E5%B0%8F%E8%AE%B0/</guid>
         <description>&lt;h1 id=&#34;重学-kmp-小记&#34;&gt;重学 KMP 小记
 &lt;/h1&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;KMP 这个东西赛时用到的几率很小（虽然圣人说概率不小、也不是很大），但是如果一旦考字符串类的题又极可能考匹配问题。当时掌握得也是一知半解，所以现在来重学来了。&lt;/p&gt;
@@ -786,11 +786,11 @@
         </item>
         <item>
         <title>浅谈 AC 自动机</title>
-        <link>http://localhost:1313/p/%E6%B5%85%E8%B0%88-ac-%E8%87%AA%E5%8A%A8%E6%9C%BA/</link>
+        <link>https://werchange.github.io/p/%E6%B5%85%E8%B0%88-ac-%E8%87%AA%E5%8A%A8%E6%9C%BA/</link>
         <pubDate>Tue, 16 Jan 2024 22:24:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E6%B5%85%E8%B0%88-ac-%E8%87%AA%E5%8A%A8%E6%9C%BA/</guid>
-        <description>&lt;img src="http://localhost:1313/img/AC/p1.png" alt="Featured image of post 浅谈 AC 自动机" /&gt;&lt;h1 id=&#34;浅谈-ac-自动机&#34;&gt;浅谈 AC 自动机
+        <guid>https://werchange.github.io/p/%E6%B5%85%E8%B0%88-ac-%E8%87%AA%E5%8A%A8%E6%9C%BA/</guid>
+        <description>&lt;img src="https://werchange.github.io/img/AC/p1.png" alt="Featured image of post 浅谈 AC 自动机" /&gt;&lt;h1 id=&#34;浅谈-ac-自动机&#34;&gt;浅谈 AC 自动机
 &lt;/h1&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;这不是第一次看到这个算法。第一次是在 &lt;a class=&#34;link&#34; href=&#34;https://oiwiki.org/string/ac-automaton/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -840,7 +840,7 @@
 &lt;p&gt;举个例子：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;如果以 &lt;code&gt;i&lt;/code&gt;,&lt;code&gt;he&lt;/code&gt;,&lt;code&gt;his&lt;/code&gt;,&lt;code&gt;she&lt;/code&gt;,&lt;code&gt;hers&lt;/code&gt; 这些单词构建 $\text{fail}$ 指针：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/AC/p1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://werchange.github.io/img/AC/p1.png&#34;
 	
 	
 	
@@ -1128,11 +1128,11 @@
         </item>
         <item>
         <title>超级简单的后缀数组（SA）！！</title>
-        <link>http://localhost:1313/p/%E8%B6%85%E7%BA%A7%E7%AE%80%E5%8D%95%E7%9A%84%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84sa/</link>
+        <link>https://werchange.github.io/p/%E8%B6%85%E7%BA%A7%E7%AE%80%E5%8D%95%E7%9A%84%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84sa/</link>
         <pubDate>Sun, 14 Jan 2024 22:00:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E8%B6%85%E7%BA%A7%E7%AE%80%E5%8D%95%E7%9A%84%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84sa/</guid>
-        <description>&lt;img src="http://localhost:1313/img/%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84/p1.png" alt="Featured image of post 超级简单的后缀数组（SA）！！" /&gt;&lt;h1 id=&#34;超级简单的后缀数组sa&#34;&gt;超级简单的后缀数组（SA）！！
+        <guid>https://werchange.github.io/p/%E8%B6%85%E7%BA%A7%E7%AE%80%E5%8D%95%E7%9A%84%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84sa/</guid>
+        <description>&lt;img src="https://werchange.github.io/img/%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84/p1.png" alt="Featured image of post 超级简单的后缀数组（SA）！！" /&gt;&lt;h1 id=&#34;超级简单的后缀数组sa&#34;&gt;超级简单的后缀数组（SA）！！
 &lt;/h1&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;这里选择当一手标题党。&lt;/p&gt;
@@ -1163,7 +1163,7 @@
 &lt;p&gt;“简单的说，后缀数组是‘排第几的是谁？’，名次数组是‘你排第几？’。”——罗穗骞&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;显然，这俩玩意儿就是双映射关系，说白了就是运算互逆。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/%e5%90%8e%e7%bc%80%e6%95%b0%e7%bb%84/p1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://werchange.github.io/img/%e5%90%8e%e7%bc%80%e6%95%b0%e7%bb%84/p1.png&#34;
 	
 	
 	
@@ -1182,7 +1182,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;举个例子：&lt;/p&gt;
 &lt;p&gt;以字符串“aabaaaab”为例，整个过程如图所示。其中 $x,y$ 是表示长度为 $2^k$ 的字符串的两个关键字 。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/%e5%90%8e%e7%bc%80%e6%95%b0%e7%bb%84/p2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://werchange.github.io/img/%e5%90%8e%e7%bc%80%e6%95%b0%e7%bb%84/p2.png&#34;
 	
 	
 	

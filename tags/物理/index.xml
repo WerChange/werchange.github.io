@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>物理 on WerChange</title>
-        <link>http://localhost:1313/tags/%E7%89%A9%E7%90%86/</link>
+        <link>https://werchange.github.io/tags/%E7%89%A9%E7%90%86/</link>
         <description>Recent content in 物理 on WerChange</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>WerChange</copyright>
-        <lastBuildDate>Tue, 29 Nov 2022 19:23:00 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E7%89%A9%E7%90%86/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 29 Nov 2022 19:23:00 +0800</lastBuildDate><atom:link href="https://werchange.github.io/tags/%E7%89%A9%E7%90%86/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>凸透镜成像原理</title>
-        <link>http://localhost:1313/p/%E5%87%B8%E9%80%8F%E9%95%9C%E6%88%90%E5%83%8F%E5%8E%9F%E7%90%86/</link>
+        <link>https://werchange.github.io/p/%E5%87%B8%E9%80%8F%E9%95%9C%E6%88%90%E5%83%8F%E5%8E%9F%E7%90%86/</link>
         <pubDate>Tue, 29 Nov 2022 19:23:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E5%87%B8%E9%80%8F%E9%95%9C%E6%88%90%E5%83%8F%E5%8E%9F%E7%90%86/</guid>
-        <description>&lt;img src="http://localhost:1313/img/%E5%87%B8%E9%80%8F%E9%95%9C/p1.png" alt="Featured image of post 凸透镜成像原理" /&gt;&lt;h1 id=&#34;凸透镜成像原理&#34;&gt;凸透镜成像原理
+        <guid>https://werchange.github.io/p/%E5%87%B8%E9%80%8F%E9%95%9C%E6%88%90%E5%83%8F%E5%8E%9F%E7%90%86/</guid>
+        <description>&lt;img src="https://werchange.github.io/img/%E5%87%B8%E9%80%8F%E9%95%9C/p1.png" alt="Featured image of post 凸透镜成像原理" /&gt;&lt;h1 id=&#34;凸透镜成像原理&#34;&gt;凸透镜成像原理
 &lt;/h1&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;凸透镜成像原理是个有意思的知识。初二教科书会以实验的方式告诉我们原理。&lt;/p&gt;
 &lt;p&gt;快要参加中考了，复习的时候老师说了一条公式：&lt;/p&gt;
@@ -23,7 +23,7 @@ $$
 &lt;p&gt;但它为什么是对的，所以来证明一下。&lt;/p&gt;
 &lt;h2 id=&#34;几何法&#34;&gt;几何法
 &lt;/h2&gt;&lt;p&gt;要点：三角形相似。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/%e5%87%b8%e9%80%8f%e9%95%9c/p1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://werchange.github.io/img/%e5%87%b8%e9%80%8f%e9%95%9c/p1.png&#34;
 	
 	
 	
@@ -56,7 +56,7 @@ $\therefore u:v=f:(v-f)$&lt;/p&gt;
 &lt;p&gt;$证毕$.&lt;/p&gt;
 &lt;h2 id=&#34;函数法&#34;&gt;函数法
 &lt;/h2&gt;&lt;p&gt;要点：一次函数，正比例函数。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/%e5%87%b8%e9%80%8f%e9%95%9c/p2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://werchange.github.io/img/%e5%87%b8%e9%80%8f%e9%95%9c/p2.png&#34;
 	
 	
 	
