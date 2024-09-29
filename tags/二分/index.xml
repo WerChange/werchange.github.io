@@ -2,18 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>二分 on WerChange</title>
-        <link>https://werchange.github.io/tags/%E4%BA%8C%E5%88%86/</link>
+        <link>http://localhost:1313/tags/%E4%BA%8C%E5%88%86/</link>
         <description>Recent content in 二分 on WerChange</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>WerChange</copyright>
-        <lastBuildDate>Sat, 28 Sep 2024 21:52:00 +0800</lastBuildDate><atom:link href="https://werchange.github.io/tags/%E4%BA%8C%E5%88%86/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 28 Sep 2024 21:52:00 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E4%BA%8C%E5%88%86/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>ABC373E 题解</title>
-        <link>https://werchange.github.io/p/abc373e-%E9%A2%98%E8%A7%A3/</link>
+        <link>http://localhost:1313/p/abc373e-%E9%A2%98%E8%A7%A3/</link>
         <pubDate>Sat, 28 Sep 2024 21:52:00 +0800</pubDate>
         
-        <guid>https://werchange.github.io/p/abc373e-%E9%A2%98%E8%A7%A3/</guid>
-        <description>&lt;h1 id=&#34;abc373e-题解&#34;&gt;ABC373E 题解
+        <guid>http://localhost:1313/p/abc373e-%E9%A2%98%E8%A7%A3/</guid>
+        <description>&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://badges.toozhao.com/stats/01J8XQVVMKGDM6M75M16NAQJWB&#34;  title=&#34;Get your own page views count badge on badges.toozhao.com&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://badges.toozhao.com/badges/01J8XQVVMKGDM6M75M16NAQJWB/green.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Page Views Count&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;abc373e-题解&#34;&gt;ABC373E 题解
 &lt;/h1&gt;&lt;h2 id=&#34;题目大意&#34;&gt;题目大意
 &lt;/h2&gt;&lt;p&gt;$n$ 个候选人目前各有一些选票 $a_i$，总共选民投出了 $k$ 张选票。现在有 $k-\sum a_i$ 张可支配选票。现在请你求出第 $i$ 个人至少需要多少票使得剩下的票无论投给谁他都可以当选。&lt;/p&gt;
 &lt;p&gt;当选规则是：当且仅当选票比他多的人 $&amp;lt;m$。&lt;/p&gt;
@@ -234,10 +246,10 @@ $$
         </item>
         <item>
         <title>[ARC120E] 1D Party 题解</title>
-        <link>https://werchange.github.io/p/arc120e-1d-party-%E9%A2%98%E8%A7%A3/</link>
+        <link>http://localhost:1313/p/arc120e-1d-party-%E9%A2%98%E8%A7%A3/</link>
         <pubDate>Mon, 04 Dec 2023 20:14:00 +0800</pubDate>
         
-        <guid>https://werchange.github.io/p/arc120e-1d-party-%E9%A2%98%E8%A7%A3/</guid>
+        <guid>http://localhost:1313/p/arc120e-1d-party-%E9%A2%98%E8%A7%A3/</guid>
         <description>&lt;p&gt;提供二分+DP做法。&lt;/p&gt;
 &lt;h1 id=&#34;solution&#34;&gt;Solution
 &lt;/h1&gt;&lt;h2 id=&#34;题意&#34;&gt;题意
@@ -431,10 +443,10 @@ $$
         </item>
         <item>
         <title>CF773A Success Rate 题解</title>
-        <link>https://werchange.github.io/p/cf773a-success-rate-%E9%A2%98%E8%A7%A3/</link>
+        <link>http://localhost:1313/p/cf773a-success-rate-%E9%A2%98%E8%A7%A3/</link>
         <pubDate>Thu, 02 Nov 2023 20:10:00 +0800</pubDate>
         
-        <guid>https://werchange.github.io/p/cf773a-success-rate-%E9%A2%98%E8%A7%A3/</guid>
+        <guid>http://localhost:1313/p/cf773a-success-rate-%E9%A2%98%E8%A7%A3/</guid>
         <description>&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.luogu.com.cn/problem/CF773A&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Success Rate&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;（提供二分做法）&lt;/p&gt;
