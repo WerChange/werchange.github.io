@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>后缀数组 on WerChange</title>
-        <link>http://localhost:1313/tags/%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84/</link>
+        <link>http://werchange.github.io/tags/%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84/</link>
         <description>Recent content in 后缀数组 on WerChange</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>WerChange</copyright>
-        <lastBuildDate>Sun, 14 Jan 2024 22:00:00 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 14 Jan 2024 22:00:00 +0800</lastBuildDate><atom:link href="http://werchange.github.io/tags/%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>超级简单的后缀数组（SA）！！</title>
-        <link>http://localhost:1313/p/%E8%B6%85%E7%BA%A7%E7%AE%80%E5%8D%95%E7%9A%84%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84sa/</link>
+        <link>http://werchange.github.io/p/%E8%B6%85%E7%BA%A7%E7%AE%80%E5%8D%95%E7%9A%84%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84sa/</link>
         <pubDate>Sun, 14 Jan 2024 22:00:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E8%B6%85%E7%BA%A7%E7%AE%80%E5%8D%95%E7%9A%84%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84sa/</guid>
-        <description>&lt;img src="http://localhost:1313/img/%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84/p1.png" alt="Featured image of post 超级简单的后缀数组（SA）！！" /&gt;&lt;h1 id=&#34;超级简单的后缀数组sa&#34;&gt;超级简单的后缀数组（SA）！！
+        <guid>http://werchange.github.io/p/%E8%B6%85%E7%BA%A7%E7%AE%80%E5%8D%95%E7%9A%84%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84sa/</guid>
+        <description>&lt;img src="http://werchange.github.io/img/%E5%90%8E%E7%BC%80%E6%95%B0%E7%BB%84/p1.png" alt="Featured image of post 超级简单的后缀数组（SA）！！" /&gt;&lt;h1 id=&#34;超级简单的后缀数组sa&#34;&gt;超级简单的后缀数组（SA）！！
 &lt;/h1&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;这里选择当一手标题党。&lt;/p&gt;
@@ -44,7 +44,7 @@
 &lt;p&gt;“简单的说，后缀数组是‘排第几的是谁？’，名次数组是‘你排第几？’。”——罗穗骞&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;显然，这俩玩意儿就是双映射关系，说白了就是运算互逆。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/%e5%90%8e%e7%bc%80%e6%95%b0%e7%bb%84/p1.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://werchange.github.io/img/%e5%90%8e%e7%bc%80%e6%95%b0%e7%bb%84/p1.png&#34;
 	
 	
 	
@@ -63,7 +63,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;举个例子：&lt;/p&gt;
 &lt;p&gt;以字符串“aabaaaab”为例，整个过程如图所示。其中 $x,y$ 是表示长度为 $2^k$ 的字符串的两个关键字 。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/%e5%90%8e%e7%bc%80%e6%95%b0%e7%bb%84/p2.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://werchange.github.io/img/%e5%90%8e%e7%bc%80%e6%95%b0%e7%bb%84/p2.png&#34;
 	
 	
 	

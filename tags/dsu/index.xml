@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>DSU on WerChange</title>
-        <link>http://localhost:1313/tags/dsu/</link>
+        <link>http://werchange.github.io/tags/dsu/</link>
         <description>Recent content in DSU on WerChange</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>WerChange</copyright>
-        <lastBuildDate>Wed, 24 Jan 2024 09:47:00 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/dsu/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 24 Jan 2024 09:47:00 +0800</lastBuildDate><atom:link href="http://werchange.github.io/tags/dsu/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>优美的暴力——树上启发式合并（dsu on tree）</title>
-        <link>http://localhost:1313/p/%E4%BC%98%E7%BE%8E%E7%9A%84%E6%9A%B4%E5%8A%9B%E6%A0%91%E4%B8%8A%E5%90%AF%E5%8F%91%E5%BC%8F%E5%90%88%E5%B9%B6dsu-on-tree/</link>
+        <link>http://werchange.github.io/p/%E4%BC%98%E7%BE%8E%E7%9A%84%E6%9A%B4%E5%8A%9B%E6%A0%91%E4%B8%8A%E5%90%AF%E5%8F%91%E5%BC%8F%E5%90%88%E5%B9%B6dsu-on-tree/</link>
         <pubDate>Wed, 24 Jan 2024 09:47:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E4%BC%98%E7%BE%8E%E7%9A%84%E6%9A%B4%E5%8A%9B%E6%A0%91%E4%B8%8A%E5%90%AF%E5%8F%91%E5%BC%8F%E5%90%88%E5%B9%B6dsu-on-tree/</guid>
+        <guid>http://werchange.github.io/p/%E4%BC%98%E7%BE%8E%E7%9A%84%E6%9A%B4%E5%8A%9B%E6%A0%91%E4%B8%8A%E5%90%AF%E5%8F%91%E5%BC%8F%E5%90%88%E5%B9%B6dsu-on-tree/</guid>
         <description>&lt;h1 id=&#34;dsu-on-tree&#34;&gt;dsu on tree
 &lt;/h1&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;在我认为，这个并不能说单独列出来成为一个算法，更恰当的说，是一种思想、技巧。反正挺简单的，也很有趣（谁会拒绝一个优美的暴力呢），所以写篇笔记记录一手。&lt;/p&gt;
