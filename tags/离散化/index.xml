@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>离散化 on WerChange</title>
-        <link>https://werchange.github.io/tags/%E7%A6%BB%E6%95%A3%E5%8C%96/</link>
+        <link>http://localhost:1313/tags/%E7%A6%BB%E6%95%A3%E5%8C%96/</link>
         <description>Recent content in 离散化 on WerChange</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>WerChange</copyright>
-        <lastBuildDate>Fri, 04 Oct 2024 16:29:00 +0800</lastBuildDate><atom:link href="https://werchange.github.io/tags/%E7%A6%BB%E6%95%A3%E5%8C%96/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 04 Oct 2024 16:29:00 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E7%A6%BB%E6%95%A3%E5%8C%96/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>[省选联考 2020 A/B 卷] 冰火战士 题解</title>
-        <link>https://werchange.github.io/p/%E7%9C%81%E9%80%89%E8%81%94%E8%80%83-2020-a/b-%E5%8D%B7-%E5%86%B0%E7%81%AB%E6%88%98%E5%A3%AB-%E9%A2%98%E8%A7%A3/</link>
+        <link>http://localhost:1313/p/%E7%9C%81%E9%80%89%E8%81%94%E8%80%83-2020-a/b-%E5%8D%B7-%E5%86%B0%E7%81%AB%E6%88%98%E5%A3%AB-%E9%A2%98%E8%A7%A3/</link>
         <pubDate>Fri, 04 Oct 2024 16:29:00 +0800</pubDate>
         
-        <guid>https://werchange.github.io/p/%E7%9C%81%E9%80%89%E8%81%94%E8%80%83-2020-a/b-%E5%8D%B7-%E5%86%B0%E7%81%AB%E6%88%98%E5%A3%AB-%E9%A2%98%E8%A7%A3/</guid>
+        <guid>http://localhost:1313/p/%E7%9C%81%E9%80%89%E8%81%94%E8%80%83-2020-a/b-%E5%8D%B7-%E5%86%B0%E7%81%AB%E6%88%98%E5%A3%AB-%E9%A2%98%E8%A7%A3/</guid>
         <description>&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://badges.toozhao.com/stats/01J9BAAMY6QT5T4XHPS5KNXZA3&#34;  title=&#34;Get your own page views count badge on badges.toozhao.com&#34;
      target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;img src=&#34;https://badges.toozhao.com/badges/01J9BAAMY6QT5T4XHPS5KNXZA3/green.svg&#34;

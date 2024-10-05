@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>计数 on WerChange</title>
-        <link>https://werchange.github.io/tags/%E8%AE%A1%E6%95%B0/</link>
+        <link>http://localhost:1313/tags/%E8%AE%A1%E6%95%B0/</link>
         <description>Recent content in 计数 on WerChange</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>WerChange</copyright>
-        <lastBuildDate>Thu, 26 Sep 2024 21:49:00 +0800</lastBuildDate><atom:link href="https://werchange.github.io/tags/%E8%AE%A1%E6%95%B0/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 26 Sep 2024 21:49:00 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E8%AE%A1%E6%95%B0/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>奇偶矩阵 Tablica 题解</title>
-        <link>https://werchange.github.io/p/%E5%A5%87%E5%81%B6%E7%9F%A9%E9%98%B5-tablica-%E9%A2%98%E8%A7%A3/</link>
+        <link>http://localhost:1313/p/%E5%A5%87%E5%81%B6%E7%9F%A9%E9%98%B5-tablica-%E9%A2%98%E8%A7%A3/</link>
         <pubDate>Thu, 26 Sep 2024 21:49:00 +0800</pubDate>
         
-        <guid>https://werchange.github.io/p/%E5%A5%87%E5%81%B6%E7%9F%A9%E9%98%B5-tablica-%E9%A2%98%E8%A7%A3/</guid>
+        <guid>http://localhost:1313/p/%E5%A5%87%E5%81%B6%E7%9F%A9%E9%98%B5-tablica-%E9%A2%98%E8%A7%A3/</guid>
         <description>&lt;h1 id=&#34;奇偶矩阵-题解&#34;&gt;奇偶矩阵 题解
 &lt;/h1&gt;&lt;h2 id=&#34;题目大意&#34;&gt;题目大意
 &lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.luogu.com.cn/problem/P10681&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -183,10 +183,10 @@ $$
         </item>
         <item>
         <title>扫雷 题解</title>
-        <link>https://werchange.github.io/p/%E6%89%AB%E9%9B%B7-%E9%A2%98%E8%A7%A3/</link>
+        <link>http://localhost:1313/p/%E6%89%AB%E9%9B%B7-%E9%A2%98%E8%A7%A3/</link>
         <pubDate>Thu, 26 Sep 2024 19:11:00 +0800</pubDate>
         
-        <guid>https://werchange.github.io/p/%E6%89%AB%E9%9B%B7-%E9%A2%98%E8%A7%A3/</guid>
+        <guid>http://localhost:1313/p/%E6%89%AB%E9%9B%B7-%E9%A2%98%E8%A7%A3/</guid>
         <description>&lt;h1 id=&#34;扫雷题解&#34;&gt;扫雷题解
 &lt;/h1&gt;&lt;h2 id=&#34;题目大意&#34;&gt;题目大意
 &lt;/h2&gt;&lt;p&gt;$a_{i,j}\in[0,1]$ 表示该格是否有雷，$b_{i,j}$ 为该格所处九宫格内雷的数量。对于所有可能的 $a$，求出 $\sum b_{i,j}$ 的总和 $(\bmod 998244353)$。&lt;/p&gt;

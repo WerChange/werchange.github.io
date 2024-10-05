@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>贪心 on WerChange</title>
-        <link>https://werchange.github.io/tags/%E8%B4%AA%E5%BF%83/</link>
+        <link>http://localhost:1313/tags/%E8%B4%AA%E5%BF%83/</link>
         <description>Recent content in 贪心 on WerChange</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>WerChange</copyright>
-        <lastBuildDate>Fri, 27 Sep 2024 09:08:00 +0800</lastBuildDate><atom:link href="https://werchange.github.io/tags/%E8%B4%AA%E5%BF%83/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 27 Sep 2024 09:08:00 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E8%B4%AA%E5%BF%83/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>[CCO2021] Travelling Merchant 题解</title>
-        <link>https://werchange.github.io/p/cco2021-travelling-merchant-%E9%A2%98%E8%A7%A3/</link>
+        <link>http://localhost:1313/p/cco2021-travelling-merchant-%E9%A2%98%E8%A7%A3/</link>
         <pubDate>Fri, 27 Sep 2024 09:08:00 +0800</pubDate>
         
-        <guid>https://werchange.github.io/p/cco2021-travelling-merchant-%E9%A2%98%E8%A7%A3/</guid>
+        <guid>http://localhost:1313/p/cco2021-travelling-merchant-%E9%A2%98%E8%A7%A3/</guid>
         <description>&lt;h1 id=&#34;题解&#34;&gt;题解
 &lt;/h1&gt;&lt;h2 id=&#34;题目大意&#34;&gt;题目大意
 &lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.luogu.com.cn/problem/P7831&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -162,10 +162,10 @@
         </item>
         <item>
         <title>[ARC124C] LCM of GCDs 题解</title>
-        <link>https://werchange.github.io/p/arc124c-lcm-of-gcds-%E9%A2%98%E8%A7%A3/</link>
+        <link>http://localhost:1313/p/arc124c-lcm-of-gcds-%E9%A2%98%E8%A7%A3/</link>
         <pubDate>Sat, 16 Dec 2023 11:48:00 +0800</pubDate>
         
-        <guid>https://werchange.github.io/p/arc124c-lcm-of-gcds-%E9%A2%98%E8%A7%A3/</guid>
+        <guid>http://localhost:1313/p/arc124c-lcm-of-gcds-%E9%A2%98%E8%A7%A3/</guid>
         <description>&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.luogu.com.cn/problem/AT_arc124_c&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;题目跳转&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;fake_solution&#34;&gt;Fake_Solution
