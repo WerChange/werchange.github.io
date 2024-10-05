@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>GDOI on WerChange</title>
-        <link>http://localhost:1313/tags/gdoi/</link>
+        <link>https://werchange.github.io/tags/gdoi/</link>
         <description>Recent content in GDOI on WerChange</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>WerChange</copyright>
-        <lastBuildDate>Tue, 05 Mar 2024 19:27:00 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/gdoi/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 05 Mar 2024 19:27:00 +0800</lastBuildDate><atom:link href="https://werchange.github.io/tags/gdoi/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>GDOI2024 游记</title>
-        <link>http://localhost:1313/p/gdoi2024-%E6%B8%B8%E8%AE%B0/</link>
+        <link>https://werchange.github.io/p/gdoi2024-%E6%B8%B8%E8%AE%B0/</link>
         <pubDate>Tue, 05 Mar 2024 19:27:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/gdoi2024-%E6%B8%B8%E8%AE%B0/</guid>
+        <guid>https://werchange.github.io/p/gdoi2024-%E6%B8%B8%E8%AE%B0/</guid>
         <description>&lt;h1 id=&#34;gdoi2024-游记&#34;&gt;GDOI2024 游记
 &lt;/h1&gt;&lt;h2 id=&#34;day--6&#34;&gt;Day -6
 &lt;/h2&gt;&lt;p&gt;元宵节，得知自己可以参加 GDOI，惊喜坏了。&lt;/p&gt;

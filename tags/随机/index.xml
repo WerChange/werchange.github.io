@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>随机 on WerChange</title>
-        <link>http://localhost:1313/tags/%E9%9A%8F%E6%9C%BA/</link>
+        <link>https://werchange.github.io/tags/%E9%9A%8F%E6%9C%BA/</link>
         <description>Recent content in 随机 on WerChange</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>WerChange</copyright>
-        <lastBuildDate>Sat, 05 Oct 2024 09:07:00 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E9%9A%8F%E6%9C%BA/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 05 Oct 2024 09:07:00 +0800</lastBuildDate><atom:link href="https://werchange.github.io/tags/%E9%9A%8F%E6%9C%BA/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>「EZEC-8」猜树 加强版 题解</title>
-        <link>http://localhost:1313/p/ezec-8%E7%8C%9C%E6%A0%91-%E5%8A%A0%E5%BC%BA%E7%89%88-%E9%A2%98%E8%A7%A3/</link>
+        <link>https://werchange.github.io/p/ezec-8%E7%8C%9C%E6%A0%91-%E5%8A%A0%E5%BC%BA%E7%89%88-%E9%A2%98%E8%A7%A3/</link>
         <pubDate>Sat, 05 Oct 2024 09:07:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/ezec-8%E7%8C%9C%E6%A0%91-%E5%8A%A0%E5%BC%BA%E7%89%88-%E9%A2%98%E8%A7%A3/</guid>
+        <guid>https://werchange.github.io/p/ezec-8%E7%8C%9C%E6%A0%91-%E5%8A%A0%E5%BC%BA%E7%89%88-%E9%A2%98%E8%A7%A3/</guid>
         <description>&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://badges.toozhao.com/stats/01J9D5MKP5EX3ZY5HFT9NMTTWB&#34;  title=&#34;Get your own page views count badge on badges.toozhao.com&#34;
      target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;img src=&#34;https://badges.toozhao.com/badges/01J9D5MKP5EX3ZY5HFT9NMTTWB/green.svg&#34;

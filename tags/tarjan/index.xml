@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Tarjan on WerChange</title>
-        <link>http://localhost:1313/tags/tarjan/</link>
+        <link>https://werchange.github.io/tags/tarjan/</link>
         <description>Recent content in Tarjan on WerChange</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>WerChange</copyright>
-        <lastBuildDate>Sat, 05 Oct 2024 10:37:00 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/tarjan/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 05 Oct 2024 10:37:00 +0800</lastBuildDate><atom:link href="https://werchange.github.io/tags/tarjan/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>[POI2008] BLO-Blockade 题解</title>
-        <link>http://localhost:1313/p/poi2008-blo-blockade-%E9%A2%98%E8%A7%A3/</link>
+        <link>https://werchange.github.io/p/poi2008-blo-blockade-%E9%A2%98%E8%A7%A3/</link>
         <pubDate>Sat, 05 Oct 2024 10:37:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/poi2008-blo-blockade-%E9%A2%98%E8%A7%A3/</guid>
+        <guid>https://werchange.github.io/p/poi2008-blo-blockade-%E9%A2%98%E8%A7%A3/</guid>
         <description>&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://badges.toozhao.com/stats/01J9D8NDW9Z7YH8PA9GPAJA5KN&#34;  title=&#34;Get your own page views count badge on badges.toozhao.com&#34;
      target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;img src=&#34;https://badges.toozhao.com/badges/01J9D8NDW9Z7YH8PA9GPAJA5KN/green.svg&#34;
@@ -34,12 +34,8 @@
 &lt;p&gt;鲜花：&lt;/p&gt;
 &lt;p&gt;加深了对 tarjan 的理解：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;满足 $low_u=dfn_u$ 的性质当且仅当 $u$ 为 dfs 树的根节点或割点。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;$low_u$ 一定不大于 $dfn_u$。&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;tarjan 本质上就是一个 dfs。&lt;/li&gt;
+&lt;li&gt;$low_u$ 一定不大于 $dfn_u$。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;正解：&lt;/p&gt;
@@ -53,8 +49,8 @@ $$
 $$
 2(n-1)+\sum\limits_{i=1}^k siz_i\times (n-siz_i-1)
 $$
-&lt;p&gt;在实现中，如果遇到儿子不存在返租边（$low_v\geq dfn_u$），则可以考虑子树连通块的贡献）。最后记得计算子树内外的点产生的贡献（$(n-\sum\limits_{i\in son_u} siz_i -1)\times \sum\limits_{i\in son_u} siz_i$）和该点和所有点形成点对的贡献（$n-1$）。&lt;/p&gt;
-&lt;p&gt;最后无序对记得乘 2。&lt;/p&gt;
+&lt;p&gt;在实现中，如果遇到儿子不存在返租边（$low_v\geq dfn_u$），则可以考虑子树连通块的贡献。最后记得计算子树内外的点形成点对产生的贡献（$(n-\sum\limits_{i\in son_u} siz_i -1)\times \sum\limits_{i\in son_u} siz_i$）和该点和所有点形成点对的贡献（$n-1$）。&lt;/p&gt;
+&lt;p&gt;最后因为是有序对所以记得乘 2。&lt;/p&gt;
 &lt;h2 id=&#34;代码&#34;&gt;代码
 &lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>数论 on WerChange</title>
-        <link>http://localhost:1313/categories/%E6%95%B0%E8%AE%BA/</link>
+        <link>https://werchange.github.io/categories/%E6%95%B0%E8%AE%BA/</link>
         <description>Recent content in 数论 on WerChange</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>WerChange</copyright>
-        <lastBuildDate>Tue, 25 Apr 2023 20:49:00 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/%E6%95%B0%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 25 Apr 2023 20:49:00 +0800</lastBuildDate><atom:link href="https://werchange.github.io/categories/%E6%95%B0%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>质数及其筛法</title>
-        <link>http://localhost:1313/p/%E8%B4%A8%E6%95%B0%E5%8F%8A%E5%85%B6%E7%AD%9B%E6%B3%95/</link>
+        <link>https://werchange.github.io/p/%E8%B4%A8%E6%95%B0%E5%8F%8A%E5%85%B6%E7%AD%9B%E6%B3%95/</link>
         <pubDate>Tue, 25 Apr 2023 20:49:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E8%B4%A8%E6%95%B0%E5%8F%8A%E5%85%B6%E7%AD%9B%E6%B3%95/</guid>
+        <guid>https://werchange.github.io/p/%E8%B4%A8%E6%95%B0%E5%8F%8A%E5%85%B6%E7%AD%9B%E6%B3%95/</guid>
         <description>&lt;h2 id=&#34;质数&#34;&gt;质数
 &lt;/h2&gt;&lt;p&gt;质数，又称素数。如果一个数 $a \in \N^+（a\neq 1）$ 的因子有且仅有$1$和它本身，则称数 $a$ 为质数。&lt;/p&gt;
 &lt;h2 id=&#34;普通筛法&#34;&gt;普通筛法

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>游记 on WerChange</title>
-        <link>http://localhost:1313/categories/%E6%B8%B8%E8%AE%B0/</link>
+        <link>https://werchange.github.io/categories/%E6%B8%B8%E8%AE%B0/</link>
         <description>Recent content in 游记 on WerChange</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>WerChange</copyright>
-        <lastBuildDate>Thu, 04 Jul 2024 00:02:00 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/%E6%B8%B8%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 04 Jul 2024 00:02:00 +0800</lastBuildDate><atom:link href="https://werchange.github.io/categories/%E6%B8%B8%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>中考2024 游记</title>
-        <link>http://localhost:1313/p/%E4%B8%AD%E8%80%832024-%E6%B8%B8%E8%AE%B0/</link>
+        <link>https://werchange.github.io/p/%E4%B8%AD%E8%80%832024-%E6%B8%B8%E8%AE%B0/</link>
         <pubDate>Thu, 04 Jul 2024 00:02:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E4%B8%AD%E8%80%832024-%E6%B8%B8%E8%AE%B0/</guid>
+        <guid>https://werchange.github.io/p/%E4%B8%AD%E8%80%832024-%E6%B8%B8%E8%AE%B0/</guid>
         <description>&lt;h1 id=&#34;中考2024-游记&#34;&gt;中考2024 游记
 &lt;/h1&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;貌似中考也可以写游记捏，谨以此纪念我的中考与毕业。&lt;/p&gt;
@@ -152,10 +152,10 @@
         </item>
         <item>
         <title>GDOI2024 游记</title>
-        <link>http://localhost:1313/p/gdoi2024-%E6%B8%B8%E8%AE%B0/</link>
+        <link>https://werchange.github.io/p/gdoi2024-%E6%B8%B8%E8%AE%B0/</link>
         <pubDate>Tue, 05 Mar 2024 19:27:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/gdoi2024-%E6%B8%B8%E8%AE%B0/</guid>
+        <guid>https://werchange.github.io/p/gdoi2024-%E6%B8%B8%E8%AE%B0/</guid>
         <description>&lt;h1 id=&#34;gdoi2024-游记&#34;&gt;GDOI2024 游记
 &lt;/h1&gt;&lt;h2 id=&#34;day--6&#34;&gt;Day -6
 &lt;/h2&gt;&lt;p&gt;元宵节，得知自己可以参加 GDOI，惊喜坏了。&lt;/p&gt;
@@ -225,10 +225,10 @@
         </item>
         <item>
         <title>CSP2023 总结</title>
-        <link>http://localhost:1313/p/csp2023-%E6%80%BB%E7%BB%93/</link>
+        <link>https://werchange.github.io/p/csp2023-%E6%80%BB%E7%BB%93/</link>
         <pubDate>Sat, 28 Oct 2023 16:27:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/csp2023-%E6%80%BB%E7%BB%93/</guid>
+        <guid>https://werchange.github.io/p/csp2023-%E6%80%BB%E7%BB%93/</guid>
         <description>&lt;h1 id=&#34;csp2023-总结&#34;&gt;CSP2023 总结
 &lt;/h1&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;这次 CSP2023 并没有考出水平。经过深刻反思，我总结了个人目前存在的一些问题与改进的方案。&lt;/p&gt;
