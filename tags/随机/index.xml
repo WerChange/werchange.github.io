@@ -41,7 +41,8 @@
 &lt;p&gt;双倍经验（其实是弱化版）：&lt;a class=&#34;link&#34; href=&#34;https://www.luogu.com.cn/problem/P7595&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;P7595 「EZEC-8」猜树&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;代码&#34;&gt;代码
-&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/h2&gt;&lt;p&gt;小知识：为什么我没有用 &lt;code&gt;fflush(stdout)&lt;/code&gt;，那是因为 &lt;code&gt;endl&lt;/code&gt; 内部就有重载缓冲区。这也是 &lt;code&gt;cout&amp;lt;&amp;lt;endl&lt;/code&gt; 会比 &lt;code&gt;cout&amp;lt;&amp;lt;&amp;quot;\n&amp;quot;&lt;/code&gt; 稍慢的原因。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
