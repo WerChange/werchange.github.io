@@ -512,7 +512,8 @@ $$
         <pubDate>Wed, 24 Jan 2024 20:39:00 +0800</pubDate>
         
         <guid>https://werchange.github.io/p/%E6%AC%A7%E6%8B%89%E8%B7%AF%E5%BE%84%E6%AC%A7%E6%8B%89%E5%9B%9E%E8%B7%AF%E6%AC%A7%E6%8B%89%E5%9B%BE%E5%82%BB%E5%82%BB%E5%88%86%E4%B8%8D%E6%B8%85%E6%A5%9A%E7%9C%8B%E8%BF%99%E4%B8%80%E7%AF%87%E5%B0%B1%E5%A4%9F%E4%BA%86/</guid>
-        <description>&lt;h1 id=&#34;欧拉路径回路图&#34;&gt;欧拉路径、回路、图
+        <description>&lt;p&gt;upd 2024.10.24 ：补充了为什么求欧拉路径时不能正序存点。&lt;/p&gt;
+&lt;h1 id=&#34;欧拉路径回路图&#34;&gt;欧拉路径、回路、图
 &lt;/h1&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;当一手标题党，快乐~&lt;/p&gt;
 &lt;p&gt;之前一直分不清楚，写篇笔记分辨一下。&lt;/p&gt;
@@ -540,6 +541,18 @@ $$
 &lt;/h2&gt;&lt;p&gt;判断一个图是否有欧拉路或欧拉回路，要用到 Fleury 算法。（虽然这不是文章的重点，重点是上文）&lt;/p&gt;
 &lt;p&gt;用 DFS 实现。&lt;/p&gt;
 &lt;p&gt;算法核心：除非都是桥，否则走桥边。&lt;/p&gt;
+&lt;h2 id=&#34;关于为什么不能倒序存点&#34;&gt;关于为什么不能倒序存点
+&lt;/h2&gt;&lt;p&gt;先放张图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.luogu.com.cn/upload/image_hosting/lehu8fd2.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;正确顺序：$1\to 3\to 4\to 1\to 2$&lt;/p&gt;
+&lt;p&gt;如果先进栈会出现断层。&lt;/p&gt;
 &lt;h3 id=&#34;p7771-模板欧拉路径httpswwwluogucomcnproblemp7771&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.luogu.com.cn/problem/P7771&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;P7771 【模板】欧拉路径&lt;/a&gt;
 &lt;/h3&gt;&lt;p&gt;code&lt;/p&gt;
