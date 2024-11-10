@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="一句话题解 不能什么题都随便写写就过了，留点印象好一点。一直更新。 [TOC] 2024.10.29 AT_abc290_f 组合数数。满足树的形态要有 $\\sum deg_i=2n-2$。考虑目前有 $k$ 个儿子">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="一句话题解 不能什么题都随便写写就过了，留点印象好一点。一直更新。 2024.10.29 AT_abc290_f 组合数数。满足树的形态要有 $\\sum deg_i=2n-2$。考虑目前有 $k$ 个儿子节">
 <title>[置顶][一直更新中]一句话题解</title>
 
 <link rel='canonical' href='https://werchange.github.io/p/%E7%BD%AE%E9%A1%B6%E4%B8%80%E7%9B%B4%E6%9B%B4%E6%96%B0%E4%B8%AD%E4%B8%80%E5%8F%A5%E8%AF%9D%E9%A2%98%E8%A7%A3/'>
 
 <link rel="stylesheet" href="/scss/style.min.46b014bcd81355ac4fa4b0113be0f78589502d595e9e9c4ab35776b148d0407b.css"><meta property='og:title' content="[置顶][一直更新中]一句话题解">
-<meta property='og:description' content="一句话题解 不能什么题都随便写写就过了，留点印象好一点。一直更新。 [TOC] 2024.10.29 AT_abc290_f 组合数数。满足树的形态要有 $\\sum deg_i=2n-2$。考虑目前有 $k$ 个儿子">
+<meta property='og:description' content="一句话题解 不能什么题都随便写写就过了，留点印象好一点。一直更新。 2024.10.29 AT_abc290_f 组合数数。满足树的形态要有 $\\sum deg_i=2n-2$。考虑目前有 $k$ 个儿子节">
 <meta property='og:url' content='https://werchange.github.io/p/%E7%BD%AE%E9%A1%B6%E4%B8%80%E7%9B%B4%E6%9B%B4%E6%96%B0%E4%B8%AD%E4%B8%80%E5%8F%A5%E8%AF%9D%E9%A2%98%E8%A7%A3/'>
 <meta property='og:site_name' content='WerChange'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='' /><meta property='article:published_time' content='2024-10-30T09:14:00&#43;08:00'/><meta property='article:modified_time' content='2024-10-30T09:14:00&#43;08:00'/>
 <meta name="twitter:title" content="[置顶][一直更新中]一句话题解">
-<meta name="twitter:description" content="一句话题解 不能什么题都随便写写就过了，留点印象好一点。一直更新。 [TOC] 2024.10.29 AT_abc290_f 组合数数。满足树的形态要有 $\\sum deg_i=2n-2$。考虑目前有 $k$ 个儿子">
+<meta name="twitter:description" content="一句话题解 不能什么题都随便写写就过了，留点印象好一点。一直更新。 2024.10.29 AT_abc290_f 组合数数。满足树的形态要有 $\\sum deg_i=2n-2$。考虑目前有 $k$ 个儿子节">
     <link rel="shortcut icon" href="/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -68,7 +68,7 @@
                 
                 </a>
                 
-                    <span class="emoji">✍</span>
+                    <span class="emoji">🍀</span>
                 
             </figure>
             
@@ -410,7 +410,6 @@
 ></a></p>
 <h1 id="一句话题解">一句话题解
 </h1><p>不能什么题都随便写写就过了，留点印象好一点。一直更新。</p>
-<p>[TOC]</p>
 <h2 id="20241029">2024.10.29
 </h2><h3 id="at_abc290_f">AT_abc290_f
 </h3><p>组合数数。满足树的形态要有 $\sum deg_i=2n-2$。考虑目前有 $k$ 个儿子节点，直径最大肯定是 $n-k$ 个非儿子点串一条长度为 $n-k+1$ 的链，然后再挂儿子节点。总度数 $2n-2$，给 $n-k$ 个非儿子节点支配的还剩 $2n-2-k$，易得插板：$\binom{(2n-2-k)-2(n-k)+(n-k)-1}{(2n-2-k)-2(n-k)}=\binom{n-3}{k-2}$。答案即为：$\sum\limits_{k=1}^n \binom{n}{k}\binom{n-3}{k-2}(n-k+1)$。</p>
