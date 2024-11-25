@@ -35,7 +35,6 @@
 &lt;li&gt;&lt;code&gt;Medium&lt;/code&gt;：看了题解茅塞顿开并切掉。&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Hard&lt;/code&gt;：看了题解磨了好久才切掉。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;[TOC]&lt;/p&gt;
 &lt;h2 id=&#34;20241029&#34;&gt;2024.10.29
 &lt;/h2&gt;&lt;h3 id=&#34;abc290f&#34;&gt;ABC290F
 &lt;/h3&gt;&lt;p&gt;&lt;code&gt;Medium&lt;/code&gt;&lt;/p&gt;
@@ -192,6 +191,23 @@ $$\gcd (a_l,\dots,a_r)=\gcd (a_l,|a_{l+2}-a_{l+1}|,\dots,|a_{r-1}-a_{r-2}|,|a_r-
 &lt;h3 id=&#34;luogu-p4107-heoi2015-兔子与樱花&#34;&gt;Luogu P4107 [HEOI2015] 兔子与樱花
 &lt;/h3&gt;&lt;p&gt;&lt;code&gt;Easy&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;贪心。自底向上按 $son_i+c_i$ 的顺序从小到大贪心删除一定最优。感性证明：对于排序，一定是选最小的儿子删掉不会劣；对于自底向上，如果点 $u$ 的儿子 $v$ 因为删了 $v$ 的儿子节点而导致不能删 $u$，发现不能被删的只有一个点 $u$，但是 $v$ 删掉的是至少一个 $v$ 的儿子节点。&lt;/p&gt;
+&lt;h2 id=&#34;20241125&#34;&gt;2024.11.25
+&lt;/h2&gt;&lt;h3 id=&#34;arc106d&#34;&gt;ARC106D
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;Medium&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;二项式定理。又忘记二项式定理了，一定要记住！！记录一下：$(a+b)^n=\sum\limits_{i=0}^n\binom{n}{i}a^{n-i}b^i$。这道题是推式子：&lt;/p&gt;
+$$
+\begin{aligned}
+\sum\limits_{l=1}^{n-1}\sum\limits_{r=l+1}^n (a_l+a_r)^x
+&amp;=\frac{\sum\limits_{l=1}^n\sum\limits_{r=1}^n(a_l+a_r)^x-\sum\limits_{p=1}^n(2a_p)^x}{2}
+\end{aligned}
+$$
+&lt;p&gt;分子后面好做，推前面那个：&lt;/p&gt;
+$$
+\begin{aligned}
+    \sum\limits_{l=1}^n\sum\limits_{r=1}^n(a_l+a_r)^x&amp;=\sum\limits_{i=0}^x\binom{x}{i}\sum\limits_{l=1}^na_l^{x-i}\sum\limits_{r=1}^na_r^i
+\end{aligned}
+$$
+&lt;p&gt;这样就好做了。$\mathcal{O}(nk)$。&lt;/p&gt;
 </description>
         </item>
         <item>
