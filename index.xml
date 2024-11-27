@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>WerChange</copyright>
-        <lastBuildDate>Mon, 04 Nov 2024 22:31:00 +0800</lastBuildDate><atom:link href="https://werchange.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 25 Nov 2024 22:32:00 +0800</lastBuildDate><atom:link href="https://werchange.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>[置顶][一直更新中]一句话题解</title>
         <link>https://werchange.github.io/p/%E7%BD%AE%E9%A1%B6%E4%B8%80%E7%9B%B4%E6%9B%B4%E6%96%B0%E4%B8%AD%E4%B8%80%E5%8F%A5%E8%AF%9D%E9%A2%98%E8%A7%A3/</link>
         <pubDate>Wed, 30 Oct 2024 09:14:00 +0800</pubDate>
@@ -208,6 +208,44 @@ $$
 \end{aligned}
 $$
 &lt;p&gt;这样就好做了。$\mathcal{O}(nk)$。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>boruvka 嘴巴杂记</title>
+        <link>https://werchange.github.io/p/boruvka-%E5%98%B4%E5%B7%B4%E6%9D%82%E8%AE%B0/</link>
+        <pubDate>Mon, 25 Nov 2024 22:32:00 +0800</pubDate>
+        
+        <guid>https://werchange.github.io/p/boruvka-%E5%98%B4%E5%B7%B4%E6%9D%82%E8%AE%B0/</guid>
+        <description>&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://badges.toozhao.com/stats/01JDHVSPNVV1701V6A42NSNZDS&#34;  title=&#34;Get your own page views count badge on badges.toozhao.com&#34;
+     target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;img src=&#34;https://badges.toozhao.com/badges/01JDHVSPNVV1701V6A42NSNZDS/green.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Page Views Count&#34;
+	
+	
+&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;boruvka-嘴巴杂记&#34;&gt;boruvka 嘴巴杂记
+&lt;/h1&gt;&lt;p&gt;如果 NOIP2024 考完后还有心思的话可能会写个最小生成树全家桶。&lt;/p&gt;
+&lt;h2 id=&#34;嘴巴概要&#34;&gt;嘴巴概要
+&lt;/h2&gt;&lt;p&gt;每次应对的局面都是若干个连通块，我们处理出每个连通块向外连出的最小边。然后每个连通块通过其最小边连出去合并。局面再次来到若干个连通块，重复操作至连通块数量为一。&lt;/p&gt;
+&lt;h2 id=&#34;嘴巴复杂度&#34;&gt;嘴巴复杂度
+&lt;/h2&gt;&lt;p&gt;一次局面后最坏情况下连通块个数至少减半，这里是 $O(\log)$ 的。每一次局面对于每个点（注意不是连通块）都要找到一个不连通点其中边权最小，即对于每个连通块找最小连出边。假设一次找点是 $O(1)$ 的，那么 $n$ 次就是 $O(n)$ 的。所以总时间复杂度 $O(n\log n)$。&lt;/p&gt;
+&lt;p&gt;前提是找最小连出边的时间复杂度是 $O(1)$ 的，不然时间复杂度就不能保证 $O(n\log n)$。&lt;/p&gt;
+&lt;h2 id=&#34;嘴巴总结&#34;&gt;嘴巴总结
+&lt;/h2&gt;&lt;p&gt;所以 boruvka 的应用主要是一些性质最小生成树题。这类题通常需要你抽象出最小生成树的模型，而通常这类题的边数极多。所以会卡 $O((n+m)\log m)$ 的 Prim 和 $O(m\log m)$ 的 Kruskal。&lt;/p&gt;
+&lt;p&gt;因此这种特殊性质最小生成树题也一般被称为菠萝题🍍。&lt;/p&gt;
+&lt;h2 id=&#34;嘴巴应用&#34;&gt;嘴巴应用
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;题意：$n$ 个数 $a_1,\dots,a_n$，满足 $i&amp;lt;j$ 则可以连一条权值为 $a_j-a_i$ 的边，求最小生成树。（$n\leq 3\times 10^5$）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;主要讲讲怎么 $O(1)$ 得每个连通块的最小连出边。&lt;/p&gt;
+&lt;p&gt;我们在 $O(n)$ 求每个点所属连通块的最小连出边时，同时维护一个最大值和次大值，这两个值不属于同一个连通块。每次更新最小连出边，如果最大值的所属连通块与当前点不同，就是 $col_x=\min{a_i-\text{mx}_1}$ 否则用次大值转移。&lt;/p&gt;
+&lt;p&gt;当然还要跑一次维护最小值和次小值的，因为上面是为了减数大，这里是为了被减数小，操作同理，不讲了。&lt;/p&gt;
+&lt;p&gt;因此这道题可以 $O(1)$ 得到每个连通块的最小连出边。又因为数据范围卡 Prim 和 Kruskal，所以这道题菠萝题实锤。&lt;/p&gt;
 </description>
         </item>
         <item>
