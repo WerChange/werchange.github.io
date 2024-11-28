@@ -35,6 +35,7 @@
 &lt;li&gt;&lt;code&gt;Medium&lt;/code&gt;：看了题解茅塞顿开并切掉。&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Hard&lt;/code&gt;：看了题解磨了好久才切掉。&lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;[TOC]&lt;/p&gt;
 &lt;h2 id=&#34;20241029&#34;&gt;2024.10.29
 &lt;/h2&gt;&lt;h3 id=&#34;abc290f&#34;&gt;ABC290F
 &lt;/h3&gt;&lt;p&gt;&lt;code&gt;Medium&lt;/code&gt;&lt;/p&gt;
@@ -208,6 +209,25 @@ $$
 \end{aligned}
 $$
 &lt;p&gt;这样就好做了。$\mathcal{O}(nk)$。&lt;/p&gt;
+&lt;h2 id=&#34;20241127&#34;&gt;2024.11.27
+&lt;/h2&gt;&lt;h3 id=&#34;arc173c&#34;&gt;ARC173C
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;Medium&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;贪心。这类题的难点就是如何证时间复杂度。关于做法，首先易想到可以设 $L$，$R$ 表示合法区间 $[l,r]$ 的范围，然后保证长度为奇数的情况下去暴力拓展。具体的证明没看懂，但是可以感性理解：对于很苛刻的情况必定是这个数每次拓展的两个数刚好一大一小，即 &lt;code&gt;+-+-+-0+-+-+-&lt;/code&gt;。但是发现这里面也有很多 &lt;code&gt;-+-&lt;/code&gt; 和 &lt;code&gt;+-+&lt;/code&gt;，当我们要求这些位置的答案时拓展是很快的。所以有的地方会很慢，同时有的地方就会很快。均摊下来就是 $O(n)$ 的。&lt;/p&gt;
+&lt;h3 id=&#34;arc050b&#34;&gt;ARC050B
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;Medium&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;二分。把问题转换成能不能共做出 $k$ 种花束。制作花束至少需要一朵红花和一朵蓝花，所以把他们的数量都先减 $k$。组成红花束还要 $x-1$ 朵红花，所以可以制作 $\lfloor\frac{R-k}{x-1}\rfloor$，蓝花束的数量同理。能做 $k$ 束花束的条件是红蓝花束数量大于等于 $k$，二分最大 $k$ 即可。&lt;/p&gt;
+&lt;h3 id=&#34;arc064e&#34;&gt;ARC064E
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;Easy&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;最短路。把起点终点看成半径为 $0$ 的圆，然后直接跑起点的单源最短路即可。为了避免堆优化比较的误差，就打了 SPFA。不懂为什么有蓝，原来 AtCoder 评分是 &lt;code&gt;Difficulty:1164&lt;/code&gt;。果然还是太水了。&lt;/p&gt;
+&lt;h3 id=&#34;arc112d&#34;&gt;ARC112D
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;Medium&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;并查集 + 图论建模。发现 $i$ 行 $j$ 列的 &lt;code&gt;#&lt;/code&gt; 可以使得第 $i$ 行的点和第 $j$ 列的点相互到达，那么可以把矩阵抽象出来有 $n$ 个行点和 $m$ 个列点的图。题目目标转换为最少连边使得图连通。&lt;/p&gt;
+&lt;h3 id=&#34;arc111d&#34;&gt;ARC111D
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;Medium&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;构造。首先考虑 $c_u\neq c_v$ 的情况，显然较大的点要向小的点连边。接下来考虑 $c_u=c_v$ 的情况，在图中是成环的，可以跑一遍 dfs，记录一下该环的方向即可。&lt;/p&gt;
+&lt;h3 id=&#34;csp-s-2024-染色&#34;&gt;[CSP-S 2024] 染色
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;Easy&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;DP。后悔场上没打，明明所有都想到了。设 $f_i$ 表示考虑到第 $i$ 位的答案，平凡转移有 $f_i=f_{i-1}$。设 $lst_i$ 表示考虑到当前位时最近的 $a_i$ 的位置。如果想给答案贡献 $a_i$，那么 $[lst_{a_i}+1,i-1]$ 之间都是另一种颜色，这里产生的贡献只有相邻项相同的 $a_j$。再维护一个 $sum_i$ 记录上面所说的前缀和。方程为 $f_i=\max{f_{lst_{a_i}+1}+a_i+sum_i-sum_{lst_{a_i}+1} }$。&lt;/p&gt;
 </description>
         </item>
         <item>
