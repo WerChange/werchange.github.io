@@ -469,7 +469,7 @@
 <h2 id="20241029">2024.10.29
 </h2><h3 id="abc290f">ABC290F
 </h3><p><code>Medium</code></p>
-<p>组合数数。满足树的形态要有 $\sum deg_i=2n-2$。考虑目前有 $k$ 个儿子节点，直径最大肯定是 $n-k$ 个非儿子点串一条长度为 $n-k+1$ 的链，然后再挂儿子节点。总度数 $2n-2$，给 $n-k$ 个非儿子节点支配的还剩 $2n-2-k$，易得插板：$\binom{(2n-2-k)-2(n-k)+(n-k)-1}{(2n-2-k)-2(n-k)}=\binom{n-3}{k-2}$。答案即为：$\sum\limits_{k=1}^n \binom{n}{k}\binom{n-3}{k-2}(n-k+1)$。</p>
+<p>组合数数。满足树的形态要有 $\sum deg_i=2n-2$。考虑目前有 $k$ 个叶子节点，直径最大肯定是 $n-k$ 个非叶子点串一条长度为 $n-k+1$ 的链，然后再挂叶子节点。总度数 $2n-2$，给 $n-k$ 个非叶子节点支配的还剩 $2n-2-k$，易得插板：$\binom{(2n-2-k)-2(n-k)+(n-k)-1}{(2n-2-k)-2(n-k)}=\binom{n-3}{k-2}$。答案即为：$\sum\limits_{k=1}^n \binom{n}{k}\binom{n-3}{k-2}(n-k+1)$。</p>
 <p>根据吸收恒等式（$k\binom{n}{k}=n\binom{n-1}{k-1}$）和范德蒙德卷积（$\sum\limits_{i=0}^k\binom{n}{i}\binom{m}{k-i}=\binom{n+m}{k}$）可以化简成 $O(1)$：$Ans=(n-1)\binom{2n-3}{n-1}-(n-3)\binom{2n-4}{n-1}$。</p>
 <h3 id="arc156c">ARC156C
 </h3><p><code>Medium</code></p>
